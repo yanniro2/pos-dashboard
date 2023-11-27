@@ -89,4 +89,8 @@
 }
 
 
+tbody > tr {
+  @apply p-1 odd:bg-white even:bg-gray-100;
+}
+
 

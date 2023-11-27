@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <div
-      className="w-screen h-screen bg-orange-300 flex flex-col justify-between"
+      className="w-screen h-screen  flex flex-col justify-between"
       suppressHydrationWarning>
       <Navbar />
       {children}
