@@ -1,10 +1,13 @@
 // CategoryButtons.tsx
 import React from "react";
+import { FaLaptop, FaTshirt, FaBook } from "react-icons/fa";
 
 export namespace CategoryButtonsTypes {
   export type Category = {
     id: number;
     name: string;
+    icon: string;
+    color: string;
     items: {
       id: number;
       name?: string;
@@ -19,13 +22,26 @@ export namespace CategoryButtonsTypes {
   };
 }
 
+const iconComponents: { [key: string]: React.ElementType } = {
+  FaLaptop,
+  FaTshirt,
+  FaBook,
+  // Add more icon components as needed
+};
+
 const CategoryButtons: React.FC<CategoryButtonsTypes.CategoryButtonsProps> = ({
   categories,
   onSelectCategory,
 }) => (
-  <div>
+  <div className="w-1/3 flex flex-col items-start gap-1 p-1 border rounded-lg h-full">
     {categories?.map((category) => (
-      <button key={category.id} onClick={() => onSelectCategory(category)}>
+      <button
+        key={category.id}
+        onClick={() => onSelectCategory(category)}
+        className="category-btn">
+        {React.createElement(iconComponents[category.icon], {
+          className: "text-[22px]",
+        })}
         {category.name}
       </button>
     ))}

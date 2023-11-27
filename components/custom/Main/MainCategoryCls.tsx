@@ -7,6 +7,8 @@ import ItemList from "../Category/ItemList";
 type Category = {
   id: number;
   name: string;
+  icon: string;
+  color: string;
   items: {
     id: number;
     name?: string;
@@ -44,12 +46,12 @@ export default function Page() {
   }, []);
 
   return (
-    <>
+    <div className="flex w-full h-full items-start">
       <CategoryButtons
         categories={data}
         onSelectCategory={handleSelectCategory}
       />
       {selectedCategory && <ItemList items={selectedCategory.items} />}
-    </>
+    </div>
   );
 }

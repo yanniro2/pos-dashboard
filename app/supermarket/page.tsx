@@ -6,7 +6,7 @@ export default async function Page() {
   return (
     <div className="w-full flex h-full overflow-hidden">
       <div className="w-1/3 h-full bg-orange-400">crud</div>
-      <div className="w-1/3 h-full bg-orange-500">
+      <div className="w-1/3 h-full bg-gray-50">
         <MainCategoryCls />
       </div>
       <div className="w-1/3 h-full bg-slate-200">

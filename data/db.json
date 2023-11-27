@@ -149,6 +149,7 @@
       "icon": "FaHome"
     }
   ],
+
   "categories": [
     {
       "id": 1,
@@ -168,8 +169,114 @@
           "id": 103,
           "name": "Headphones",
           "price": 79.99
+        },
+        {
+          "id": 104,
+          "name": "Laptop",
+          "price": 999.99
+        },
+        {
+          "id": 105,
+          "name": "Smartphone",
+          "price": 499.99
+        },
+        {
+          "id": 106,
+          "name": "Headphones",
+          "price": 79.99
+        },
+        {
+          "id": 107,
+          "name": "Laptop",
+          "price": 999.99
+        },
+        {
+          "id": 108,
+          "name": "Smartphone",
+          "price": 499.99
+        },
+        {
+          "id": 109,
+          "name": "Headphones",
+          "price": 79.99
+        },
+        {
+          "id": 110,
+          "name": "Laptop",
+          "price": 999.99
+        },
+        {
+          "id": 111,
+          "name": "Smartphone",
+          "price": 499.99
+        },
+        {
+          "id": 112,
+          "name": "Headphones",
+          "price": 79.99
+        },
+        {
+          "id": 113,
+          "name": "Laptop",
+          "price": 999.99
+        },
+        {
+          "id": 114,
+          "name": "Smartphone",
+          "price": 499.99
+        },
+        {
+          "id": 115,
+          "name": "Headphones",
+          "price": 79.99
+        },
+        {
+          "id": 116,
+          "name": "Laptop",
+          "price": 999.99
+        },
+        {
+          "id": 117,
+          "name": "Smartphone",
+          "price": 499.99
+        },
+        {
+          "id": 118,
+          "name": "Headphones",
+          "price": 79.99
+        },
+        {
+          "id": 119,
+          "name": "Laptop",
+          "price": 999.99
+        },
+        {
+          "id": 120,
+          "name": "Smartphone",
+          "price": 499.99
+        },
+        {
+          "id": 121,
+          "name": "Headphones",
+          "price": 79.99
+        },
+        {
+          "id": 122,
+          "name": "Laptop",
+          "price": 999.99
+        },
+        {
+          "id": 123,
+          "name": "Smartphone",
+          "price": 499.99
+        },
+        {
+          "id": 124,
+          "name": "Headphones",
+          "price": 79.99
         }
-      ]
+      ],
+      "icon": "FaLaptop"
     },
     {
       "id": 2,
@@ -190,7 +297,8 @@
           "name": "Sneakers",
           "price": 59.99
         }
-      ]
+      ],
+      "icon": "FaTshirt"
     },
     {
       "id": 3,
@@ -214,7 +322,8 @@
           "author": "George Orwell",
           "price": 14.99
         }
-      ]
+      ],
+      "icon": "FaBook"
     }
   ]
 }
