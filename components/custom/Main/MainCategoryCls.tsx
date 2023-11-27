@@ -1,42 +1,19 @@
+// Page.tsx
 "use client";
 import React, { useState, useEffect } from "react";
-
-type Item = {
-  id: number;
-  name?: string;
-  title?: string;
-  author?: string;
-  price: number;
-};
+import CategoryButtons from "../Category/CategoryButtons";
+import ItemList from "../Category/ItemList";
 
 type Category = {
   id: number;
   name: string;
-  items: Item[];
+  items: {
+    id: number;
+    name?: string;
+    title?: string;
+    price: number;
+  }[];
 };
-
-const CategoryButtons: React.FC<{
-  categories: Category[] | null | undefined; // Update the type here
-  onSelectCategory: (category: Category) => void;
-}> = ({ categories, onSelectCategory }) => (
-  <div>
-    {categories?.map((category) => (
-      <button key={category.id} onClick={() => onSelectCategory(category)}>
-        {category.name}
-      </button>
-    ))}
-  </div>
-);
-
-const ItemList: React.FC<{ items: Item[] }> = ({ items }) => (
-  <ul>
-    {items.map((item) => (
-      <li key={item.id}>
-        {item.name || item.title} - ${item.price}
-      </li>
-    ))}
-  </ul>
-);
 
 export default function Page() {
   const [data, setData] = useState<Category[] | null>(null);
@@ -64,15 +41,15 @@ export default function Page() {
     };
 
     fetchData();
-  }, []); // Make sure to pass an empty dependency array if you only want to run the effect once
+  }, []);
 
   return (
-    <div>
+    <>
       <CategoryButtons
         categories={data}
         onSelectCategory={handleSelectCategory}
       />
       {selectedCategory && <ItemList items={selectedCategory.items} />}
-    </div>
+    </>
   );
 }
