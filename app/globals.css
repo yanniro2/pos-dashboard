@@ -81,7 +81,11 @@
 }
 
 .category-btn{
-  @apply p-3 bg-white w-full  flex items-center gap-[1rem] rounded-lg drop-shadow hover:bg-gray-100 active:bg-gray-200 transition;
+  @apply p-3 bg-black text-white w-full  flex items-center gap-[1rem] rounded-lg drop-shadow hover:bg-gray-900 active:bg-gray-800 transition;
+}
+
+.itemlist-btn {
+  @apply p-4 bg-white rounded-lg shadow-md hover:bg-gray-200 active:bg-gray-300 transition duration-300 flex justify-between 
 }
 
 

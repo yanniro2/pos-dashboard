@@ -7,7 +7,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="w-screen h-screen bg-orange-300 flex flex-col justify-between">
+    <div
+      className="w-screen h-screen bg-orange-300 flex flex-col justify-between"
+      suppressHydrationWarning>
       <Navbar />
       {children}
       <Footer />
