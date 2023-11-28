@@ -35,6 +35,12 @@ export default function Page() {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result: Category[] = await response.json();
+
+        // Set the default selected category to the first category if available
+        if (result.length > 0) {
+          setSelectedCategory(result[0]);
+        }
+
         setData(result);
       } catch (error) {
         // handle the error as needed

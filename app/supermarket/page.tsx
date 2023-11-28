@@ -1,7 +1,12 @@
 import MainButtonCls from "@/components/custom/Main/MainButtonCls";
 import MainCategoryCls from "@/components/custom/Main/MainCategoryCls";
 import MainCrudCls from "@/components/custom/Main/MainCrudCls";
+import { Metadata } from "next";
 import React from "react";
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Created By Niroyan",
+};
 
 export default async function Page() {
   return (

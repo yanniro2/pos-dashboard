@@ -101,3 +101,11 @@ tbody > tr {
   @apply font-medium;
 }
 
+.active {
+  @apply text-orange-500 font-bold text-[1.5rem];
+}
+
+.not-active {
+  @apply font-normal hover:text-orange-500 hover:font-bold hover:text-[1.5rem] transition-all;
+}
+
