@@ -8,6 +8,15 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  safelist: [
+    "right-[8rem]",
+    "right-[6rem]",
+    "right-[2rem]",
+    "z-[1508]",
+    "z-[1506]",
+    "z-[1502]",
+    // Add other classes you want to include in the final CSS output
+  ],
   theme: {
     container: {
       center: true,

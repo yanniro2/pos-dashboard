@@ -2,9 +2,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBell, FaMoon, FaLightbulb, FaUser } from "react-icons/fa";
+import { FaBell, FaMoon, FaUser } from "react-icons/fa";
 import { IoLogoBitbucket } from "react-icons/io5";
 import { MdHome } from "react-icons/md";
+import HeaderPopup from "./Sub/HeaderPopup";
 import { IoIosSettings } from "react-icons/io";
 
 const Header = () => {
@@ -16,10 +17,10 @@ const Header = () => {
     { label: "link3", href: "/supermarket/link3", icon: "IoIosSettings" },
   ];
 
-  const [hide, setHide] = useState(false);
+  const [activePopup, setActivePopup] = useState("");
 
-  const handleClick = () => {
-    setHide(!hide);
+  const handleClick = (popupType: React.SetStateAction<string>) => {
+    setActivePopup(popupType);
   };
 
   const iconComponents: { [key: string]: React.ElementType } = {
@@ -28,11 +29,12 @@ const Header = () => {
 
     // Add more icon components as needed
   };
+
   return (
     <>
-      <nav className="w-full h-min bg-white text-black ">
+      <nav className="w-full h-min bg-white text-black relative">
         <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-b-bGray">
-          <div className="flex items-center gap-[1rem] ">
+          <div className="flex items-center gap-[1rem]">
             <Link href="/supermarket">
               <IoLogoBitbucket className="text-[2rem] hover:text-orange-600 transition-all" />
             </Link>
@@ -44,7 +46,6 @@ const Header = () => {
                     key={link.href}
                     className={`${isActive ? "active" : "not-active"}`}>
                     <Link href={link.href}>
-                      {/* {link.label} */}
                       {React.createElement(iconComponents[link.icon], {
                         className: "text-[22px]",
                       })}
@@ -56,24 +57,42 @@ const Header = () => {
           </div>
 
           <ul className="flex items-center gap-5 justify-center">
-            <li className="flex items-center">
-              <button onClick={handleClick}>
-                {hide ? (
-                  <FaLightbulb className="icon" />
-                ) : (
-                  <FaMoon className="icon" />
-                )}
+            <li className="flex items-center justify-center">
+              <button onClick={() => handleClick("theme")}>
+                <FaMoon className="icon" />
               </button>
             </li>
-            <li>
-              <FaBell className="icon" />
+            <li className="flex items-center justify-center">
+              <button
+                onClick={() => handleClick("notification")}
+                className="relative">
+                <FaBell className="icon " />
+                <div className="w-[1.5rem] h-[1.5rem] absolute bg-orange-500 rounded-full top-[-.5rem] right-0 translate-x-1/2 text-white font-bold">
+                  3
+                </div>
+              </button>
             </li>
-            <li>
-              <FaUser className="icon" />
+            <li className="flex items-center justify-center">
+              <button onClick={() => handleClick("user")}>
+                <FaUser className="icon" />
+              </button>
             </li>
           </ul>
         </div>
       </nav>
+      {activePopup === "user" && (
+        <HeaderPopup style={8} type="user" close={() => setActivePopup("")} />
+      )}
+      {activePopup === "notification" && (
+        <HeaderPopup
+          style={4}
+          type="notification"
+          close={() => setActivePopup("")}
+        />
+      )}
+      {activePopup === "theme" && (
+        <HeaderPopup style={2} type="theme" close={() => setActivePopup("")} />
+      )}
     </>
   );
 };
