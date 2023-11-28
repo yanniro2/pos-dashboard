@@ -35,7 +35,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
           onClick={() => handlePopup(item)}>
           <div className="text-left">
             <h1 className="font-bold ">{item.name || item.title}</h1>
-            <div>${item.price}</div>
+            <div className="price">${item.price}</div>
           </div>
           <div>
             <Image src="/item img.png" width="32" height="32" alt="img items" />
