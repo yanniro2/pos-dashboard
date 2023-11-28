@@ -1,6 +1,11 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  quantity: number;
+  discount: number;
+  subTotal: number;
+  grandTotal: number;
+};
 
 const ShowSummary = (props: Props) => {
   return (
@@ -8,21 +13,21 @@ const ShowSummary = (props: Props) => {
       <div className="flex flex-col gap-1 items-start w-full h-min">
         <div className="w-full justify-between items-center bg-slate-200 p-1 rounded-lg flex">
           <h1 className="text-gray-500">total Quantity</h1>
-          <h1 className="price">8</h1>
+          <h1 className="price">{props.quantity}</h1>
         </div>
         <div className="w-full justify-between items-center bg-slate-200 p-1 rounded-lg flex">
           <h1 className="text-gray-500">discount</h1>
-          <h1 className="price">80$</h1>
+          <h1 className="price">-{props.discount}$</h1>
         </div>
         <div className="w-full justify-between items-center bg-slate-200 p-1 rounded-lg flex">
           <h1 className="text-gray-500">sub total</h1>
-          <h1 className="price">80$</h1>
+          <h1 className="price">{props.subTotal}$</h1>
         </div>
       </div>
 
       <div className="w-full justify-between items-center bg-slate-200 p-1 rounded-lg flex uppercase h-min">
         <h1 className="text-black font-bold ">Grand total</h1>
-        <h1 className="font-bold text-orange-400">800$</h1>
+        <h1 className="font-bold text-orange-400">{props.grandTotal}$</h1>
       </div>
     </div>
   );

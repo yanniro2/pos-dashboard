@@ -11,6 +11,7 @@ const TableList = (props: Props) => {
           type="search"
           name="search"
           id="search"
+          placeholder="search.."
           className="border rounded-lg py-2 px-1 w-full"
         />
         <label htmlFor="search" className="absolute right-6 top-3">

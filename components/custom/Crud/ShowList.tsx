@@ -27,7 +27,12 @@ const ShowList = () => {
         ))}
       </div>
       <div className="right bg-gray-100">
-        <ShowSummary />
+        <ShowSummary
+          quantity={5}
+          discount={100}
+          subTotal={600}
+          grandTotal={500}
+        />
       </div>
     </div>
   );
