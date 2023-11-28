@@ -90,7 +90,14 @@
 
 
 tbody > tr {
-  @apply p-1 odd:bg-white even:bg-gray-100;
+  @apply  odd:bg-white even:bg-gray-100;
 }
 
+.left,.right {
+  @apply w-1/2 h-full p-1 rounded-lg flex flex-col gap-1 overflow-x-auto pb-[5rem];
+}
+
+.price {
+  @apply font-medium;
+}
 

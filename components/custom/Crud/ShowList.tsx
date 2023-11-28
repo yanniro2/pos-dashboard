@@ -1,9 +1,36 @@
+// Import React and the ShowLabel component
 import React from "react";
+import ShowLabel from "../Sub/ShowLabel";
+import ShowSummary from "../Sub/ShowSummary";
 
-type Props = {};
+const labels = [
+  { title: "discount", value: 5 },
+  { title: "coupon", value: 5 },
+  { title: "gift card", value: 5 },
+  { title: "voucher", value: 5 },
+  { title: "discount", value: 5 },
+  { title: "coupon", value: 5 },
+  { title: "gift card", value: 5 },
+  { title: "voucher", value: 5 },
+  { title: "discount", value: 5 },
+  { title: "coupon", value: 5 },
+  { title: "gift card", value: 5 },
+  { title: "voucher", value: 5 },
+];
 
-const ShowList = (props: Props) => {
-  return <div className="p-1 w-full h-1/2 bg-white">ShowList</div>;
+const ShowList = () => {
+  return (
+    <div className="w-full h-1/2 bg-white flex justify-between ">
+      <div className="left bg-gray-300">
+        {labels.map((label, index) => (
+          <ShowLabel key={index} title={label.title} value={label.value} />
+        ))}
+      </div>
+      <div className="right bg-gray-100">
+        <ShowSummary />
+      </div>
+    </div>
+  );
 };
 
 export default ShowList;
