@@ -93,6 +93,10 @@ td {
   @apply  text-[1.8rem];
 }
 
+.link-icon {
+  @apply text-[1.6rem] ;
+}
+
 
 
 .category-btn{
@@ -128,3 +132,10 @@ td {
   @apply flex items-center gap-[1rem] hover:bg-primary p-3 rounded-lg pl-[1rem] transition-all hover:text-white w-full ;
 }
 
+.nav-link {
+  @apply flex items-center gap-[1rem] pl-[1rem] p-3 bg-white rounded-lg hover:bg-gray-100 transition-all font-semibold active:bg-gray-200;
+}
+
+.nav-link-active{
+  @apply flex items-center gap-[1rem] pl-[1rem] p-3 bg-primary rounded-lg hover:bg-gray-100 transition-all font-semibold text-white;
+}

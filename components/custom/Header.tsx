@@ -18,7 +18,7 @@ const Header = () => {
   const pathName = usePathname();
   const links = [
     { label: "home", href: "/supermarket", icon: "MdHome" },
-    { label: "link1", href: "/supermarket/link1", icon: "IoIosSettings" },
+    { label: "settings", href: "/settings", icon: "IoIosSettings" },
     { label: "link2", href: "/supermarket/link2", icon: "IoIosSettings" },
     { label: "link3", href: "/supermarket/link3", icon: "IoIosSettings" },
   ];
@@ -55,6 +55,7 @@ const Header = () => {
                       {React.createElement(iconComponents[link.icon], {
                         className: "nav-icon-left",
                       })}
+                      <div className="bg-orange">{isActive}</div>
                     </Link>
                   </li>
                 );
