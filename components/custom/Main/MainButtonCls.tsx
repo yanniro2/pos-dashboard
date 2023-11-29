@@ -32,7 +32,7 @@ export default async function Page() {
   };
   return (
     <div className="w-full h-full flex flex-col dark:bg-gray-950 p-1 gap-1">
-      <div className="h-1/2 w-full flex flex-col flex-wrap overflow-x-auto  rounded-lg overflow-hidden ">
+      <div className="h-1/2 w-full flex flex-col flex-wrap overflow-x-auto  rounded-lg overflow-hidden gap-1 ">
         {buttons_icons.map((data) => (
           <button
             key={data.id}
