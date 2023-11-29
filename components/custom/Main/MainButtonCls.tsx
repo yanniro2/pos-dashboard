@@ -36,7 +36,7 @@ export default async function Page() {
         {buttons_icons.map((data) => (
           <button
             key={data.id}
-            className="bg-black text-white hover:text-black  grow drop-shadow text-[1.2rem] font-bold hover:bg-gray-100 transition active:bg-gray-200 basis-1/4 flex flex-col gap-3 items-center justify-center ">
+            className="bg-primary text-white hover:bg-primary-foreground hover:text-primary  grow drop-shadow text-[1.2rem] font-bold hover:bg-gray-100 transition active:bg-white basis-1/4 flex flex-col gap-3 items-center justify-center ">
             {React.createElement(iconComponents[data.icon], {
               className: "text-[30px]",
             })}
@@ -48,7 +48,7 @@ export default async function Page() {
         {buttons_number.map((data) => (
           <button
             key={data.id}
-            className="bg-white hover:bg-black hover:text-white grow drop-shadow text-[1.8rem] font-bold   transition active:bg-gray-700 basis-1/4 ">
+            className="bg-white hover:bg-primary hover:text-white grow drop-shadow text-[1.8rem] font-bold   transition active:bg-white basis-1/4 text-primary active:text-primary ">
             {data.label}
           </button>
         ))}

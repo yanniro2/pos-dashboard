@@ -36,7 +36,7 @@ const Header = () => {
         <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-b-bGray">
           <div className="flex items-center gap-[1rem]">
             <Link href="/supermarket">
-              <IoLogoBitbucket className="text-[2rem] hover:text-orange-600 transition-all" />
+              <IoLogoBitbucket className="text-[2rem] hover:text-primary transition-all text-primary" />
             </Link>
             <ul className="flex items-center gap-5 justify-center pl-[5rem]">
               {links.map((link) => {
@@ -67,7 +67,7 @@ const Header = () => {
                 onClick={() => handleClick("notification")}
                 className="relative">
                 <FaBell className="icon " />
-                <div className="w-[1.5rem] h-[1.5rem] absolute bg-orange-500 rounded-full top-[-.5rem] right-0 translate-x-1/2 text-white font-bold">
+                <div className="w-[1.5rem] h-[1.5rem] absolute bg-primary rounded-full top-[-.5rem] right-0 translate-x-1/2 text-white font-bold">
                   3
                 </div>
               </button>

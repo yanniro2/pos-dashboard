@@ -5,23 +5,23 @@ type Props = {};
 
 const TableList = (props: Props) => {
   return (
-    <div className="w-full p-1 h-2/3 bg-gray-50">
+    <div className="w-full p-1 h-2/3 bg-gray-100 rounded-lg border ">
       <div className="flex relative items-center">
         <input
           type="search"
           name="search"
           id="search"
           placeholder="search.."
-          className="border rounded-lg py-2 px-1 w-full"
+          className="border rounded-lg py-2 px-1 w-full outline-primary"
         />
         <label htmlFor="search" className="absolute right-6 top-3">
-          <RiSearch2Line className="text-[1.2rem]" />
+          <RiSearch2Line className="text-[1.2rem] text-primary" />
         </label>
       </div>
       <div className="p-1 w-full h-full overflow-y-auto pb-[3rem]">
-        <table className="table-fixed w-full rounded-lg ">
-          <thead className="w-full bg-black text-white  rounded-lg">
-            <tr className="w-full rounded-lg ">
+        <table className="table-fixed w-full  ">
+          <thead className="w-full  text-white  ">
+            <tr className="w-full">
               <th>Song</th>
               <th>Artist</th>
               <th>Year</th>

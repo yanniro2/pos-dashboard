@@ -20,8 +20,8 @@ const labels = [
 
 const ShowList = () => {
   return (
-    <div className="w-full h-1/2 bg-white flex justify-between ">
-      <div className="left bg-gray-300">
+    <div className="w-full h-1/2 bg-accent flex justify-between border bg-gray-100 rounded-lg p-1">
+      <div className="left bg-destructive">
         {labels.map((label, index) => (
           <ShowLabel key={index} title={label.title} value={label.value} />
         ))}

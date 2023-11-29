@@ -33,7 +33,7 @@ const CategoryButtons: React.FC<CategoryButtonsTypes.CategoryButtonsProps> = ({
   categories,
   onSelectCategory,
 }) => (
-  <div className="w-1/3 flex flex-col items-start gap-1 p-1 border rounded-lg h-full overflow-x-auto">
+  <div className="w-1/3 flex flex-col items-start gap-1 p-1 border rounded-lg h-full overflow-x-auto bg-gray-100">
     {categories?.map((category) => (
       <button
         key={category.id}
@@ -42,7 +42,7 @@ const CategoryButtons: React.FC<CategoryButtonsTypes.CategoryButtonsProps> = ({
         {React.createElement(iconComponents[category.icon], {
           className: "text-[22px]",
         })}
-        {category.name}
+        <span className="font-semibold">{category.name}</span>
       </button>
     ))}
   </div>
