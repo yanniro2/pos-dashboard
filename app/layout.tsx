@@ -11,7 +11,7 @@ export const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Supermarket",
+    default: "Dashboard",
     template: "%s | Supermarket",
   },
   description: "Created By Niroyan",
