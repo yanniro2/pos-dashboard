@@ -52,7 +52,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="flex w-full h-full items-start">
+    <div className="flex w-full h-full items-start dark:bg-gray-950">
       <CategoryButtons
         categories={data}
         onSelectCategory={handleSelectCategory}

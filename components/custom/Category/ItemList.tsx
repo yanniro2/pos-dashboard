@@ -27,7 +27,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
   };
 
   return (
-    <div className="w-2/3 h-full bg-gray-100 border rounded-lg p-1 grid grid-cols-2 gap-1 overflow-y-auto content-start">
+    <div className="w-2/3 h-full bg-gray-100 border rounded-lg p-1 grid grid-cols-2 gap-1 overflow-y-auto content-start dark:bg-gray-900 ">
       {items.map((item) => (
         <button
           key={item.id}

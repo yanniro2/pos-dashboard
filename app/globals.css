@@ -63,7 +63,7 @@
   }
 
   tbody > tr {
-  @apply  odd:bg-primary-foreground even:bg-white w-full rounded-lg overflow-hidden;
+  @apply  odd:bg-primary-foreground even:bg-white w-full rounded-lg overflow-hidden dark:even:bg-gray-800 dark:odd:bg-card;
 }
 
 
@@ -96,14 +96,14 @@
 }
 
 .itemlist-btn {
-  @apply p-4 bg-white rounded-lg shadow-md hover:bg-gray-200 active:bg-gray-300 transition duration-300 flex justify-between ; 
+  @apply p-4 bg-white rounded-lg shadow-md hover:bg-gray-200 active:bg-gray-300 transition duration-300 flex justify-between dark:bg-gray-950 dark:hover:bg-gray-800 dark:active:bg-gray-700 ; 
 }
 
 
 
 
 .left,.right {
-  @apply w-1/2 h-full p-1 rounded-lg flex flex-col gap-1 overflow-x-auto pb-[5rem];
+  @apply w-1/2 h-full  rounded-lg flex flex-col gap-1 overflow-x-auto ;
 }
 
 .price {

@@ -20,8 +20,8 @@ const Popup: React.FC<PopupProps> = ({ item, onClose }) => {
       <div
         className="w-screen h-screen backdrop-blur-sm z-[1001] fixed"
         onClick={onClose}></div>
-      <div className="bg-white  rounded-md z-[1005] w-1/2 h-1/2">
-        <header className="w-full border-b p-3 flex justify-between items-center">
+      <div className="bg-white  rounded-md z-[1005] w-1/2 h-1/2 dark:bg-gray-800">
+        <header className="w-full border-b p-3 flex justify-between items-center dark:border-gray-500">
           <h1 className="font-bold text-xl text-primary ">
             {item.name || item.title}
           </h1>

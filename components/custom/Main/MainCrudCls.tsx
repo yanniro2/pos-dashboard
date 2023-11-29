@@ -6,7 +6,7 @@ type Props = {};
 
 const MainCrudCls = (props: Props) => {
   return (
-    <div className="w-full h-full flex flex-col justify-between">
+    <div className="w-full h-full flex flex-col justify-between dark:bg-gray-950">
       <TableList />
       <ShowList />
     </div>

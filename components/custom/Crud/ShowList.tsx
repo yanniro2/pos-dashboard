@@ -20,13 +20,13 @@ const labels = [
 
 const ShowList = () => {
   return (
-    <div className="w-full h-1/2 bg-accent flex justify-between border bg-gray-100 rounded-lg p-1">
-      <div className="left bg-destructive">
+    <div className="w-full h-1/3 bg-accent flex justify-between border bg-gray-100 rounded-lg dark:bg-gray-900 ">
+      <div className="left bg-accent dark:bg-card p-1">
         {labels.map((label, index) => (
           <ShowLabel key={index} title={label.title} value={label.value} />
         ))}
       </div>
-      <div className="right bg-gray-100">
+      <div className="right bg-primary dark:bg-card">
         <ShowSummary
           quantity={5}
           discount={100}
