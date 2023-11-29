@@ -122,3 +122,9 @@ td {
   @apply font-normal hover:text-primary hover:font-bold hover:text-[1.5rem] transition-all;
 }
 
+/* Buttons */
+
+.theme-btn {
+  @apply flex items-center gap-[1rem] hover:bg-primary p-3 rounded-lg pl-[1rem] transition-all hover:text-white w-full ;
+}
+

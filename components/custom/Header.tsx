@@ -12,7 +12,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { MdHome } from "react-icons/md";
 import HeaderPopup from "./Sub/HeaderPopup";
 import { IoIosSettings } from "react-icons/io";
-import { ModeToggle } from "./Sub/ModeToggle";
+import ThemePopup from "./Popup/ThemePopup";
 
 const Header = () => {
   const pathName = usePathname();
@@ -83,9 +83,6 @@ const Header = () => {
                 <IoPersonOutline className="icon-outline" />
               </button>
             </li>
-            <li>
-              <ModeToggle />
-            </li>
           </ul>
         </div>
       </nav>
@@ -100,7 +97,7 @@ const Header = () => {
         />
       )}
       {activePopup === "theme" && (
-        <HeaderPopup style={2} type="theme" close={() => setActivePopup("")} />
+        <ThemePopup style={8} type="theme" close={() => setActivePopup("")} />
       )}
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useTheme } from "next-themes";
 type Props = {
   type: string;
   style: number;
@@ -7,6 +7,7 @@ type Props = {
 };
 
 const HeaderPopup: React.FC<Props> = (props) => {
+  
   const z = 10 - props.style;
   return (
     <div className="w-screen h-screen fixed z-[1500] ">
