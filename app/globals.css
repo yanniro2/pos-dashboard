@@ -71,8 +71,25 @@
 
 /* Custom Style */
 .icon {
-  @apply text-xl;
+  @apply text-[1.5rem];
 }
+.nav-icon-left{
+  @apply text-[1.8rem];
+}
+
+.category-icon {
+  @apply text-[1.5rem];
+}
+
+.big-btn-icon{
+  @apply text-[2rem]
+}
+
+.icon-outline {
+  @apply  text-[1.8rem];
+}
+
+
 
 .category-btn{
   @apply p-3 bg-primary text-white w-full  flex items-center gap-[1rem] rounded-lg drop-shadow hover:bg-secondary active:bg-secondary transition hover:text-primary ;

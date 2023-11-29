@@ -40,7 +40,7 @@ const CategoryButtons: React.FC<CategoryButtonsTypes.CategoryButtonsProps> = ({
         onClick={() => onSelectCategory(category)}
         className="category-btn">
         {React.createElement(iconComponents[category.icon], {
-          className: "text-[22px]",
+          className: "category-icon",
         })}
         <span className="font-semibold">{category.name}</span>
       </button>

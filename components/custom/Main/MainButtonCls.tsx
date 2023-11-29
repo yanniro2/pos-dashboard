@@ -38,7 +38,7 @@ export default async function Page() {
             key={data.id}
             className="bg-primary text-white hover:bg-primary-foreground hover:text-primary  grow drop-shadow text-[1.2rem] font-bold hover:bg-gray-100 transition active:bg-white basis-1/4 flex flex-col gap-3 items-center justify-center ">
             {React.createElement(iconComponents[data.icon], {
-              className: "text-[30px]",
+              className: "big-btn-icon",
             })}
             <span className="text-sm">{data.label}</span>
           </button>

@@ -2,11 +2,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBell, FaMoon, FaUser } from "react-icons/fa";
-import { IoLogoBitbucket } from "react-icons/io5";
+import { FaRegBell, FaRegUser } from "react-icons/fa";
+import {
+  IoLogoBitbucket,
+  IoColorPaletteOutline,
+  IoPersonOutline,
+} from "react-icons/io5";
+import { IoMdNotificationsOutline } from "react-icons/io";
 import { MdHome } from "react-icons/md";
 import HeaderPopup from "./Sub/HeaderPopup";
 import { IoIosSettings } from "react-icons/io";
+import { ModeToggle } from "./Sub/ModeToggle";
 
 const Header = () => {
   const pathName = usePathname();
@@ -32,7 +38,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="w-full h-min bg-white text-black relative">
+      <nav className="w-full h-min bg-white text-black relative dark:bg-gray-900">
         <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-b-bGray">
           <div className="flex items-center gap-[1rem]">
             <Link href="/supermarket">
@@ -47,7 +53,7 @@ const Header = () => {
                     className={`${isActive ? "active" : "not-active"}`}>
                     <Link href={link.href}>
                       {React.createElement(iconComponents[link.icon], {
-                        className: "text-[22px]",
+                        className: "nav-icon-left",
                       })}
                     </Link>
                   </li>
@@ -59,23 +65,26 @@ const Header = () => {
           <ul className="flex items-center gap-5 justify-center">
             <li className="flex items-center justify-center">
               <button onClick={() => handleClick("theme")}>
-                <FaMoon className="icon" />
+                <IoColorPaletteOutline className="icon-outline" />
               </button>
             </li>
             <li className="flex items-center justify-center">
               <button
                 onClick={() => handleClick("notification")}
                 className="relative">
-                <FaBell className="icon " />
-                <div className="w-[1.5rem] h-[1.5rem] absolute bg-primary rounded-full top-[-.5rem] right-0 translate-x-1/2 text-white font-bold">
+                <IoMdNotificationsOutline className="icon-outline" />
+                <div className="w-[1.5rem] h-[1.5rem] absolute bg-primary drop-shadow rounded-full top-[-.5rem] right-0 translate-x-1/2 text-white font-bold">
                   3
                 </div>
               </button>
             </li>
             <li className="flex items-center justify-center">
               <button onClick={() => handleClick("user")}>
-                <FaUser className="icon" />
+                <IoPersonOutline className="icon-outline" />
               </button>
+            </li>
+            <li>
+              <ModeToggle />
             </li>
           </ul>
         </div>
