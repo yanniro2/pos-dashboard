@@ -7,6 +7,9 @@ type Props = {};
 
 const TableList = (props: Props) => {
   const [search, setSearch] = useState<null | string>(null);
+  const handleSearchNull = () => {
+    setSearch(null);
+  };
   return (
     <div className="w-full p-1 h-2/3 bg-gray-100 rounded-lg border dark:bg-gray-900 flex flex-col gap-1 ">
       <div className="flex relative items-center">
@@ -15,13 +18,17 @@ const TableList = (props: Props) => {
           name="search"
           id="search"
           placeholder="search product name | SKU | Others"
-          className="border rounded-lg py-2 px-1 w-full outline-primary dark:bg-gray-800 capitalize"
+          className="border rounded-lg p-3 w-full outline-primary dark:bg-gray-800 capitalize"
           onChange={(e) => setSearch(e.target.value)}
         />
-        <label htmlFor="search" className="absolute right-6 top-3">
+        <label htmlFor="search" className="absolute right-6 top-4">
           <RiSearch2Line className="text-[1.2rem] text-primary" />
         </label>
-        <div>{search && <SearchPopup value={search} />}</div>
+        <div>
+          {search && (
+            <SearchPopup search={search} handleSearchNull={handleSearchNull} />
+          )}
+        </div>
       </div>
       <div className="table-fixed w-full rounded-lg h-min overflow-hidden">
         <table className="table-auto w-full rounded-lg h-min overflow-hidden">

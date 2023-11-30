@@ -13,6 +13,7 @@ import { MdHome } from "react-icons/md";
 import HeaderPopup from "./Sub/HeaderPopup";
 import { IoIosSettings } from "react-icons/io";
 import ThemePopup from "./Popup/ThemePopup";
+import { GoGear } from "react-icons/go";
 
 const Header = () => {
   const pathName = usePathname();
@@ -41,8 +42,9 @@ const Header = () => {
       <nav className="w-full h-min bg-white text-black relative dark:bg-gray-800 dark:text-white">
         <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-b-bGray">
           <div className="flex items-center gap-[1rem]">
-            <Link href="/supermarket">
+            <Link href="/supermarket" className="flex items-center gap-3">
               <IoLogoBitbucket className="text-[2rem] hover:text-primary transition-all text-primary" />
+              logo
             </Link>
             <ul className="flex items-center gap-5 justify-center pl-[5rem]">
               {links.map((link) => {
@@ -82,6 +84,12 @@ const Header = () => {
             <li className="flex items-center justify-center">
               <button onClick={() => handleClick("user")}>
                 <IoPersonOutline className="icon-outline" />
+              </button>
+            </li>
+            <li>|</li>
+            <li className="flex items-center justify-center">
+              <button>
+                <GoGear className="icon-outline" />
               </button>
             </li>
           </ul>
