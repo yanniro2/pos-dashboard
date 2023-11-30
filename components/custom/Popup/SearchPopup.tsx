@@ -39,7 +39,7 @@ const SearchPopup = (props: Props) => {
     fetchData();
   }, [props.value]);
   return (
-    <div className="w-full h-screen bg-white text-primary absolute z-[1600] left-0 right-0 top-[2.5rem] rounded-lg p-3 drop-shadow overflow-x-auto flex flex-col pb-[10rem]">
+    <div className="w-full h-screen bg-white text-primary absolute z-[1600] left-0 right-0 top-[2.5rem] rounded-lg p-3 drop-shadow overflow-x-auto flex flex-col pb-[10rem] dark:bg-gray-800">
       <div>to search values are &quot;{props.value}&quot;</div>
 
       <div className="flex flex-col gap-1 items-start">
@@ -60,7 +60,7 @@ const SearchPopup = (props: Props) => {
           .map((datas) => (
             <div
               key={datas.id}
-              className="w-full h-full p-3  flex border rounded-lg ">
+              className="w-full h-full p-3  flex border rounded-lg dark:border-primary ">
               <div className="flex gap-1 p-3 font-semibold">
                 <div>Id:{datas.id}</div>
                 <div>{datas.name}</div>
