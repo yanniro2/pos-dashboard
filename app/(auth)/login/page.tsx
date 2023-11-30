@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 const page = (props: Props) => {
   return (
-    <section className="w-screen h-screen flex justify-between relative">
+    <section className="w-screen h-screen flex justify-between relative dark:bg-gray-800">
       <div className="w-1/4 h-full bg-primary flex items-center justify-center rounded-r-lg drop-shadow">
         <h1 className="text-4xl font-bold text-white ">lorem</h1>
       </div>
-      <div className="w-3/4 h-full bg-white flex items-center flex-col justify-center ">
+      <div className="w-3/4 h-full bg-white flex items-center flex-col justify-center dark:bg-gray-800 ">
         <form
           action=""
           className="w-1/2  h-1/2 flex flex-col items-center justify-center gap-5">
@@ -51,7 +51,12 @@ const page = (props: Props) => {
           </div>
           <div className="flex items-center justify-between font-medium capitalize w-full">
             <div className="label-box-2">
-              <input type="checkbox" name="remember" id="remember" />
+              <input
+                type="checkbox"
+                name="remember"
+                id="remember"
+                className="dark:bg-gray-700"
+              />
               <label htmlFor="remember">Remember me</label>
             </div>
             <Link
