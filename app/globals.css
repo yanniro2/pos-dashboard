@@ -74,6 +74,9 @@ td {
 }
 
 /* Custom Style */
+
+
+/* Icons */
 .icon {
   @apply text-[1.5rem];
 }
@@ -138,4 +141,29 @@ td {
 
 .nav-link-active{
   @apply flex items-center gap-[1rem] pl-[1rem] p-3 bg-primary rounded-lg hover:bg-gray-100 transition-all font-semibold text-white;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 w-max font-semibold rounded-lg mx-auto
+}
+
+/* Box */
+.label-box-1 {
+  @apply flex flex-col gap-1 w-full;
+}
+
+.label-box-2 {
+  @apply flex gap-1 w-fit;
+}
+
+
+/* Label */
+.label-1 {
+  @apply font-medium;
+}
+
+
+/* Input */
+.input-1 {
+  @apply border rounded-lg p-3 outline-primary;
 }
