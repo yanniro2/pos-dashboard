@@ -12,6 +12,7 @@ type Category = {
     id: number;
     name?: string;
     title?: string;
+    author?: string;
     price: number;
   }[];
 };
@@ -48,8 +49,12 @@ const SearchPopup = (props: Props) => {
               ? datas.name.toLocaleLowerCase().includes(props.value)
               : datas.items.some(
                   (item) =>
-                    item.name &&
-                    item.name.toLocaleLowerCase().includes(props.value)
+                    (item.name &&
+                      item.name.toLocaleLowerCase().includes(props.value)) ||
+                    (item.title &&
+                      item.title.toLocaleLowerCase().includes(props.value)) ||
+                    (item.author &&
+                      item.author.toLocaleLowerCase().includes(props.value))
                 );
           })
           .map((datas) => (
@@ -67,7 +72,10 @@ const SearchPopup = (props: Props) => {
                     key={item.id}
                     className="bg-primary text-white p-3 rounded-lg flex flex-col gap-3 w-auto h-full flex-wrap">
                     <div>{item.id}</div>
-                    <div>{item.name}</div>
+                    <div>
+                      {item.name}
+                      {item.author} {item.title}
+                    </div>
                     <div>{item.price}</div>
 
                     <button className="p-3 bg-white text-primary rounded-lg w-fit">
