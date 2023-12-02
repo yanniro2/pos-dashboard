@@ -1,6 +1,8 @@
 // Popup.tsx
+"use client";
 import { IoClose } from "react-icons/io5";
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "@/app/contexts/CartContext";
 
 type Item = {
   id: number;
@@ -15,6 +17,21 @@ type PopupProps = {
 };
 
 const Popup: React.FC<PopupProps> = ({ item, onClose }) => {
+  const { addItems } = useContext(CartContext);
+
+  const generateId = (): number => {
+    return Math.floor(Math.random() * 10000); // Replace this with a proper unique ID generation logic
+  };
+
+  const addButton = () => {
+    const newItem = {
+      id: generateId(),
+      name: "Prpduct 1",
+      price: 1200,
+    };
+    addItems(newItem);
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-[1000]">
       <div
@@ -35,6 +52,10 @@ const Popup: React.FC<PopupProps> = ({ item, onClose }) => {
           <div> id - {item.id}</div>
           <div> price - ${item.price}</div>
         </main>
+
+        <button onClick={addButton} className="btn-primary">
+          Add
+        </button>
       </div>
     </div>
   );

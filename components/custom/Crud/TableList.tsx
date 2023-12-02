@@ -1,11 +1,13 @@
 "use client";
 import { RiSearch2Line } from "react-icons/ri";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import SearchPopup from "../Popup/SearchPopup";
+import { CartContext } from "@/app/contexts/CartContext";
 
 type Props = {};
 
 const TableList = (props: Props) => {
+  const { items } = useContext(CartContext);
   const [search, setSearch] = useState<null | string>(null);
   const handleSearchNull = () => {
     setSearch(null);
@@ -31,7 +33,7 @@ const TableList = (props: Props) => {
         </div>
       </div>
       <div className="table-fixed w-full rounded-lg h-min overflow-hidden">
-        <table className="table-auto w-full rounded-lg h-min overflow-hidden">
+        {/* <table className="table-auto w-full rounded-lg h-min overflow-hidden">
           <thead className="w-full text-white">
             <tr className="w-full">
               <th>Product Name</th>
@@ -113,7 +115,10 @@ const TableList = (props: Props) => {
               <td>$19.99</td>
             </tr>
           </tbody>
-        </table>
+        </table> */}
+        {items.map((data) => (
+          <div key={data.id}>{data.name}</div>
+        ))}
       </div>
     </div>
   );

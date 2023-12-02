@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Popup from "../Popup";
+import Popup from "../Popup/Popup";
 
 type Item = {
   id: number;
