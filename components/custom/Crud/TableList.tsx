@@ -33,7 +33,7 @@ const TableList = (props: Props) => {
         </div>
       </div>
       <div className="table-fixed w-full rounded-lg h-min overflow-hidden">
-        {/* <table className="table-auto w-full rounded-lg h-min overflow-hidden">
+        <table className="table-auto w-full rounded-lg h-min overflow-hidden">
           <thead className="w-full text-white">
             <tr className="w-full">
               <th>Product Name</th>
@@ -44,86 +44,17 @@ const TableList = (props: Props) => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>The Sliding </td>
-              <td>$5</td>
-              <td>$99.99</td>
-              <td>2</td>
-              <td>$199.98</td>
-            </tr>
-            <tr>
-              <td>Witchy Woman</td>
-              <td>$5</td>
-              <td>$19.99</td>
-              <td>3</td>
-              <td>$59.97</td>
-            </tr>
-            <tr>
-              <td>Shining Star</td>
-              <td>$5</td>
-              <td>$9.99</td>
-              <td>1</td>
-              <td>$9.99</td>
-            </tr>
-            <tr>
-              <td>Sneakers</td>
-              <td>$5</td>
-              <td>$59.99</td>
-              <td>1</td>
-              <td>$59.99</td>
-            </tr>
-            <tr>
-              <td>The Great Gatsby</td>
-              <td>$5</td>
-              <td>$12.99</td>
-              <td>2</td>
-              <td>$25.98</td>
-            </tr>
-            <tr>
-              <td>Smartphone</td>
-              <td>$5</td>
-              <td>$499.99</td>
-              <td>1</td>
-              <td>$499.99</td>
-            </tr>
-            <tr>
-              <td>Jeans</td>
-              <td>$5</td>
-              <td>$39.99</td>
-              <td>2</td>
-              <td>$79.98</td>
-            </tr>
-            <tr>
-              <td>To Kill a Mockingbird</td>
-              <td>$5</td>
-              <td>$14.99</td>
-              <td>1</td>
-              <td>$14.99</td>
-            </tr>
-            <tr>
-              <td>Headphones</td>
-              <td>$5</td>
-              <td>$79.99</td>
-              <td>1</td>
-              <td>$79.99</td>
-            </tr>
-            <tr>
-              <td>T-Shirt</td>
-              <td>$5</td>
-              <td>$19.99</td>
-              <td>1</td>
-              <td>$19.99</td>
-            </tr>
+            {items.map((data) => (
+              <tr key={data.id}>
+                <td>{data.name}</td>
+                <td>0</td>
+                <td>{data.price}</td>
+                <td>{data.qt}</td>
+                <td> {data.price * data.qt}</td>
+              </tr>
+            ))}
           </tbody>
-        </table> */}
-        {items.map((data) => (
-          <div key={data.id}>
-            {data.name}
-            {data.price}
-            {data.qt}
-            total Price : {data.price * data.qt}
-          </div>
-        ))}
+        </table>
       </div>
     </div>
   );

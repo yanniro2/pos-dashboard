@@ -55,7 +55,7 @@ const Quantity: React.FC<Props> = (props) => {
           id="value"
           value={value} // Use value instead of defaultValue
           onChange={handleChange}
-          className="w-min  overflow-y-auto pl-9 rounded"
+          className="w-min  overflow-y-auto pl-3 rounded "
         />
         <button onClick={handleClickAdd}>
           <MdAdd className="quantity-icon" />
