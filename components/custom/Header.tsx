@@ -10,7 +10,7 @@ import {
 } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { MdHome } from "react-icons/md";
-import HeaderPopup from "./Sub/HeaderPopup";
+import HeaderPopup from "./Popup/HeaderPopup";
 import { IoIosSettings } from "react-icons/io";
 import ThemePopup from "./Popup/ThemePopup";
 import { GoGear } from "react-icons/go";

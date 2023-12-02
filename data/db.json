@@ -201,19 +201,19 @@
       "items": [
         {
           "id": 301,
-          "title": "The Great Gatsby",
+          "name": "The Great Gatsby",
           "author": "F. Scott Fitzgerald",
           "price": 9.99
         },
         {
           "id": 302,
-          "title": "To Kill a Mockingbird",
+          "name": "To Kill a Mockingbird",
           "author": "Harper Lee",
           "price": 12.99
         },
         {
           "id": 303,
-          "title": "1984",
+          "name": "1984",
           "author": "George Orwell",
           "price": 14.99
         }

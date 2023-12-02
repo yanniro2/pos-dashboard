@@ -3,11 +3,11 @@
 import { IoClose } from "react-icons/io5";
 import React, { useContext } from "react";
 import { CartContext } from "@/app/contexts/CartContext";
+import Quantity from "../Sub/Quantity";
 
 type Item = {
   id: number;
-  name?: string;
-  title?: string;
+  name: string;
   price: number;
 };
 
@@ -26,8 +26,8 @@ const Popup: React.FC<PopupProps> = ({ item, onClose }) => {
   const addButton = () => {
     const newItem = {
       id: generateId(),
-      name: "Prpduct 1",
-      price: 1200,
+      name: item.name,
+      price: item.price,
     };
     addItems(newItem);
   };
@@ -39,9 +39,7 @@ const Popup: React.FC<PopupProps> = ({ item, onClose }) => {
         onClick={onClose}></div>
       <div className="bg-white  rounded-md z-[1005] w-1/2 h-1/2 dark:bg-gray-800">
         <header className="w-full border-b p-3 flex justify-between items-center dark:border-gray-500">
-          <h1 className="font-bold text-xl text-primary ">
-            {item.name || item.title}
-          </h1>
+          <h1 className="font-bold text-xl text-primary ">{item.name}</h1>
           <button
             onClick={onClose}
             className="bg-primary text-white p-1 rounded text-[1.5rem]">
@@ -51,11 +49,12 @@ const Popup: React.FC<PopupProps> = ({ item, onClose }) => {
         <main className="p-3 w-full flex flex-col">
           <div> id - {item.id}</div>
           <div> price - ${item.price}</div>
-        </main>
 
-        <button onClick={addButton} className="btn-primary">
-          Add
-        </button>
+          <button onClick={addButton} className="btn-primary">
+            Add
+          </button>
+          {/* <Quantity /> */}
+        </main>
       </div>
     </div>
   );

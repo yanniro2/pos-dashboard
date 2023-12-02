@@ -100,6 +100,10 @@ td {
   @apply text-[1.6rem] ;
 }
 
+.quantity-icon {
+  @apply text-white text-[1.5rem] mx-1;
+}
+
 
 
 .category-btn{
@@ -107,7 +111,7 @@ td {
 }
 
 .itemlist-btn {
-  @apply p-4 bg-white rounded-lg shadow-md hover:bg-gray-200 active:bg-gray-300 transition duration-300 flex justify-between dark:bg-gray-700 dark:hover:bg-gray-600 dark:active:bg-gray-500 ; 
+  @apply p-4 bg-white rounded-lg shadow-sm hover:shadow-xl   transition duration-300 flex justify-between dark:bg-gray-700 dark:hover:bg-gray-600  ; 
 }
 
 
@@ -145,6 +149,10 @@ td {
 
 .btn-primary {
   @apply bg-primary text-white px-6 py-3 w-max font-semibold rounded-lg mx-auto hover:bg-primary-foreground transition-all hover:text-primary drop-shadow-lg hover:bg-white;
+}
+
+.btn-quantity {
+  @apply  transition-all text-white;
 }
 
 /* Box */

@@ -117,7 +117,12 @@ const TableList = (props: Props) => {
           </tbody>
         </table> */}
         {items.map((data) => (
-          <div key={data.id}>{data.name}</div>
+          <div key={data.id}>
+            {data.name}
+            {data.price}
+            {data.qt}
+            total Price : {data.price * data.qt}
+          </div>
         ))}
       </div>
     </div>
