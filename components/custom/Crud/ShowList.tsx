@@ -31,6 +31,7 @@ const ShowList = () => {
           quantity={5}
           discount={100}
           subTotal={600}
+          tax={100}
           grandTotal={500}
         />
       </div>

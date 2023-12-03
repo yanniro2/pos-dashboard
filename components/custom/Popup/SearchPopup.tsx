@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Quantity from "../Sub/Quantity";
 
 type Props = {
-  items: Items[];
   search: string;
   handleSearchNull: () => void;
 };
@@ -18,11 +17,7 @@ type Category = {
   }[];
 };
 
-type Items = {
-  id: number;
-  name: string;
-  price: number;
-};
+
 const SearchPopup = (props: Props) => {
   const [data, setData] = useState<Category[] | null>(null);
 

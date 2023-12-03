@@ -48,9 +48,9 @@ const TableList = (props: Props) => {
               <tr key={data.id}>
                 <td>{data.name}</td>
                 <td>0</td>
-                <td>{data.price}</td>
+                <td>{data.price}$</td>
                 <td>{data.qt}</td>
-                <td> {data.price * data.qt}</td>
+                <td> {data.price * data.qt}$</td>
               </tr>
             ))}
           </tbody>

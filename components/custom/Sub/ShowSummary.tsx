@@ -5,6 +5,7 @@ type Props = {
   discount: number;
   subTotal: number;
   grandTotal: number;
+  tax: number;
 };
 
 const ShowSummary = (props: Props) => {
@@ -17,19 +18,27 @@ const ShowSummary = (props: Props) => {
         </div>
         <div className="w-full justify-between items-center bg-white  dark:bg-primary p-1 rounded-lg flex dark:text-white">
           <h1 className="text-primary dark:text-white">discount</h1>
-          <h1 className="price dark:text-white">-{props.discount}$</h1>
+          <h1 className="price dark:text-white">-{props.discount}</h1>
         </div>
-        <div className="w-full justify-between items-center bg-white  dark:bg-primary p-1 rounded-lg flex">
-          <h1 className="text-primary dark:text-white">sub total</h1>
-          <h1 className="price dark:text-white">{props.subTotal}$</h1>
+        <div className="w-full justify-between items-center bg-white  dark:bg-primary p-1 rounded-lg flex dark:text-white">
+          <h1 className="text-primary dark:text-white">tax</h1>
+          <h1 className="price dark:text-white">{props.tax}</h1>
         </div>
       </div>
 
-      <div className="w-full justify-between items-center bg-white  dark:bg-primary p-1 rounded-lg flex uppercase h-max">
-        <h1 className="text-primary dark:text-white font-bold ">Grand total</h1>
-        <h1 className="font-bold text-primary dark:text-white  ">
-          {props.grandTotal}$
-        </h1>
+      <div className="w-full justify-between items-center   dark:bg-primary rounded-lg flex uppercase flex-col gap-1">
+        <div className="w-full justify-between items-center border-white border text-white   dark:bg-primary py-2 px-1 rounded-lg flex font-bold uppercase">
+          <h1 className="text-white dark:text-white">sub total</h1>
+          <h1 className="text-white dark:text-white">{props.subTotal}</h1>
+        </div>
+        <div className="w-full justify-between items-center bg-white  dark:bg-primary py-2 px-1 rounded-lg flex font-bold uppercase">
+          <h1 className="text-primary dark:text-white font-bold ">
+            Grand total
+          </h1>
+          <h1 className="font-bold text-primary dark:text-white  ">
+            {props.grandTotal}$
+          </h1>
+        </div>
       </div>
     </div>
   );
