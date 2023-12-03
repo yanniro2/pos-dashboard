@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
-
+import Image from "next/image";
 type Props = {};
 export const metadata: Metadata = {
   title: "Login",
@@ -12,7 +12,10 @@ const page = (props: Props) => {
   return (
     <section className="w-screen h-screen flex justify-between relative dark:bg-gray-800">
       <div className="w-1/4 h-full bg-primary flex items-center justify-center rounded-r-lg drop-shadow">
-        <h1 className="text-4xl font-bold text-white ">lorem</h1>
+        <div className="flex flex-col justify-center items-center">
+          <Image src="/dummy-logo.png" width="500" height="50" alt="img logo" />
+          <h1 className="text-4xl font-bold text-white ">lorem</h1>
+        </div>
       </div>
       <div className="w-3/4 h-full bg-white flex items-center flex-col justify-center dark:bg-gray-800 ">
         <form
@@ -23,6 +26,18 @@ const page = (props: Props) => {
               Welcome to Lorem
             </span>
             <h1 className="text-4xl font-bold ">Login to your Account</h1>
+          </div>
+          <div className="label-box-1">
+            <label htmlFor="locationCode" className="label-1">
+              Location code
+            </label>
+            <input
+              type="text"
+              name="locationCode"
+              id="locationCode"
+              placeholder="Jaffna : 40000"
+              className="input-1"
+            />
           </div>
 
           <div className="label-box-1">
