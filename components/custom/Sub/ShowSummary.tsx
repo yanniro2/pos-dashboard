@@ -26,8 +26,8 @@ const ShowSummary = (props: Props) => {
         </div>
       </div>
 
-      <div className="w-full justify-between items-center   dark:bg-primary rounded-lg flex uppercase flex-col gap-1">
-        <div className="w-full justify-between items-center border-white border text-white   dark:bg-primary py-2 px-1 rounded-lg flex font-bold uppercase">
+      <div className="w-full justify-between items-center    rounded-lg flex uppercase flex-col gap-1">
+        <div className="w-full justify-between items-center border-white border text-white    py-2 px-1 rounded-lg flex font-bold uppercase dark:bg-black">
           <h1 className="text-white dark:text-white">sub total</h1>
           <h1 className="text-white dark:text-white">{props.subTotal}</h1>
         </div>
