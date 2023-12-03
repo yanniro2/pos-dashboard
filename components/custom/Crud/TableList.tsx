@@ -47,10 +47,10 @@ const TableList = (props: Props) => {
             {items.map((data) => (
               <tr key={data.id}>
                 <td>{data.name}</td>
-                <td>0</td>
-                <td>{data.price}$</td>
-                <td>{data.qt}</td>
-                <td> {data.price * data.qt}$</td>
+                <td className="text-center">0</td>
+                <td className="text-right">{data.price}$</td>
+                <td className="text-center">{data.qt}</td>
+                <td className="text-right"> {data.price * data.qt}$</td>
               </tr>
             ))}
           </tbody>
