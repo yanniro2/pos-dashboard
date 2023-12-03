@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require("tailwindcss/defaultTheme");
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -8,16 +7,8 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  safelist: [
-    "right-[8rem]",
-    "right-[6rem]",
-    "right-[2rem]",
-    "z-[1508]",
-    "z-[1506]",
-    "z-[1502]",
-    // Add other classes you want to include in the final CSS output
-  ],
   theme: {
+    fontFamily: { sans: ["Open Sans", "sans-serif"] },
     container: {
       center: true,
       padding: "2rem",
@@ -26,9 +17,6 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
