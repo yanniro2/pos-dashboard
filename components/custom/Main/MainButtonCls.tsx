@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
+import data from "../../../data/db.json";
 type ButtonsNumber = {
   id: string | number;
   label: string;
@@ -12,15 +13,17 @@ type ButtonsIcons = {
 };
 
 export default async function Page() {
-  const res_number = await fetch("http://localhost:4000/numberButtons", {
-    cache: "no-cache",
-  });
-  const buttons_number: ButtonsNumber[] = await res_number.json();
+  // const res_number = await fetch("http://localhost:4000/numberButtons", {
+  //   cache: "no-cache",
+  // });
+  // const buttons_number: ButtonsNumber[] = await res_number.json();
 
-  const res_icons = await fetch("http://localhost:4000/iconButtons", {
-    cache: "no-cache",
-  });
-  const buttons_icons: ButtonsIcons[] = await res_icons.json();
+  const buttons_number = data.numberButtons;
+  const buttons_icons = data.iconButtons;
+  // const res_icons = await fetch("http://localhost:4000/iconButtons", {
+  //   cache: "no-cache",
+  // });
+  // const buttons_icons: ButtonsIcons[] = await res_icons.json();
 
   const iconComponents: Record<
     string,

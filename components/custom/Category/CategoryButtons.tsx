@@ -7,7 +7,7 @@ export namespace CategoryButtonsTypes {
     id: number;
     name: string;
     icon: string;
-    color: string;
+    // color: string;
     items: {
       id: number;
       name: string;
@@ -17,7 +17,7 @@ export namespace CategoryButtonsTypes {
   };
 
   export type CategoryButtonsProps = {
-    categories: Category[] | null | undefined;
+    categories: Category[] | null;
     onSelectCategory: (category: Category) => void;
   };
 }

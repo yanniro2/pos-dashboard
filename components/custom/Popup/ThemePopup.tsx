@@ -31,6 +31,10 @@ const ThemePopup = (props: Props) => {
           <MdSettingsSystemDaydream />
           system
         </button>
+        <button onClick={() => setTheme("red")} className="theme-btn">
+          <MdSettingsSystemDaydream />
+          red
+        </button>
       </div>
     </div>
   );

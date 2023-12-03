@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from "react";
 import CategoryButtons from "../Category/CategoryButtons";
 import ItemList from "../Category/ItemList";
-
+import dataCategory from "../../../data/db.json";
 type Category = {
   id: number;
   name: string;
   icon: string;
-  color: string;
+  // color?: string;
   items: {
     id: number;
     name: string;
@@ -30,11 +30,12 @@ export default function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:4000/categories");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const result: Category[] = await response.json();
+        // const response = await fetch("http://localhost:4000/categories");
+        // if (!response.ok) {
+        //   throw new Error(`HTTP error! status: ${response.status}`);
+        // }
+        // const result: Category[] = await response.json();
+        const result: Category[] = dataCategory.categories;
 
         // Set the default selected category to the first category if available
         if (result.length > 0) {
