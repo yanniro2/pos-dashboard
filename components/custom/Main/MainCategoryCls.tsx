@@ -11,8 +11,8 @@ type Category = {
   color: string;
   items: {
     id: number;
-    name?: string;
-    title?: string;
+    name: string;
+    // title?: string;
     price: number;
   }[];
 };

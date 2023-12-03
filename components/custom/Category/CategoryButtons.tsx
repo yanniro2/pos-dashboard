@@ -3,15 +3,15 @@ import React from "react";
 import { FaLaptop, FaTshirt, FaBook } from "react-icons/fa";
 
 export namespace CategoryButtonsTypes {
-  export type Category = {
+  type Category = {
     id: number;
     name: string;
     icon: string;
     color: string;
     items: {
       id: number;
-      name?: string;
-      title?: string;
+      name: string;
+      // title?: string;
       price: number;
     }[];
   };

@@ -3,7 +3,7 @@
 import React, { useContext, useState } from "react";
 import Image from "next/image";
 import Popup from "../Popup/Popup";
-import { CartContext } from "@/app/contexts/CartContext";
+// import { CartContext } from "@/app/contexts/CartContext";
 import Quantity from "../Sub/Quantity";
 
 type Items = {
