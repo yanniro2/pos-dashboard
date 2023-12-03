@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import Quantity from "../Sub/Quantity";
 
 type Props = {
+  items: Items[];
   search: string;
   handleSearchNull: () => void;
 };
@@ -11,11 +13,15 @@ type Category = {
   color: string;
   items: {
     id: number;
-    name?: string;
-    title?: string;
-    author?: string;
+    name: string;
     price: number;
   }[];
+};
+
+type Items = {
+  id: number;
+  name: string;
+  price: number;
 };
 const SearchPopup = (props: Props) => {
   const [data, setData] = useState<Category[] | null>(null);
@@ -54,40 +60,42 @@ const SearchPopup = (props: Props) => {
                 ? datas.name.toLocaleLowerCase().includes(props.search)
                 : datas.items.some(
                     (item) =>
-                      (item.name &&
-                        item.name.toLocaleLowerCase().includes(props.search)) ||
-                      (item.title &&
-                        item.title
-                          .toLocaleLowerCase()
-                          .includes(props.search)) ||
-                      (item.author &&
-                        item.author.toLocaleLowerCase().includes(props.search))
+                      item.name &&
+                      item.name.toLocaleLowerCase().includes(props.search)
+                    // (item.title &&
+                    //   item.title
+                    //     .toLocaleLowerCase()
+                    //     .includes(props.search)) ||
+                    // (item.author &&
+                    //   item.author.toLocaleLowerCase().includes(props.search))
                   );
             })
             .map((datas) => (
               <div
                 key={datas.id}
                 className="w-full h-full p-3  flex border rounded-lg dark:border-primary ">
-                <div className="flex gap-1 p-3 font-semibold">
+                {/* <div className="flex gap-1 p-3 font-semibold">
                   <div>Id:{datas.id}</div>
                   <div>{datas.name}</div>
-                </div>
+                </div> */}
 
-                <div className=" w-full h-full overflow-y-auto content-start rounded-lg p-1 grid grid-cols-2 gap-1 ">
+                <div className=" w-full h-full overflow-y-auto content-start rounded-lg p-1 flex flex-col gap-1 ">
                   {datas.items.map((item) => (
                     <div
                       key={item.id}
-                      className="bg-primary text-white p-3 rounded-lg flex flex-col gap-3 w-auto h-full flex-wrap">
+                      className="bg-gray-100  p-3 rounded-lg flex flex-col gap-3 w-auto h-full flex-wrap border">
                       <div>{item.id}</div>
                       <div>
                         {item.name}
-                        {item.author} {item.title}
+                        {/* {item.author} {item.title} */}
                       </div>
                       <div>{item.price}</div>
 
-                      <button className="p-3 bg-white text-primary rounded-lg w-fit">
+                      {/* <button className="p-3 bg-white text-primary rounded-lg w-fit">
                         Add
-                      </button>
+                      </button> */}
+
+                      <Quantity item={item} />
                     </div>
                   ))}
                 </div>
