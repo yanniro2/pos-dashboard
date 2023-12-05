@@ -1,25 +1,14 @@
 "use client";
+
+import { CartItems } from "@/typings";
 import React, { createContext, useState, FC, ReactNode } from "react";
-
-// type Categorys = {
-//   id: number;
-//   name: string;
-//   items: Items[];
-// };
-
-type Items = {
-  id: number;
-  name: string;
-  price: number;
-  qt: number;
-};
 
 type CartContextType = {
   count: number;
-  items: Items[];
+  items: CartItems[];
   // Categorys: Categorys[];
   setCount: React.Dispatch<React.SetStateAction<number>>;
-  addItems: (item: Items) => void;
+  addItems: (item: CartItems) => void;
 };
 
 export const CartContext = createContext<CartContextType>({
@@ -32,9 +21,9 @@ export const CartContext = createContext<CartContextType>({
 
 export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [count, setCount] = useState<number>(0);
-  const [items, setItems] = useState<Items[]>([]);
+  const [items, setItems] = useState<CartItems[]>([]);
 
-  const addItems = (item: Items) => {
+  const addItems = (item: CartItems) => {
     // setItems((prev) => [...prev, item]);
 
     setItems((prev) => {

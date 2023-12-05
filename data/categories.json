@@ -1,0 +1,82 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "items": [
+        {
+          "id": 101,
+          "name": "Laptop",
+          "price": 999,
+          "availableStock": 100
+        },
+        {
+          "id": 102,
+          "name": "Smartphone",
+          "price": 499,
+          "availableStock": 50
+        },
+        {
+          "id": 103,
+          "name": "Headphones",
+          "price": 79,
+          "availableStock": 0
+        }
+      ],
+      "icon": "FaLaptop"
+    },
+    {
+      "id": 2,
+      "name": "Clothing",
+      "items": [
+        {
+          "id": 201,
+          "name": "T-Shirt",
+          "price": 19,
+          "availableStock": 50
+        },
+        {
+          "id": 202,
+          "name": "Jeans",
+          "price": 39,
+          "availableStock": 0
+        },
+        {
+          "id": 203,
+          "name": "Sneakers",
+          "price": 59,
+          "availableStock": 50
+        }
+      ],
+      "icon": "FaTshirt"
+    },
+    {
+      "id": 3,
+      "name": "Books",
+      "items": [
+        {
+          "id": 301,
+          "name": "The Great Gatsby",
+          "author": "F. Scott Fitzgerald",
+          "price": 9,
+          "availableStock": 10
+        },
+        {
+          "id": 302,
+          "name": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "price": 12,
+          "availableStock": 50
+        },
+        {
+          "id": 303,
+          "name": "1984",
+          "author": "George Orwell",
+          "price": 14,
+          "availableStock": 0
+        }
+      ],
+      "icon": "FaBook"
+    }
+  ]
+}

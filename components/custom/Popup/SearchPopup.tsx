@@ -1,22 +1,12 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import Quantity from "../Sub/Quantity";
-
+import dataCategory from "../../../data/db.json";
+import { Category } from "@/typings";
 type Props = {
   search: string;
   handleSearchNull: () => void;
 };
-type Category = {
-  id: number;
-  name: string;
-  icon: string;
-  color: string;
-  items: {
-    id: number;
-    name: string;
-    price: number;
-  }[];
-};
-
 
 const SearchPopup = (props: Props) => {
   const [data, setData] = useState<Category[] | null>(null);
@@ -24,12 +14,13 @@ const SearchPopup = (props: Props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:4000/categories");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const result: Category[] = await response.json();
+        // const response = await fetch("http://localhost:4000/categories");
+        // if (!response.ok) {
+        //   throw new Error(`HTTP error! status: ${response.status}`);
+        // }
+        // const result: Category[] = await response.json();
 
+        const result: Category[] = dataCategory.categories;
         // Set the default selected category to the first category if available
         setData(result);
       } catch (error) {

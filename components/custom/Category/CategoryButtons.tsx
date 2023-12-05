@@ -1,21 +1,9 @@
 // CategoryButtons.tsx
+import { Category } from "@/typings";
 import React from "react";
 import { FaLaptop, FaTshirt, FaBook } from "react-icons/fa";
 
 export namespace CategoryButtonsTypes {
-  type Category = {
-    id: number;
-    name: string;
-    icon: string;
-    // color: string;
-    items: {
-      id: number;
-      name: string;
-      // title?: string;
-      price: number;
-    }[];
-  };
-
   export type CategoryButtonsProps = {
     categories: Category[] | null;
     onSelectCategory: (category: Category) => void;

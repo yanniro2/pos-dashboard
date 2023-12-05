@@ -3,19 +3,9 @@
 import React, { useState, useEffect } from "react";
 import CategoryButtons from "../Category/CategoryButtons";
 import ItemList from "../Category/ItemList";
-import dataCategory from "../../../data/db.json";
-type Category = {
-  id: number;
-  name: string;
-  icon: string;
-  // color?: string;
-  items: {
-    id: number;
-    name: string;
-    // title?: string;
-    price: number;
-  }[];
-};
+import dataCategory from "../../../data/categories.json";
+import { Category } from "@/typings";
+import PopAndClick from "../Item/PopAndClick";
 
 export default function Page() {
   const [data, setData] = useState<Category[] | null>(null);
@@ -59,6 +49,7 @@ export default function Page() {
         onSelectCategory={handleSelectCategory}
       />
       {selectedCategory && <ItemList items={selectedCategory.items} />}
+      {/* {selectedCategory && <PopAndClick items={selectedCategory.items} />} */}
     </div>
   );
 }
