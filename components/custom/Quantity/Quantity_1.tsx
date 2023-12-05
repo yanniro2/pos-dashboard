@@ -12,6 +12,7 @@ const Quantity: React.FC<Props> = ({ item, value }) => {
   const { addItems, changeQuantity } = useContext(CartContext);
   const [quantity, setQuantity] = useState<number>(value);
   const id = item.id;
+  const stocks = item.availableStock;
 
   useEffect(() => {
     const newItem = {

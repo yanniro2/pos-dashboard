@@ -24,15 +24,19 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
   };
 
   const handleAdd = (item: Items) => {
-    const newItem = {
-      id: item.id,
-      name: item.name,
-      price: item.price,
-      qt: 1,
-      discount: item.discount,
-      availableStock: item.availableStock,
-    };
-    addItems(newItem);
+    if (item.availableStock > 0) {
+      const newItem = {
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        qt: 1,
+        discount: item.discount,
+        availableStock: item.availableStock,
+      };
+      addItems(newItem);
+    }
+    
+    
   };
 
   return (

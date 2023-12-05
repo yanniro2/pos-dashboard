@@ -44,7 +44,6 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
               </div>
 
               <div className="flex items-center gap-[1rem]">
-                {" "}
                 {item.availableStock > 0 ? (
                   <div className="flex items-center gap-2">
                     <div className="w-[1rem] h-[1rem] rounded-full bg-primary"></div>
