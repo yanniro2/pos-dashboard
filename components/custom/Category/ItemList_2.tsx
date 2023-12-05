@@ -85,11 +85,11 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
                 height="32"
                 alt="img items"
               />
-              <button
+              {/* <button
                 className="btn-primary z-20 absolute right-1"
                 onClick={() => handlePopup(item)}>
                 open
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

@@ -2,7 +2,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import CategoryButtons from "../Category/CategoryButtons";
-import ItemList from "../Category/ItemList_2";
+import ItemList_2 from "../Category/ItemList_2";
+import ItemList_1 from "../Category/ItemList_1";
 import dataCategory from "../../../data/categories.json";
 import { Category } from "@/typings";
 import PopAndClick from "../Item/PopAndClick";
@@ -48,8 +49,8 @@ export default function Page() {
         categories={data}
         onSelectCategory={handleSelectCategory}
       />
-      {/* {selectedCategory && <ItemList items={selectedCategory.items} />} */}
-      {selectedCategory && <ItemList items={selectedCategory.items} />}
+      {/* {selectedCategory && <ItemList_2 items={selectedCategory.items} />} */}
+      {selectedCategory && <ItemList_1 items={selectedCategory.items} />}
     </div>
   );
 }
