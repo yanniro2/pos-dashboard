@@ -49,8 +49,8 @@ export default function Page() {
         categories={data}
         onSelectCategory={handleSelectCategory}
       />
-      {/* {selectedCategory && <ItemList_2 items={selectedCategory.items} />} */}
-      {selectedCategory && <ItemList_1 items={selectedCategory.items} />}
+      {selectedCategory && <ItemList_2 items={selectedCategory.items} />}
+      {/* {selectedCategory && <ItemList_1 items={selectedCategory.items} />} */}
     </div>
   );
 }

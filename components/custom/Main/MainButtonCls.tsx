@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
 import data from "../../../data/db.json";
+import Calculate from "../Calculate";
 type ButtonsNumber = {
   id: string | number;
   label: string;
@@ -47,15 +48,8 @@ export default async function Page() {
           </button>
         ))}
       </div>
-      <div className="h-1/2 w-full flex flex-col flex-wrap dark:bg-gray-900 rounded-lg overflow-hidden gap-1">
-        {buttons_number.map((data) => (
-          <button
-            key={data.id}
-            className="bg-white hover:bg-primary hover:text-white grow drop-shadow text-[1.8rem] font-bold   transition active:bg-white basis-1/4 text-primary active:text-primary dark:bg-gray-800 dark:hover:bg-gray-700 dark:active:bg-gray-600 rounded-lg ">
-            {data.label}
-          </button>
-        ))}
-      </div>
+
+      <Calculate />
     </div>
   );
 }

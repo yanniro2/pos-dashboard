@@ -232,6 +232,10 @@ th {
   @apply  transition-all text-white;
 }
 
+.btn-number {
+  @apply bg-white hover:bg-primary hover:text-white grow drop-shadow text-[1.8rem] font-bold   transition active:bg-white basis-1/4 text-primary active:text-primary dark:bg-gray-800 dark:hover:bg-gray-700 dark:active:bg-gray-600 rounded-lg uppercase;
+}
+
 /* Box */
 .label-box-1 {
   @apply flex flex-col gap-1 w-full;

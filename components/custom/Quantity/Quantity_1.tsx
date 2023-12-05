@@ -39,16 +39,26 @@ const Quantity: React.FC<Props> = ({ item, value }) => {
   };
 
   return (
-    <div className="flex items-center">
-      <div className="flex items-center">
+    <div className=" w-[5rem] flex items-center justify-center">
+      <div className="flex items-center gap-2 justify-center w-full">
+        <button
+          onClick={() => setQuantity(quantity - 1)}
+          className="text-[1.2rem] text-primary">
+          -
+        </button>
         <input
-          type="number"
-          name="quantity"
+          type="text"
+          name="number"
           id="quantity"
           value={quantity}
           onChange={handleChange}
-          className="w-[4rem] rounded-lg px-2"
+          className="w-[3rem] rounded-lg px-2"
         />
+        <button
+          onClick={() => setQuantity(quantity + 1)}
+          className="text-[1.2rem] text-primary">
+          +
+        </button>
       </div>
     </div>
   );

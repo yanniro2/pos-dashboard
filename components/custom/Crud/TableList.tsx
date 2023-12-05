@@ -1,21 +1,31 @@
 "use client";
-import { RiSearch2Line } from "react-icons/ri";
 import React, { useContext, useState } from "react";
+import { RiSearch2Line } from "react-icons/ri";
+import { MdDeleteOutline } from "react-icons/md";
 import SearchPopup from "../Popup/SearchPopup";
 import { CartContext } from "@/app/contexts/CartContext";
 import Quantity from "../Quantity/Quantity_1";
-import { MdDeleteOutline } from "react-icons/md";
 
 type Props = {};
 
 const TableList = (props: Props) => {
   const { items, removeItem } = useContext(CartContext);
   const [search, setSearch] = useState<null | string>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5; // Adjust the number of items per page as needed
+
   const handleSearchNull = () => {
     setSearch(null);
   };
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
   return (
-    <div className="w-full p-1 h-2/3 bg-gray-100 rounded-lg border dark:bg-gray-900 flex flex-col gap-1 ">
+    <div className="w-full p-1 h-2/3 bg-gray-100 rounded-lg border dark:bg-gray-900 flex flex-col gap-1">
       <div className="flex relative items-center">
         <input
           type="search"
@@ -34,24 +44,26 @@ const TableList = (props: Props) => {
           )}
         </div>
       </div>
-      <div className="table-fixed w-full rounded-lg h-min overflow-hidden">
-        <table className="table-auto w-full rounded-lg h-min overflow-hidden">
+      <div className="table-fixed w-full rounded-lg h-full overflow-hidden">
+        <table className="table-auto w-full rounded-lg">
           <thead className="w-full text-white">
             <tr className="w-full">
               <th>Product Name</th>
-              <th>Discount</th>
               <th>U Price</th>
               <th>Qy</th>
               <th>Sub Total</th>
-              <th>utils</th>
+              <th>act</th>
             </tr>
           </thead>
-          <tbody>
-            {items.map((data) => (
+          <tbody className="h-40 overflow-auto">
+            {currentItems.map((data) => (
               <tr key={data.id}>
-                <td>{data.name}</td>
-                <td className="text-center">{data.discount}$</td>
-                <td className="text-right">{data.price}$</td>
+                <td className="text-ellipsis">
+                  {data.name.length > 50
+                    ? `${data.name.substring(0, 50)}...`
+                    : data.name}
+                </td>
+                <td className="text-left">{data.price}$</td>
                 <td className="text-center">
                   <Quantity item={data} value={data.qt} />
                 </td>
@@ -65,6 +77,32 @@ const TableList = (props: Props) => {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="px-2 flex justify-between w-full">
+        <button
+          onClick={() => setCurrentPage(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="text-gray-400 cursor-pointer font-bold">
+          Previous
+        </button>
+        <div className="flex items-center justify-center gap-3">
+          {Array.from({ length: Math.ceil(items.length / itemsPerPage) }).map(
+            (_, index) => (
+              <button
+                key={index}
+                onClick={() => paginate(index + 1)}
+                className={currentPage === index + 1 ? "active" : ""}>
+                {index + 1}
+              </button>
+            )
+          )}
+        </div>
+        <button
+          onClick={() => setCurrentPage(currentPage + 1)}
+          disabled={currentPage === Math.ceil(items.length / itemsPerPage)}
+          className=" px-2 py-1 rounded-lg font-bold text-primary cursor-pointer">
+          Next
+        </button>
       </div>
     </div>
   );
