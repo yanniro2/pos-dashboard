@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Quantity from "../Sub/Quantity";
-import dataCategory from "../../../data/db.json";
+import dataCategory from "../../../data/categories.json";
 import { Category } from "@/typings";
+import Quantity from "../Quantity/Quantity_2";
 type Props = {
   search: string;
   handleSearchNull: () => void;

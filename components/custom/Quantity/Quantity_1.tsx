@@ -9,8 +9,9 @@ type Props = {
 };
 
 const Quantity: React.FC<Props> = ({ item, value }) => {
-  const { addItems } = useContext(CartContext);
+  const { addItems, changeQuantity } = useContext(CartContext);
   const [quantity, setQuantity] = useState<number>(value);
+  const id = item.id;
 
   useEffect(() => {
     const newItem = {
@@ -21,15 +22,16 @@ const Quantity: React.FC<Props> = ({ item, value }) => {
       availableStock: item.availableStock,
       qt: quantity,
     };
-
     if (quantity > 0) {
-      addItems(newItem);
+      changeQuantity(id, quantity);
     } else {
       alert("Quantity not be Zero!");
+
       setQuantity(1);
+      addItems(newItem);
       console.error("Value should not be zero");
     }
-  }, [quantity, item, addItems]);
+  }, [quantity, item, addItems, changeQuantity, id]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newQuantity = parseInt(event.target.value, 10) || 1;

@@ -4,7 +4,7 @@ import React, { useContext, useState } from "react";
 import Image from "next/image";
 import Popup from "../Popup/Popup";
 // import { CartContext } from "@/app/contexts/CartContext";
-import Quantity from "../Sub/Quantity";
+
 import { Items } from "@/typings";
 
 type ItemListProps = {
@@ -78,8 +78,6 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
               />
             </div>
           </div>
-
-          {/* <Quantity item={item} /> */}
         </div>
       ))}
       {selectedItem && <Popup item={selectedItem} onClose={handleClosePopup} />}

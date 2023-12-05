@@ -9,6 +9,8 @@ type CartContextType = {
   setCount: React.Dispatch<React.SetStateAction<number>>;
   addItems: (item: CartItems) => void;
   removeItem: (itemId: number) => void;
+  changeQuantity: (itemId: number, newQuantity: number) => void;
+  getItemById: (itemId: number) => CartItems | undefined;
 };
 
 export const CartContext = createContext<CartContextType>({
@@ -17,6 +19,8 @@ export const CartContext = createContext<CartContextType>({
   items: [],
   addItems: () => {},
   removeItem: () => {},
+  changeQuantity: () => {},
+  getItemById: () => undefined,
 });
 
 export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
@@ -49,6 +53,17 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const removeItem = (itemId: number) => {
     setItems((prev) => prev.filter((item) => item.id !== itemId));
   };
+
+  const changeQuantity = (itemId: number, newQuantity: number) => {
+    setItems((prev) =>
+      prev.map((item) =>
+        item.id === itemId ? { ...item, qt: newQuantity } : item
+      )
+    );
+  };
+  const getItemById = (itemId: number) => {
+    return items.find((item) => item.id === itemId);
+  };
   return (
     <CartContext.Provider
       value={{
@@ -57,6 +72,8 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
         items,
         addItems,
         removeItem,
+        changeQuantity,
+        getItemById,
       }}>
       {children}
     </CartContext.Provider>

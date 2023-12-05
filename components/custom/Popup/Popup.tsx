@@ -3,8 +3,9 @@
 import { IoClose } from "react-icons/io5";
 import React, { useContext } from "react";
 import { CartContext } from "@/app/contexts/CartContext";
-import Quantity from "../Sub/Quantity";
+
 import { Items } from "@/typings";
+import Quantity from "../Quantity/Quantity_2";
 
 type PopupProps = {
   item: Items;
