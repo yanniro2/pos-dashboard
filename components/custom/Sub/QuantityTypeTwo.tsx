@@ -1,16 +1,11 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "@/app/contexts/CartContext";
+import { Items } from "@/typings";
 
 type Props = {
   item: Items;
   value: number;
-};
-
-type Items = {
-  id: number;
-  name: string;
-  price: number;
 };
 
 const QuantityTypeTwo: React.FC<Props> = ({ item, value }) => {
@@ -22,6 +17,7 @@ const QuantityTypeTwo: React.FC<Props> = ({ item, value }) => {
       id: item.id,
       name: item.name,
       price: item.price,
+      discount: item.discount,
       qt: quantity,
     };
 

@@ -6,9 +6,9 @@ import React, { createContext, useState, FC, ReactNode } from "react";
 type CartContextType = {
   count: number;
   items: CartItems[];
-  // Categorys: Categorys[];
   setCount: React.Dispatch<React.SetStateAction<number>>;
   addItems: (item: CartItems) => void;
+  removeItem: (itemId: number) => void;
 };
 
 export const CartContext = createContext<CartContextType>({
@@ -16,7 +16,7 @@ export const CartContext = createContext<CartContextType>({
   setCount: () => {},
   items: [],
   addItems: () => {},
-  // Categorys: [],
+  removeItem: () => {},
 });
 
 export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
@@ -46,6 +46,9 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
     });
   };
 
+  const removeItem = (itemId: number) => {
+    setItems((prev) => prev.filter((item) => item.id !== itemId));
+  };
   return (
     <CartContext.Provider
       value={{
@@ -53,7 +56,7 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
         setCount,
         items,
         addItems,
-        // Category,
+        removeItem,
       }}>
       {children}
     </CartContext.Provider>

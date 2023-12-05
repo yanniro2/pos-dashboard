@@ -3,13 +3,13 @@ import { RiSearch2Line } from "react-icons/ri";
 import React, { useContext, useState } from "react";
 import SearchPopup from "../Popup/SearchPopup";
 import { CartContext } from "@/app/contexts/CartContext";
-import Quantity from "../Sub/Quantity";
 import QuantityTypeTwo from "../Sub/QuantityTypeTwo";
+import { MdDeleteOutline } from "react-icons/md";
 
 type Props = {};
 
 const TableList = (props: Props) => {
-  const { items } = useContext(CartContext);
+  const { items, removeItem } = useContext(CartContext);
   const [search, setSearch] = useState<null | string>(null);
   const handleSearchNull = () => {
     setSearch(null);
@@ -43,6 +43,7 @@ const TableList = (props: Props) => {
               <th>U Price</th>
               <th>Qy</th>
               <th>Sub Total</th>
+              <th>utils</th>
             </tr>
           </thead>
           <tbody>
@@ -56,6 +57,11 @@ const TableList = (props: Props) => {
                   <QuantityTypeTwo item={data} value={data.qt} />
                 </td>
                 <td className="text-right"> {data.price * data.qt}$</td>
+                <td className="text-center">
+                  <button onClick={() => removeItem(data.id)}>
+                    <MdDeleteOutline className="text-primary font-bold text-[1.4rem]" />
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

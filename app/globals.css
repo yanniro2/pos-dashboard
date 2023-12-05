@@ -143,6 +143,10 @@ td {
   @apply p-1;
 }
 
+th {
+  @apply capitalize;
+}
+
 
 }
 
