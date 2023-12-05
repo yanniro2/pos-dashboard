@@ -8,7 +8,7 @@ type Props = {
   value: number;
 };
 
-const QuantityTypeTwo: React.FC<Props> = ({ item, value }) => {
+const Quantity: React.FC<Props> = ({ item, value }) => {
   const { addItems } = useContext(CartContext);
   const [quantity, setQuantity] = useState<number>(value);
 
@@ -18,6 +18,7 @@ const QuantityTypeTwo: React.FC<Props> = ({ item, value }) => {
       name: item.name,
       price: item.price,
       discount: item.discount,
+      availableStock: item.availableStock,
       qt: quantity,
     };
 
@@ -51,4 +52,4 @@ const QuantityTypeTwo: React.FC<Props> = ({ item, value }) => {
   );
 };
 
-export default QuantityTypeTwo;
+export default Quantity;

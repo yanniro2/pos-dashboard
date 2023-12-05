@@ -3,7 +3,7 @@ import { RiSearch2Line } from "react-icons/ri";
 import React, { useContext, useState } from "react";
 import SearchPopup from "../Popup/SearchPopup";
 import { CartContext } from "@/app/contexts/CartContext";
-import QuantityTypeTwo from "../Sub/QuantityTypeTwo";
+import Quantity from "../Quantity/Quantity_1";
 import { MdDeleteOutline } from "react-icons/md";
 
 type Props = {};
@@ -53,8 +53,7 @@ const TableList = (props: Props) => {
                 <td className="text-center">{data.discount}$</td>
                 <td className="text-right">{data.price}$</td>
                 <td className="text-center">
-                  {/* {data.qt} */}
-                  <QuantityTypeTwo item={data} value={data.qt} />
+                  <Quantity item={data} value={data.qt} />
                 </td>
                 <td className="text-right"> {data.price * data.qt}$</td>
                 <td className="text-center">
