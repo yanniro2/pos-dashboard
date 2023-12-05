@@ -4,15 +4,10 @@ import { IoClose } from "react-icons/io5";
 import React, { useContext } from "react";
 import { CartContext } from "@/app/contexts/CartContext";
 import Quantity from "../Sub/Quantity";
-
-type Item = {
-  id: number;
-  name: string;
-  price: number;
-};
+import { Items } from "@/typings";
 
 type PopupProps = {
-  item: Item;
+  item: Items;
   onClose: () => void;
 };
 
@@ -34,6 +29,8 @@ const Popup: React.FC<PopupProps> = ({ item, onClose }) => {
         <main className="p-3 w-full flex flex-col">
           <div> id - {item.id}</div>
           <div> price - ${item.price}</div>
+          <div>discount- ${item.discount}</div>
+          <div>availableStock - {item.availableStock}</div>
 
           {/* <button onClick={addButton} className="btn-primary">
             Add

@@ -1,14 +1,9 @@
 import { CartContext } from "@/app/contexts/CartContext";
+import { Items } from "@/typings";
 import React, { useContext, useState } from "react";
 import { MdAdd, MdRemove } from "react-icons/md";
 type Props = {
   item: Items;
-};
-
-type Items = {
-  id: number;
-  name: string;
-  price: number;
 };
 
 const Quantity: React.FC<Props> = (props) => {
@@ -18,6 +13,7 @@ const Quantity: React.FC<Props> = (props) => {
       name: props.item.name,
       price: props.item.price,
       qt: value,
+      discount: props.item.discount,
     };
     if (value > 0) {
       addItems(newItem);

@@ -49,7 +49,7 @@ const TableList = (props: Props) => {
             {items.map((data) => (
               <tr key={data.id}>
                 <td>{data.name}</td>
-                <td className="text-center">0$</td>
+                <td className="text-center">{data.discount}$</td>
                 <td className="text-right">{data.price}$</td>
                 <td className="text-center">
                   {/* {data.qt} */}

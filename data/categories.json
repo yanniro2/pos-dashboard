@@ -8,18 +8,21 @@
           "id": 101,
           "name": "Laptop",
           "price": 999,
+          "discount": 10,
           "availableStock": 100
         },
         {
           "id": 102,
           "name": "Smartphone",
           "price": 499,
+          "discount": 5,
           "availableStock": 50
         },
         {
           "id": 103,
           "name": "Headphones",
           "price": 79,
+          "discount": 0,
           "availableStock": 0
         }
       ],
@@ -33,18 +36,21 @@
           "id": 201,
           "name": "T-Shirt",
           "price": 19,
+          "discount": 2,
           "availableStock": 50
         },
         {
           "id": 202,
           "name": "Jeans",
           "price": 39,
+          "discount": 4,
           "availableStock": 0
         },
         {
           "id": 203,
           "name": "Sneakers",
           "price": 59,
+          "discount": 5,
           "availableStock": 50
         }
       ],
@@ -59,6 +65,7 @@
           "name": "The Great Gatsby",
           "author": "F. Scott Fitzgerald",
           "price": 9,
+          "discount": 3,
           "availableStock": 10
         },
         {
@@ -66,6 +73,7 @@
           "name": "To Kill a Mockingbird",
           "author": "Harper Lee",
           "price": 12,
+          "discount": 5,
           "availableStock": 50
         },
         {
@@ -73,6 +81,7 @@
           "name": "1984",
           "author": "George Orwell",
           "price": 14,
+          "discount": 1,
           "availableStock": 0
         }
       ],

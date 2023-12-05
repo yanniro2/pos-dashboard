@@ -32,7 +32,17 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
           <div className="flex justify-between w-full">
             <div className="text-left w-full ">
               <h1 className="font-bold z-5 ">{item.name}</h1>
-              <h3 className="price z-5">${item.price}</h3>
+              <div className="flex items-start flex-col">
+                <div className="flex items-center gap-3">
+                  <h2 className="capitalize font-semibold">unit price</h2>
+                  <h3 className="price z-5">${item.price}</h3>
+                </div>
+                <div className="flex items-center gap-3">
+                  <h2 className="capitalize font-semibold">unit discount</h2>
+                  <h3 className="price z-5">${item.discount}</h3>
+                </div>
+              </div>
+
               <div className="flex items-center gap-[1rem]">
                 {" "}
                 {item.availableStock > 0 ? (
