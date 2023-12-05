@@ -31,7 +31,7 @@ const ShowSummary = (props: Props) => {
           <h1 className="text-white dark:text-white">sub total</h1>
           <h1 className="text-white dark:text-white">{props.subTotal}</h1>
         </div>
-        <div className="w-full justify-between items-center bg-white  dark:bg-primary py-2 px-1 rounded-lg flex font-bold uppercase">
+        <div className="w-full justify-between items-center bg-white  dark:bg-primary py-4 px-1 rounded-lg flex font-bold uppercase">
           <h1 className="text-primary dark:text-white font-bold ">
             Grand total
           </h1>

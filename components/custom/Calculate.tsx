@@ -43,7 +43,7 @@ const Calculator: React.FC = () => {
           {number}
         </button>
       ))}
-      {[4, 5, 6, "÷"].map((number) => (
+      {[4, 5, 6, "-"].map((number) => (
         <button
           key={number}
           // onClick={() => handleNumberButtonClick(number)}
@@ -59,7 +59,7 @@ const Calculator: React.FC = () => {
           {number}
         </button>
       ))}
-      {[0, "00", ".", "="].map((item) => (
+      {[0, "00", ".", "enter"].map((item) => (
         <button
           key={item === "=" ? "equal" : item}
           // onClick={() =>

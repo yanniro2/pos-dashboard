@@ -40,22 +40,26 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
   };
 
   return (
-    <div className="w-2/3 h-full bg-gray-100 border rounded-lg p-1 flex flex-col overflow-y-auto content-start dark:bg-gray-900  gap-2">
+    <div className="w-2/3 h-full bg-gray-100 border rounded-lg p-1 flex-col overflow-y-auto content-start dark:bg-gray-900  gap-2 grid grid-cols-2">
       {items.map((item) => (
         <div
           key={item.id}
           className="itemlist-btn relative flex-col gap-[1rem]">
           <div className="flex justify-between w-full">
             <div className="text-left w-full ">
-              <h1 className="font-bold z-5 ">{item.name}</h1>
+              <div className="flex items-start gap-3 flex-col">
+                <h1 className="font-bold z-5 ">{item.name}</h1>
+                <h1 className="font-semibold">SKU - {item.id}</h1>
+              </div>
+
               <div className="flex items-start flex-col">
                 <div className="flex items-center gap-3">
-                  <h2 className="capitalize font-semibold">unit price</h2>
+                  {/* <h2 className="capitalize font-semibold">unit price</h2> */}
                   <h3 className="price z-5">${item.price}</h3>
                 </div>
                 <div className="flex items-center gap-3">
-                  <h2 className="capitalize font-semibold">unit discount</h2>
-                  <h3 className="price z-5">${item.discount}</h3>
+                  {/* <h2 className="capitalize font-semibold">unit discount</h2> */}
+                  {/* <h3 className="price z-5">${item.discount}</h3> */}
                 </div>
               </div>
 
@@ -63,16 +67,16 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
                 {" "}
                 {item.availableStock > 0 ? (
                   <div className="flex items-center gap-2">
-                    <div className="w-[1rem] h-[1rem] rounded-full bg-primary"></div>
-                    <h3 className="text-primary font-semibold">
-                      Available Stocks - {item.availableStock}
+                    <div className="w-[1rem] h-[1rem] rounded-full bg-green-500"></div>
+                    <h3 className="text-green-500 font-semibold">
+                      A/S - {item.availableStock}
                     </h3>
                   </div>
                 ) : (
                   <div className="flex items-center gap-2">
                     <div className="w-[1rem] h-[1rem] rounded-full bg-gray-100"></div>
                     <h3 className="text-gray-700 font-semibold">
-                      Available Stocks - {item.availableStock}
+                      A/S - {item.availableStock}
                     </h3>
                   </div>
                 )}
