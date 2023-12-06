@@ -44,7 +44,9 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.id}
-          className="itemlist-btn relative flex-col gap-[1rem]">
+          className={`p-4  rounded-lg shadow-sm hover:shadow-xl   transition duration-300 flex justify-between dark:bg-gray-700 dark:hover:bg-gray-600 relative flex-col gap-[1rem]  ${
+            item.availableStock > 0 ? "bg-white" : "bg-gray-200 "
+          }`}>
           <div className="flex justify-between w-full">
             <div className="text-left w-full ">
               <div className="flex items-start gap-3 flex-col">
@@ -73,11 +75,8 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
                     </h3>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-2">
-                    <div className="w-[1rem] h-[1rem] rounded-full border-primary border"></div>
-                    <h3 className=" text-gray-400 font-semibold">
-                      A/S - {item.availableStock}
-                    </h3>
+                  <div className="flex items-center gap-2 text-primary capitalize font-semibold">
+                    stock not available
                   </div>
                 )}
               </div>

@@ -28,7 +28,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.id}
-          className="itemlist-btn relative flex-col gap-[1rem]">
+          className="itemlist-btn relative flex-col gap-[1rem] ">
           <div className="flex justify-between w-full">
             <div className="text-left w-full ">
               <h1 className="font-bold z-5 ">{item.name}</h1>
