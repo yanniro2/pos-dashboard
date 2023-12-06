@@ -21,3 +21,9 @@ export type CartItems = {
   discount: number;
   availableStock: number;
 };
+
+export interface NavLink {
+  label: string;
+  url: string;
+  children?: NavLink[];
+}

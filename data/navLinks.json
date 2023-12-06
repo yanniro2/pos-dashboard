@@ -1,0 +1,38 @@
+[
+  {
+    "label": "Home",
+    "url": "/"
+  },
+  {
+    "label": "About",
+    "url": "/about",
+    "children": [
+      {
+        "label": "Mission",
+        "url": "/about/mission"
+      },
+      {
+        "label": "Team",
+        "url": "/about/team"
+      }
+    ]
+  },
+  {
+    "label": "Services",
+    "url": "/services",
+    "children": [
+      {
+        "label": "Web Development",
+        "url": "/services/web-development"
+      },
+      {
+        "label": "Graphic Design",
+        "url": "/services/graphic-design"
+      }
+    ]
+  },
+  {
+    "label": "Contact",
+    "url": "/contact"
+  }
+]
