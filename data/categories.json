@@ -24,6 +24,55 @@
           "price": 79,
           "discount": 0,
           "availableStock": 0
+        },
+        {
+          "id": 104,
+          "name": "Tablet",
+          "price": 299,
+          "discount": 8,
+          "availableStock": 30
+        },
+        {
+          "id": 105,
+          "name": "Smartwatch",
+          "price": 149,
+          "discount": 3,
+          "availableStock": 20
+        },
+        {
+          "id": 106,
+          "name": "Bluetooth Speaker",
+          "price": 49,
+          "discount": 0,
+          "availableStock": 15
+        },
+        {
+          "id": 107,
+          "name": "Gaming Laptop",
+          "price": 1499,
+          "discount": 12,
+          "availableStock": 10
+        },
+        {
+          "id": 108,
+          "name": "Camera",
+          "price": 399,
+          "discount": 6,
+          "availableStock": 25
+        },
+        {
+          "id": 109,
+          "name": "Wireless Earbuds",
+          "price": 69,
+          "discount": 2,
+          "availableStock": 40
+        },
+        {
+          "id": 110,
+          "name": "4K TV",
+          "price": 799,
+          "discount": 15,
+          "availableStock": 5
         }
       ],
       "icon": "FaLaptop"
@@ -52,6 +101,55 @@
           "price": 59,
           "discount": 5,
           "availableStock": 50
+        },
+        {
+          "id": 204,
+          "name": "Hoodie",
+          "price": 49,
+          "discount": 3,
+          "availableStock": 30
+        },
+        {
+          "id": 205,
+          "name": "Dress Shirt",
+          "price": 29,
+          "discount": 1,
+          "availableStock": 40
+        },
+        {
+          "id": 206,
+          "name": "Skirt",
+          "price": 34,
+          "discount": 2,
+          "availableStock": 20
+        },
+        {
+          "id": 207,
+          "name": "Jacket",
+          "price": 79,
+          "discount": 10,
+          "availableStock": 15
+        },
+        {
+          "id": 208,
+          "name": "Shorts",
+          "price": 24,
+          "discount": 0,
+          "availableStock": 25
+        },
+        {
+          "id": 209,
+          "name": "Sweater",
+          "price": 54,
+          "discount": 6,
+          "availableStock": 10
+        },
+        {
+          "id": 210,
+          "name": "Cap",
+          "price": 14,
+          "discount": 1,
+          "availableStock": 35
         }
       ],
       "icon": "FaTshirt"
@@ -83,6 +181,62 @@
           "price": 14,
           "discount": 1,
           "availableStock": 0
+        },
+        {
+          "id": 304,
+          "name": "Harry Potter and the Sorcerer's Stone",
+          "author": "J.K. Rowling",
+          "price": 11,
+          "discount": 2,
+          "availableStock": 25
+        },
+        {
+          "id": 305,
+          "name": "The Catcher in the Rye",
+          "author": "J.D. Salinger",
+          "price": 10,
+          "discount": 4,
+          "availableStock": 30
+        },
+        {
+          "id": 306,
+          "name": "The Lord of the Rings",
+          "author": "J.R.R. Tolkien",
+          "price": 18,
+          "discount": 6,
+          "availableStock": 15
+        },
+        {
+          "id": 307,
+          "name": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "price": 13,
+          "discount": 3,
+          "availableStock": 20
+        },
+        {
+          "id": 308,
+          "name": "The Hobbit",
+          "author": "J.R.R. Tolkien",
+          "price": 16,
+          "discount": 1,
+          "availableStock": 10
+        },
+        {
+          "id": 309,
+          "name": "The Hunger Games",
+          "author": "Suzanne Collins",
+          "price": 15,
+          "discount": 5,
+          "availableStock": 40
+        },
+        {
+          "id": 310,
+          "name": "Brave New World",
+          "author": "Aldous Huxley",
+          "price": 17,
+          "discount": 2,
+          "availableStock": 5
         }
       ],
       "icon": "FaBook"

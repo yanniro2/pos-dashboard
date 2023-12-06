@@ -19,9 +19,9 @@ const Header = () => {
   const pathName = usePathname();
   const links = [
     { label: "home", href: "/supermarket", icon: "MdHome" },
-    { label: "settings", href: "/settings", icon: "IoIosSettings" },
-    { label: "link2", href: "/supermarket/link2", icon: "IoIosSettings" },
-    { label: "link3", href: "/supermarket/link3", icon: "IoIosSettings" },
+    // { label: "settings", href: "/settings", icon: "IoIosSettings" },
+    // { label: "link2", href: "/supermarket/link2", icon: "IoIosSettings" },
+    // { label: "link3", href: "/supermarket/link3", icon: "IoIosSettings" },
   ];
 
   const [activePopup, setActivePopup] = useState("");
@@ -88,9 +88,9 @@ const Header = () => {
             </li>
             <li>|</li>
             <li className="flex items-center justify-center">
-              <button>
+              <Link href={"/settings/link1"}>
                 <GoGear className="icon-outline" />
-              </button>
+              </Link>
             </li>
           </ul>
         </div>

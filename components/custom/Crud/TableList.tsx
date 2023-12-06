@@ -11,18 +11,18 @@ type Props = {};
 const TableList = (props: Props) => {
   const { items, removeItem } = useContext(CartContext);
   const [search, setSearch] = useState<null | string>(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5; // Adjust the number of items per page as needed
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const itemsPerPage = 5; // Adjust the number of items per page as needed
 
   const handleSearchNull = () => {
     setSearch(null);
   };
 
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+  // const indexOfLastItem = currentPage * itemsPerPage;
+  // const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  // const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
 
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+  // const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
     <div className="w-full p-1 h-2/3 bg-gray-100 rounded-lg border dark:bg-gray-900 flex flex-col gap-1">
@@ -44,7 +44,7 @@ const TableList = (props: Props) => {
           )}
         </div>
       </div>
-      <div className="table-fixed w-full rounded-lg h-full overflow-hidden">
+      <div className="table-fixed w-full rounded-lg h-full overflow-x-auto">
         <table className="table-auto w-full rounded-lg">
           <thead className="w-full text-white">
             <tr className="w-full">
@@ -55,8 +55,8 @@ const TableList = (props: Props) => {
               <th>act</th>
             </tr>
           </thead>
-          <tbody className="h-40 overflow-auto">
-            {currentItems.map((data) => (
+          <tbody className="h-60 overflow-x-auto">
+            {items.map((data) => (
               <tr key={data.id}>
                 <td className="text-ellipsis">
                   {data.name.length > 50
@@ -78,7 +78,7 @@ const TableList = (props: Props) => {
           </tbody>
         </table>
       </div>
-      <div className="px-2 flex justify-between w-full">
+      {/* <div className="px-2 flex justify-between w-full">
         <button
           onClick={() => setCurrentPage(currentPage - 1)}
           disabled={currentPage === 1}
@@ -103,7 +103,7 @@ const TableList = (props: Props) => {
           className=" px-2 py-1 rounded-lg font-bold text-primary cursor-pointer">
           Next
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
