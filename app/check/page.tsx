@@ -1,15 +1,15 @@
-// App.tsx
-import React from "react";
-import Navigation from "./Navigation";
-import navLinks from "../../data/navLinks.json";
+// pages/index.tsx
 
-const App: React.FC = () => {
+import data from "../../data/navLinks.json";
+import Navbar from "./Navbar";
+
+const Home: React.FC = () => {
   return (
     <div>
-      <h1>My Website</h1>
-      <Navigation navLinks={navLinks} />
+      <h1>Your App</h1>
+      <Navbar data={data} />
     </div>
   );
 };
 
-export default App;
+export default Home;

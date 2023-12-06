@@ -1,38 +1,105 @@
 [
   {
-    "label": "Home",
-    "url": "/"
+    "href": "/settings/dashboard",
+    "label": "dashboard",
+    "icon": "dashboard-icon"
   },
   {
-    "label": "About",
-    "url": "/about",
-    "children": [
+    "href": "/settings/product",
+    "label": "product",
+    "icon": "product-icon",
+    "subLinks": [
       {
-        "label": "Mission",
-        "url": "/about/mission"
+        "id": "1",
+        "href": "product1",
+        "icon": "icon1",
+        "label": "product1"
       },
       {
-        "label": "Team",
-        "url": "/about/team"
+        "id": "2",
+        "href": "product2",
+        "icon": "icon2",
+        "label": "product2"
+      },
+      {
+        "id": "3",
+        "href": "product3",
+        "icon": "icon3",
+        "label": "product3"
+      },
+      {
+        "id": "4",
+        "href": "product4",
+        "icon": "icon4",
+        "label": "product4"
       }
     ]
   },
   {
-    "label": "Services",
-    "url": "/services",
-    "children": [
+    "href": "/settings/link3",
+    "label": "Setting 3",
+    "icon": "setting3-icon"
+  },
+  {
+    "href": "/settings/link4",
+    "label": "Setting 4",
+    "icon": "setting4-icon",
+    "subLinks": [
       {
-        "label": "Web Development",
-        "url": "/services/web-development"
+        "id": "1",
+        "href": "product1",
+        "icon": "icon1",
+        "label": "product1"
       },
       {
-        "label": "Graphic Design",
-        "url": "/services/graphic-design"
+        "id": "2",
+        "href": "product2",
+        "icon": "icon2",
+        "label": "product2"
+      },
+      {
+        "id": "3",
+        "href": "product3",
+        "icon": "icon3",
+        "label": "product3"
+      },
+      {
+        "id": "4",
+        "href": "product4",
+        "icon": "icon4",
+        "label": "product4"
       }
     ]
   },
   {
-    "label": "Contact",
-    "url": "/contact"
+    "href": "/settings/link5",
+    "label": "Setting 5",
+    "icon": "setting5-icon",
+    "subLinks": [
+      {
+        "id": "1",
+        "href": "product1",
+        "icon": "icon1",
+        "label": "product1"
+      },
+      {
+        "id": "2",
+        "href": "product2",
+        "icon": "icon2",
+        "label": "product2"
+      },
+      {
+        "id": "3",
+        "href": "product3",
+        "icon": "icon3",
+        "label": "product3"
+      },
+      {
+        "id": "4",
+        "href": "product4",
+        "icon": "icon4",
+        "label": "product4"
+      }
+    ]
   }
 ]

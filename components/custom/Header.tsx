@@ -88,7 +88,7 @@ const Header = () => {
             </li>
             <li>|</li>
             <li className="flex items-center justify-center">
-              <Link href={"/settings/link1"}>
+              <Link href={"/settings/dashboard"}>
                 <GoGear className="icon-outline" />
               </Link>
             </li>
