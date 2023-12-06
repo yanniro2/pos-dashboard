@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import dataCategory from "../../../data/categories.json";
 import { Category } from "@/typings";
-import Quantity from "../Quantity/Quantity_2";
+import Quantity from "../Quantity/Quantity_3";
 type Props = {
   search: string;
   handleSearchNull: () => void;
@@ -39,15 +39,16 @@ const SearchPopup = (props: Props) => {
       <div className="drop-shadow-lg overflow-x-auto flex flex-col pb-[10rem] dark:bg-gray-800 bg-white top-[7.5rem] absolute left-1 rounded-lg p-3 w-1/3 h-screen z-[1600] gap-3">
         <div>to search values are &quot;{props.search}&quot;</div>
 
-        <div className="flex flex-col gap-1 items-start">
+        <div className="gap-1 items-start grid grid-cols-2 grid-rows-2">
           {data
             ?.filter((datas) => {
               return props.search.toLocaleLowerCase() === ""
                 ? datas.name.toLocaleLowerCase().includes(props.search)
                 : datas.items.some(
                     (item) =>
-                      item.name &&
-                      item.name.toLocaleLowerCase().includes(props.search)
+                      (item.name &&
+                        item.name.toLocaleLowerCase().includes(props.search)) ||
+                      (item.id && item.id.toString().includes(props.search))
                     // (item.title &&
                     //   item.title
                     //     .toLocaleLowerCase()
@@ -59,29 +60,33 @@ const SearchPopup = (props: Props) => {
             .map((datas) => (
               <div
                 key={datas.id}
-                className="w-full h-full p-3  flex border rounded-lg dark:border-primary ">
+                className="w-full h-full   flex  rounded-lg dark:border-primary  ">
                 {/* <div className="flex gap-1 p-3 font-semibold">
                   <div>Id:{datas.id}</div>
                   <div>{datas.name}</div>
                 </div> */}
 
-                <div className=" w-full h-full overflow-y-auto content-start rounded-lg p-1 flex flex-col gap-1 ">
+                <div className=" w-full h-full overflow-y-auto content-start rounded-lg flex flex-col gap-1 ">
                   {datas.items.map((item) => (
                     <div
                       key={item.id}
-                      className="bg-gray-100  p-3 rounded-lg flex flex-col gap-3 w-auto h-full flex-wrap border">
-                      <div>{item.id}</div>
-                      <div>
-                        {item.name}
-                        {/* {item.author} {item.title} */}
+                      className={` p-3 rounded-lg flex flex-col gap-3 w-auto h-full flex-wrap border drop-shadow ${
+                        item.availableStock > 0
+                          ? "bg-white cursor-pointer"
+                          : "bg-gray-100 cursor-not-allowed"
+                      }`}>
+                      <div className="flex items-center gap-3">
+                        <div>{item.id}</div>
+                        <div className="price">{item.name}</div>
                       </div>
-                      <div>{item.price}</div>
 
-                      {/* <button className="p-3 bg-white text-primary rounded-lg w-fit">
-                        Add
-                      </button> */}
+                      <div className="price">${item.price}</div>
 
-                      <Quantity item={item} />
+                      {item.availableStock > 0 ? (
+                        <Quantity item={item} />
+                      ) : (
+                        <div className="font-bold">Stock not available</div>
+                      )}
                     </div>
                   ))}
                 </div>
