@@ -67,15 +67,15 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
                 {" "}
                 {item.availableStock > 0 ? (
                   <div className="flex items-center gap-2">
-                    <div className="w-[1rem] h-[1rem] rounded-full bg-green-500"></div>
-                    <h3 className="text-green-500 font-semibold">
+                    <div className="w-[1rem] h-[1rem] rounded-full bg-primary"></div>
+                    <h3 className="text-primary font-semibold">
                       A/S - {item.availableStock}
                     </h3>
                   </div>
                 ) : (
                   <div className="flex items-center gap-2">
-                    <div className="w-[1rem] h-[1rem] rounded-full bg-gray-100"></div>
-                    <h3 className="text-gray-700 font-semibold">
+                    <div className="w-[1rem] h-[1rem] rounded-full border-primary border"></div>
+                    <h3 className=" text-gray-400 font-semibold">
                       A/S - {item.availableStock}
                     </h3>
                   </div>
