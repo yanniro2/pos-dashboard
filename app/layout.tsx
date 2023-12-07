@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/custom/Theme/theme-provider";
-
+import Footer from "@/components/custom/Footer";
+import { CartProvider } from "./contexts/CartContext";
+import Header from "@/components/custom/Header";
 
 // export const fontSans = FontSans({
 //   subsets: ["latin"],
@@ -25,13 +27,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased  "
-          // fontSans.variable
-        )}>
+      <body className="w-screen h-screen flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="system" themes={["red"]}>
-          {children}
+          <CartProvider>
+            <Header />
+            {children}
+            <Footer />
+          </CartProvider>
         </ThemeProvider>
       </body>
     </html>

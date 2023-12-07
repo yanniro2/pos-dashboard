@@ -9,19 +9,25 @@ import {
   IoPersonOutline,
 } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { MdHome } from "react-icons/md";
+import {
+  MdHome,
+  MdInsertChartOutlined,
+  MdOutlineInventory2,
+  MdPersonOutline,
+  MdOutlineReportProblem,
+} from "react-icons/md";
 import HeaderPopup from "./Popup/HeaderPopup";
-import { IoIosSettings } from "react-icons/io";
 import ThemePopup from "./Popup/ThemePopup";
 import { GoGear } from "react-icons/go";
 
 const Header = () => {
   const pathName = usePathname();
   const links = [
-    { label: "home", href: "/supermarket", icon: "MdHome" },
-    // { label: "settings", href: "/settings", icon: "IoIosSettings" },
-    // { label: "link2", href: "/supermarket/link2", icon: "IoIosSettings" },
-    // { label: "link3", href: "/supermarket/link3", icon: "IoIosSettings" },
+    { label: "home", href: "/", icon: "MdHome" },
+    { label: "sales", href: "/sales", icon: "MdInsertChartOutlined" },
+    { label: "inventory", href: "/inventory", icon: "MdOutlineInventory2" },
+    { label: "customers", href: "/customers", icon: "MdPersonOutline" },
+    { label: "reports", href: "/reports", icon: "MdOutlineReportProblem" },
   ];
 
   const [activePopup, setActivePopup] = useState("");
@@ -32,7 +38,10 @@ const Header = () => {
 
   const iconComponents: { [key: string]: React.ElementType } = {
     MdHome,
-    IoIosSettings,
+    MdInsertChartOutlined,
+    MdOutlineInventory2,
+    MdPersonOutline,
+    MdOutlineReportProblem,
 
     // Add more icon components as needed
   };
@@ -44,7 +53,8 @@ const Header = () => {
           <div className="flex items-center gap-[1rem]">
             <Link href="/supermarket" className="flex items-center gap-3">
               <IoLogoBitbucket className="text-[2rem] hover:text-primary transition-all text-primary" />
-              logo
+
+              <h3 className="font-bold uppercase text-primary"> Pos System</h3>
             </Link>
             <ul className="flex items-center gap-5 justify-center pl-[5rem]">
               {links.map((link) => {
