@@ -152,6 +152,9 @@ th {
 
 /* Custom Style */
 
+.default-page {
+  @apply w-full h-full flex items-center justify-center;
+}
 
 /* Icons */
 .icon {

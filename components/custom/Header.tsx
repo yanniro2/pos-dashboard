@@ -23,7 +23,7 @@ import { GoGear } from "react-icons/go";
 const Header = () => {
   const pathName = usePathname();
   const links = [
-    { label: "home", href: "/", icon: "MdHome" },
+    { label: "home", href: "/home", icon: "MdHome" },
     { label: "sales", href: "/sales", icon: "MdInsertChartOutlined" },
     { label: "inventory", href: "/inventory", icon: "MdOutlineInventory2" },
     { label: "customers", href: "/customers", icon: "MdPersonOutline" },

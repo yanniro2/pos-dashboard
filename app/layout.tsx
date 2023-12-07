@@ -7,15 +7,11 @@ import Footer from "@/components/custom/Footer";
 import { CartProvider } from "./contexts/CartContext";
 import Header from "@/components/custom/Header";
 
-// export const fontSans = FontSans({
-//   subsets: ["latin"],
-//   variable: "--font-sans",
-// });
 
 export const metadata: Metadata = {
   title: {
     default: "Dashboard",
-    template: "%s | Supermarket",
+    template: "%s | Pos System",
   },
   description: "Created By Niroyan",
 };
