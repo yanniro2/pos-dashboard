@@ -7,12 +7,10 @@ export default function RootLayout({
 }>) {
   return (
     <div
-      className="w-screen h-screen flex flex-col justify-between"
+      className="w-screen h-screen flex  justify-between"
       suppressHydrationWarning>
-      <div className="w-full h-full  flex  justify-between">
-        <Navbar />
-        {children}
-      </div>
+      <Navbar />
+      {children}
     </div>
   );
 }

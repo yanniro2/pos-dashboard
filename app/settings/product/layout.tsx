@@ -6,8 +6,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <section className="w-screen h-screen flex items-center justify-between flex-col">
+    <section className="w-full h-[85vh]  overflow-x-auto flex items-center justify-between flex-col">
       <Header />
+
       {children}
     </section>
   );
