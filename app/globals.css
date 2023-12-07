@@ -204,7 +204,7 @@
   }
 
   tbody > tr {
-  @apply  odd:bg-primary-foreground even:bg-white w-full rounded-lg overflow-hidden dark:even:bg-gray-800 dark:odd:bg-card p-1;
+  @apply  odd:bg-destructive-foreground even:bg-white w-full rounded-lg overflow-hidden dark:even:bg-gray-800 dark:odd:bg-card p-1;
 }
 
 td {
