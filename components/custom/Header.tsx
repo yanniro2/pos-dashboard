@@ -50,7 +50,7 @@ const Header = () => {
       <nav className="w-full h-min bg-white text-black relative dark:bg-gray-800 dark:text-white">
         <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-b-bGray">
           <div className="flex items-center gap-[1rem]">
-            <Link href="/supermarket" className="flex items-center gap-3">
+            <Link href="/home" className="flex items-center gap-3">
               <IoLogoBitbucket className="text-[2rem] hover:text-primary transition-all text-primary" />
 
               <h3 className="font-bold uppercase text-primary"> Pos System</h3>
