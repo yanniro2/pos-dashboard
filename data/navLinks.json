@@ -47,27 +47,27 @@
     "subLinks": [
       {
         "id": "1",
-        "href": "product1",
+        "href": "link1",
         "icon": "icon1",
-        "label": "product1"
+        "label": "link1"
       },
       {
         "id": "2",
-        "href": "product2",
+        "href": "link2",
         "icon": "icon2",
-        "label": "product2"
+        "label": "link2"
       },
       {
         "id": "3",
-        "href": "product3",
+        "href": "link3",
         "icon": "icon3",
-        "label": "product3"
+        "label": "link3"
       },
       {
         "id": "4",
-        "href": "product4",
+        "href": "link4",
         "icon": "icon4",
-        "label": "product4"
+        "label": "link4"
       }
     ]
   },
