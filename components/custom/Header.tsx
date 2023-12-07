@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaRegBell, FaRegUser } from "react-icons/fa";
 import {
   IoLogoBitbucket,
   IoColorPaletteOutline,
@@ -98,7 +97,11 @@ const Header = () => {
             </li>
             <li>|</li>
             <li className="flex items-center justify-center">
-              <Link href={"/settings/dashboard"}>
+              <Link
+                href={"/settings/dashboard"}
+                className={`${
+                  pathName === "/settings/dashboard" ? "text-primary" : ""
+                }`}>
                 <GoGear className="icon-outline" />
               </Link>
             </li>
