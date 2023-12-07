@@ -3,6 +3,7 @@ import {
   MdOutlineLightMode,
   MdNightlightRound,
   MdSettingsSystemDaydream,
+  MdDoneAll,
 } from "react-icons/md";
 import { useTheme } from "next-themes";
 type Props = {
@@ -47,16 +48,24 @@ const ThemePopup = (props: Props) => {
         <div className="flex items-center justify-center w-full gap-3 p-1">
           <button
             className="w-[1rem] h-[1rem] bg-red-500 rounded-full"
-            onClick={() => setTheme("red")}></button>
+            onClick={() => setTheme("red")}>
+            {theme === "red" && <MdDoneAll className="text-white" />}
+          </button>
           <button
             className="w-[1rem] h-[1rem] bg-blue-500 rounded-full"
-            onClick={() => setTheme("blue")}></button>
+            onClick={() => setTheme("blue")}>
+            {theme === "blue" && <MdDoneAll className="text-white" />}
+          </button>
           <button
             className="w-[1rem] h-[1rem] bg-green-500 rounded-full"
-            onClick={() => setTheme("green")}></button>
+            onClick={() => setTheme("green")}>
+            {theme === "green" && <MdDoneAll className="text-white" />}
+          </button>
           <button
             className="w-[1rem] h-[1rem] bg-orange-500 rounded-full"
-            onClick={() => setTheme("orange")}></button>
+            onClick={() => setTheme("orange")}>
+            {theme === "orange" && <MdDoneAll className="text-white" />}
+          </button>
         </div>
       </div>
     </div>
