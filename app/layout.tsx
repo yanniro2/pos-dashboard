@@ -24,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="w-screen h-screen flex flex-col">
-        <ThemeProvider attribute="class" defaultTheme="system" themes={["red"]}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          themes={["red", "blue", "green", "orange", "dark", "light"]}>
           <CartProvider>
             <Header />
             {children}
