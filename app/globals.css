@@ -228,6 +228,10 @@ th {
   @apply bg-primary text-white px-6 py-3 w-max font-semibold rounded-lg mx-auto hover:bg-primary-foreground transition-all hover:text-primary drop-shadow-lg hover:bg-white;
 }
 
+.btn-primary-1 {
+  @apply bg-primary text-white block px-6 py-3 rounded-lg drop-shadow font-semibold capitalize cursor-pointer hover:text-primary hover:bg-white transition-all hover:underline hover:drop-shadow-lg;
+}
+
 .btn-quantity {
   @apply  transition-all text-white;
 }
@@ -245,10 +249,14 @@ th {
   @apply flex gap-1 w-fit;
 }
 
+.form-box-half {
+@apply w-1/2 flex flex-col gap-[1rem];
+}
+
 
 /* Label */
 .label-1 {
-  @apply font-medium;
+  @apply font-medium capitalize;
 }
 
 
@@ -256,3 +264,4 @@ th {
 .input-1 {
   @apply border rounded-lg p-3 outline-primary dark:bg-gray-700;
 }
+
