@@ -6,7 +6,7 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="w-[95%] h-full flex items-center justify-between flex-col">
+    <div className="w-[95%] h-screen flex items-center justify-between flex-col overflow-scroll ">
       <main className=" bg-white p-5 rounded-lg w-full h-full  drop-shadow-lg ">
         <div className="grid grid-cols-2 items-start gap-[1rem]">
           <InputLabel label="name" id="name" placeholder="Enter name product" />

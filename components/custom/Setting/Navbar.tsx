@@ -10,7 +10,7 @@ const Navbar = (props: Props) => {
   const currentRoute = usePathname();
 
   return (
-    <div className="w-1/4 h-full flex flex-col gap-1 drop-shadow rounded-lg  border shadow-md">
+    <div className="w-1/4 h-full grid grid-cols-2 gap-1 drop-shadow rounded-lg  border shadow-md ">
       {navLinks.map(({ href, label }) => (
         <Link
           key={label}

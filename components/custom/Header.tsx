@@ -21,6 +21,7 @@ import { GoGear } from "react-icons/go";
 
 const Header = () => {
   const pathName = usePathname();
+  const setting = pathName.startsWith("/settings");
   const links = [
     { label: "home", href: "/home", icon: "MdHome" },
     { label: "sales", href: "/sales", icon: "MdInsertChartOutlined" },
@@ -99,9 +100,7 @@ const Header = () => {
             <li className="flex items-center justify-center">
               <Link
                 href={"/settings/dashboard"}
-                className={`${
-                  pathName === "/settings/dashboard" ? "text-primary" : ""
-                }`}>
+                className={`${setting ? "text-primary" : ""}`}>
                 <GoGear className="icon-outline" />
               </Link>
             </li>

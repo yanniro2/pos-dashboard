@@ -292,11 +292,11 @@ th {
 }
 
 .nav-link {
-  @apply flex items-center gap-[1rem] pl-[1rem] p-3 bg-white rounded-lg hover:bg-gray-100 transition-all font-semibold active:bg-gray-200 capitalize;
+  @apply flex items-center justify-center gap-[1rem] pl-[1rem] p-3 bg-white rounded-lg hover:bg-gray-100 transition-all font-semibold active:bg-gray-200 capitalize flex-col;
 }
 
 .nav-link-active{
-  @apply flex items-center gap-[1rem] pl-[1rem] p-3 bg-primary rounded-lg hover:bg-gray-100 transition-all font-semibold text-white capitalize;
+  @apply flex items-center gap-[1rem] pl-[1rem] p-3 bg-primary rounded-lg hover:bg-gray-100 transition-all font-semibold text-white capitalize justify-center flex-col;
 }
 
 .btn-primary {
