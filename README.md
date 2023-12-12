@@ -4,7 +4,7 @@ Welcome to the POS Dashboard App! This project is a dynamic Point of Sale dashbo
 
 ## Project Samples
 
-![Project Sample video](/images/video.mov)
+[![Demo Video](images/video.mov)](images/video.mov)
 
 ![Project Sample image 1](/images/image%201.png)
 ![Project Sample image 2](/images/image%202.png)
@@ -38,4 +38,4 @@ To get started with this project, follow these steps:
 
 2. View Live:
    ```sh
-   https://epos-beta.vercel.app/
+   https://dashboard-khaki-psi-27.vercel.app/
