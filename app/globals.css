@@ -11,8 +11,9 @@
 @layer base {
 
   .red-light {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: #ffffff;
+    --foreground: #1a1a1a;
+
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
@@ -34,7 +35,9 @@
   }
  
   .red-dark {
-    --background: 20 14.3% 4.1%;
+    --background: 17 24 39;
+
+
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
@@ -57,7 +60,8 @@
 
   .blue-light {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 31 41 55;
+
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
@@ -79,7 +83,8 @@
   }
  
   .blue-dark {
-    --background: 222.2 84% 4.9%;
+    --background: 17 24 39;
+
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -102,6 +107,8 @@
 
   .green-light {
     --background: 0 0% 100%;
+    --foreground: 31 41 55;
+
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -124,7 +131,8 @@
   }
  
   .green-dark {
-    --background: 20 14.3% 4.1%;
+    --background: 17 24 39;
+
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
@@ -147,6 +155,8 @@
 
   .orange-light {
     --background: 0 0% 100%;
+    --foreground: 31 41 55;
+
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;
@@ -169,7 +179,8 @@
   }
  
   .orange-dark {
-    --background: 20 14.3% 4.1%;
+    --background: 17 24 39;
+
     --foreground: 60 9.1% 97.8%;
     --card: 20 14.3% 4.1%;
     --card-foreground: 60 9.1% 97.8%;
