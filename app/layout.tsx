@@ -27,7 +27,16 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
-          themes={["red", "blue", "green", "orange", "dark", "light"]}>
+          themes={[
+            "red-light",
+            "red-dark",
+            "blue-light",
+            "blue-dark",
+            "green-light",
+            "green-dark",
+            "orange-light",
+            "orange-dark",
+          ]}>
           <CartProvider>
             <Header />
             {children}

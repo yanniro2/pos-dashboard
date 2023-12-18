@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: false,
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  safelist: ["bg-red-500", "bg-blue-500", "bg-green-500", "bg-orange-500"],
   theme: {
     fontFamily: { sans: ["Open Sans", "sans-serif"] },
     container: {

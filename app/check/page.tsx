@@ -1,15 +1,13 @@
-// pages/index.tsx
+import React from "react";
 
-import data from "../../data/navLinks.json";
-import Navbar from "./Navbar";
+type Props = {};
 
-const Home: React.FC = () => {
+const page = (props: Props) => {
   return (
-    <div>
-      <h1>Your App</h1>
-      <Navbar data={data} />
-    </div>
+    <section className="w-screen h-screen flex items-center justify-center">
+      <h1 className="text-primary">Check page</h1>
+    </section>
   );
 };
 
-export default Home;
+export default page;

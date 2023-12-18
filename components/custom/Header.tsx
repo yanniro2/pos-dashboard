@@ -48,7 +48,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="w-full h-min bg-white text-black relative dark:bg-gray-800 dark:text-white">
+      <nav className="w-full h-min  text-black relative bg-background">
         <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-b-bGray">
           <div className="flex items-center gap-[1rem]">
             <Link href="/home" className="flex items-center gap-3">
