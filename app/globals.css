@@ -3,247 +3,27 @@
 @tailwind components;
 @tailwind utilities;
  
-
-
-
-
-
-@layer base {
-
+@layer base  {
   .red-light {
-    --background: #ffffff; /* White */
-    --foreground: #1a1a1a; /* Black */
+    --color-text-base :#4f46e5;
+  }
 
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 240 10% 3.9%; /* Dark Gray */
-    --popover: 0 0% 100%; /* White */
-    --popover-foreground: 240 10% 3.9%; /* Dark Gray */
-    --primary: 346.8 77.2% 49.8%; /* Burgundy */
-    --primary-foreground: 355.7 100% 97.3%; /* Light Burgundy */
-    --secondary: 240 4.8% 95.9%; /* Light Gray */
-    --secondary-foreground: 240 5.9% 10%; /* Dark Gray */
-    --muted: 240 4.8% 95.9%; /* Light Gray */
-    --muted-foreground: 240 3.8% 46.1%; /* Medium Gray */
-    --accent: 240 4.8% 95.9%; /* Light Gray */
-    --accent-foreground: 240 5.9% 10%; /* Dark Gray */
-    --destructive: 0 84.2% 60.2%; /* Dark Red */
-    --destructive-foreground: 0 0% 98%; /* White */
-    --border: 240 5.9% 90%; /* Light Gray */
-    --input: 240 5.9% 90%; /* Light Gray */
-    --ring: 346.8 77.2% 49.8%; /* Burgundy */
-    --radius: 0.5rem; /* 0.5rem */
-}
-
-.red-dark {
-    --background: 17 24 39; /* Dark Blue */
-
-    --foreground: 0 0% 95%; /* Light Gray */
-    --card: 24 9.8% 10%; /* Very Dark Blue */
-    --card-foreground: 0 0% 95%; /* Light Gray */
-    --popover: 0 0% 9%; /* Very Dark Gray */
-    --popover-foreground: 0 0% 95%; /* Light Gray */
-    --primary: 346.8 77.2% 49.8%; /* Burgundy */
-    --primary-foreground: 355.7 100% 97.3%; /* Light Burgundy */
-    --secondary: 240 3.7% 15.9%; /* Dark Gray-Blue */
-    --secondary-foreground: 0 0% 98%; /* White */
-    --muted: 0 0% 15%; /* Very Dark Gray */
-    --muted-foreground: 240 5% 64.9%; /* Medium Gray */
-    --accent: 12 6.5% 15.1%; /* Dark Teal */
-    --accent-foreground: 0 0% 98%; /* White */
-    --destructive: 0 62.8% 30.6%; /* Dark Orange */
-    --destructive-foreground: 0 85.7% 97.3%; /* Light Orange */
-    --border: 240 3.7% 15.9%; /* Dark Gray-Blue */
-    --input: 240 3.7% 15.9%; /* Dark Gray-Blue */
-    --ring: 346.8 77.2% 49.8%; /* Burgundy */
-      --radius: 0.5rem; /* 0.5rem */
+  .red-dark {
+    --color-text-base :#c00a3e;
+  }
 }
 
 
-  .blue-light {
-    --background: 0 0% 100%;
-    --foreground: 31 41 55;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
-      --radius: 0.5rem; /* 0.5rem */
-  }
- 
-  .blue-dark {
-    --background: 17 24 39;
-
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
-      --radius: 0.5rem; /* 0.5rem */
-  }
-
-  .green-light {
-    --background: 0 0% 100%;
-    --foreground: 31 41 55;
-
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 142.1 76.2% 36.3%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 142.1 76.2% 36.3%;
-    --radius: 0.5rem;
-      --radius: 0.5rem; /* 0.5rem */
-  }
- 
-  .green-dark {
-    --background: 17 24 39;
-
-    --foreground: 0 0% 95%;
-    --card: 24 9.8% 10%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 142.1 70.6% 45.3%;
-    --primary-foreground: 144.9 80.4% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 142.4 71.8% 29.2%;
-      --radius: 0.5rem; /* 0.5rem */
-  }
-
-  .orange-light {
-    --background: 0 0% 100%;
-    --foreground: 31 41 55;
-
-    --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 24.6 95% 53.1%;
-    --primary-foreground: 60 9.1% 97.8%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 24.6 95% 53.1%;
-    --radius: 0.5rem;
-      --radius: 0.5rem; /* 0.5rem */
-  }
- 
-  .orange-dark {
-    --background: 17 24 39;
-
-    --foreground: 60 9.1% 97.8%;
-    --card: 20 14.3% 4.1%;
-    --card-foreground: 60 9.1% 97.8%;
-    --popover: 20 14.3% 4.1%;
-    --popover-foreground: 60 9.1% 97.8%;
-    --primary: 20.5 90.2% 48.2%;
-    --primary-foreground: 60 9.1% 97.8%;
-    --secondary: 12 6.5% 15.1%;
-    --secondary-foreground: 60 9.1% 97.8%;
-    --muted: 12 6.5% 15.1%;
-    --muted-foreground: 24 5.4% 63.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 60 9.1% 97.8%;
-    --destructive: 0 72.2% 50.6%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 12 6.5% 15.1%;
-    --input: 12 6.5% 15.1%;
-    --ring: 20.5 90.2% 48.2%;
-      --radius: 0.5rem; /* 0.5rem */
-  }
-
-  
-}
 
 
 
  
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground ;
-  }
-  thead > tr {
-    @apply bg-primary;
-  }
 
-  tbody > tr {
-  @apply  odd:bg-destructive-foreground even:bg-white w-full rounded-lg overflow-hidden dark:even:bg-gray-800 dark:odd:bg-card p-1;
-}
-
-td {
-  @apply p-1;
-}
-
-th {
-  @apply capitalize;
-}
-
-
-}
 
 /* Custom Style */
 
 .default-page {
-  @apply w-full h-full flex items-center justify-center;
+  @apply w-full h-full flex items-center justify-center  text-skin-base  ;
 }
 
 /* Icons */
@@ -277,11 +57,11 @@ th {
 
 
 .category-btn{
-  @apply p-3 bg-primary text-white w-full  flex items-center gap-[1rem] rounded-lg drop-shadow hover:bg-secondary active:bg-secondary transition hover:text-primary ;
+  @apply p-3  text-white w-full  flex items-center gap-[1rem] rounded-lg drop-shadow transition  ;
 }
 
 .itemlist-btn {
-  @apply p-4 bg-white rounded-lg shadow-sm hover:shadow-xl   transition duration-300 flex justify-between dark:bg-gray-700 dark:hover:bg-gray-600  ; 
+  @apply p-4 bg-white rounded-lg shadow-sm hover:shadow-xl   transition duration-300 flex justify-between   ; 
 }
 
 
@@ -292,41 +72,41 @@ th {
 }
 
 .price {
-  @apply font-medium text-primary;
+  @apply font-medium ;
 }
 
 .active {
-  @apply text-primary font-bold text-[1.5rem];
+  @apply  font-bold text-[1.5rem];
 }
 
 .not-active {
-  @apply font-normal hover:text-primary hover:font-bold hover:text-[1.5rem] transition-all;
+  @apply font-normal  hover:font-bold hover:text-[1.5rem] transition-all;
 }
 
 /* Buttons */
 
 .theme-btn {
-  @apply flex items-center gap-[1rem] hover:bg-primary p-3 rounded-lg pl-[1rem] transition-all hover:text-white w-full ;
+  @apply flex items-center gap-[1rem]  p-3 rounded-lg pl-[1rem] transition-all hover:text-white w-full ;
 }
 
 .theme-icon {
-  @apply p-3 flex items-center justify-center border rounded-lg cursor-pointer hover:bg-primary hover:text-white transition-all;
+  @apply p-3 flex items-center justify-center border rounded-lg cursor-pointer hover:text-white transition-all;
 }
 
 .nav-link {
-  @apply flex items-center justify-center gap-[1rem] pl-[1rem] p-3 bg-white rounded-lg hover:bg-gray-100 transition-all font-semibold active:bg-gray-200 capitalize flex-col hover:text-primary;
+  @apply flex items-center justify-center gap-[1rem] pl-[1rem] p-3 bg-white rounded-lg hover:bg-gray-100 transition-all font-semibold active:bg-gray-200 capitalize flex-col ;
 }
 
 .nav-link-active{
-  @apply flex items-center gap-[1rem] pl-[1rem] p-3 bg-primary rounded-lg hover:bg-gray-100 transition-all font-semibold text-white capitalize justify-center flex-col hover:text-primary;
+  @apply flex items-center gap-[1rem] pl-[1rem] p-3  rounded-lg hover:bg-gray-100 transition-all font-semibold text-white capitalize justify-center flex-col ;
 }
 
 .btn-primary {
-  @apply bg-primary text-white px-6 py-3 w-max font-semibold rounded-lg mx-auto hover:bg-primary-foreground transition-all hover:text-primary drop-shadow-lg hover:bg-white;
+  @apply  text-white px-6 py-3 w-max font-semibold rounded-lg mx-auto  transition-all  drop-shadow-lg hover:bg-white;
 }
 
 .btn-primary-1 {
-  @apply bg-primary text-white block px-6 py-3 rounded-lg drop-shadow font-semibold capitalize cursor-pointer hover:text-primary hover:bg-white transition-all hover:underline hover:drop-shadow-lg;
+  @apply  text-white block px-6 py-3 rounded-lg drop-shadow font-semibold capitalize cursor-pointer  hover:bg-white transition-all hover:underline hover:drop-shadow-lg;
 }
 
 .btn-quantity {
@@ -334,7 +114,7 @@ th {
 }
 
 .btn-number {
-  @apply bg-white hover:bg-primary hover:text-white grow drop-shadow text-[1.8rem] font-bold   transition active:bg-white basis-1/4 text-primary active:text-primary dark:bg-gray-800 dark:hover:bg-gray-700 dark:active:bg-gray-600 rounded-lg uppercase;
+  @apply bg-white  hover:text-white grow drop-shadow text-[1.8rem] font-bold   transition active:bg-white basis-1/4   rounded-lg uppercase;
 }
 
 /* Box */
@@ -359,6 +139,6 @@ th {
 
 /* Input */
 .input-1 {
-  @apply border rounded-lg p-3 outline-primary dark:bg-gray-700;
+  @apply border rounded-lg p-3  ;
 }
 

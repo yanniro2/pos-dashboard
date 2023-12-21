@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 export default async function Page() {
   return (
     <div className="w-full flex h-full overflow-hidden">
-      <div className="w-1/3 h-full bg-gary-100">
+      <div className="w-1/3 h-full ">
         <MainCrudCls />
       </div>
-      <div className="w-1/3 h-full bg-gray-50">
+      <div className="w-1/3 h-full ">
         <MainCategoryCls />
       </div>
-      <div className="w-1/3 h-full bg-slate-200">
+      <div className="w-1/3 h-full ">
         <MainButtonCls />
       </div>
     </div>

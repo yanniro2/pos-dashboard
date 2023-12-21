@@ -33,7 +33,7 @@ const ThemePopup = (props: Props) => {
     { name: "orange", icon: <MdDoneAll className="text-white" /> },
   ];
 
-  console.log(theme);
+  // console.log(theme);
 
   const colorChange = (color: string) => {
     const currentTheme = theme?.split("-")[1]; // Extract current theme from the theme
@@ -47,12 +47,14 @@ const ThemePopup = (props: Props) => {
     setTheme(newTheme);
   };
 
+  // alert(theme);
+
   return (
     <div className="w-screen h-screen fixed z-[1500]">
       <div
         className="w-full h-full z-[1501] bg-transparent backdrop-brightness-50"
         onClick={props.close}></div>
-      <div className="fixed z-[1510] w-min h-min  top-[3rem] rounded-lg bg-white drop-shadow flex items-start justify-center right-[9rem] flex-col gap-[1rem] dark:bg-gray-800 p-1 ">
+      <div className="fixed z-[1510] w-min h-min  top-[3rem] rounded-lg bg-background drop-shadow flex items-start justify-center right-[9rem] flex-col gap-[1rem]  p-1 ">
         <div className="w-full flex items-center justify-center gap-3">
           {/* Map through themes array */}
           {themes.map((t) => (
@@ -60,7 +62,7 @@ const ThemePopup = (props: Props) => {
               key={t.name}
               onClick={() => themeChange(t.name)}
               className={`theme-icon ${
-                currentTheme === t.name ? "bg-gray-500 text-white" : ""
+                currentTheme === t.name ? "bg-primary text-white" : ""
               }`}>
               {t.icon}
             </button>

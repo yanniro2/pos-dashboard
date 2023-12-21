@@ -20,7 +20,7 @@ const labels = [
 
 const ShowList = () => {
   return (
-    <div className="w-full h-1/3 bg-accent flex justify-between border bg-gray-100 rounded-lg dark:bg-gray-900 ">
+    <div className="w-full h-1/3 bg-accent flex justify-between border  rounded-lg  ">
       <div className="left bg-accent dark:bg-card p-1">
         {labels.map((label, index) => (
           <ShowLabel key={index} title={label.title} value={label.value} />

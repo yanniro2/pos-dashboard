@@ -25,14 +25,14 @@ const TableList = (props: Props) => {
   // const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className="w-full p-1 h-2/3 bg-gray-100 rounded-lg border dark:bg-gray-900 flex flex-col gap-1">
+    <div className="w-full p-1 h-2/3  rounded-lg border  flex flex-col gap-1">
       <div className="flex relative items-center">
         <input
           type="search"
           name="search"
           id="search"
           placeholder="search product name | SKU | Others"
-          className="border rounded-lg p-3 w-full outline-primary dark:bg-gray-800 capitalize"
+          className="border rounded-lg p-3 w-full outline-primary  capitalize"
           onChange={(e) => setSearch(e.target.value)}
         />
         <label htmlFor="search" className="absolute right-6 top-4">

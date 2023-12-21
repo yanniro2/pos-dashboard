@@ -28,7 +28,7 @@ const Calculator: React.FC = () => {
   //   };
 
   return (
-    <div className="h-1/2 w-full  grid grid-cols-4 dark:bg-gray-900 rounded-lg overflow-hidden gap-1">
+    <div className="h-1/2 w-full  grid grid-cols-4  rounded-lg overflow-hidden gap-1">
       <input
         type="text"
         //   value={result}
