@@ -4,18 +4,7 @@
 @tailwind utilities;
 
 @layer base {
-  .red-light {
-    --color-text-primary: #dc2626;
-    --color-text-secoundary: #fecaca;
-    --color-text-base: #111827;
-    --color-bg-fill: #fafafa;
-    --color-bg-dark: #f3f4f6;
-    --color-bg-medium: #f3f4f6;
-    --color-bg-light: #f8fafc;
-    --color-border:#030712;
-    --radius: 0.5rem;
-  }
-
+ 
   .red-dark {
     --color-text-primary: #dc2626;
     --color-text-secoundary: #020617;
@@ -25,6 +14,18 @@
     --color-bg-medium: #1f2937;
     --color-bg-light: #374151;
     --color-border:#000000;
+    --radius: 0.5rem;
+  }
+
+   .red-light {
+    --color-text-primary: #dc2626;
+    --color-text-secoundary: #fecaca;
+    --color-text-base: #111827;
+    --color-bg-fill: #ffffff;
+    --color-bg-dark: #f3f4f6 ;
+    --color-bg-medium: #f1f5f9;
+    --color-bg-light: #e2e8f0;
+    --color-border:#d1d5db;
     --radius: 0.5rem;
   }
 
@@ -39,6 +40,17 @@
     --color-border:#000000;
     --radius: 0.5rem;
   }
+  .blue-light {
+    --color-text-primary: #1d4ed8;
+    --color-text-secoundary: #bfdbfe;
+    --color-text-base: #111827;
+    --color-bg-fill: #ffffff;
+    --color-bg-dark: #f3f4f6 ;
+    --color-bg-medium: #f1f5f9;
+    --color-bg-light: #e2e8f0;
+    --color-border:#d1d5db;
+    --radius: 0.5rem;
+  }
 
   .green-dark {
     --color-text-primary: #15803d;
@@ -51,6 +63,18 @@
     --color-border:#000000;
     --radius: 0.5rem;
   }
+  .green-light {
+    --color-text-primary: #15803d;
+    --color-text-secoundary: #dcfce7;
+    --color-text-base: #111827;
+    --color-bg-fill: #ffffff;
+    --color-bg-dark: #f3f4f6 ;
+    --color-bg-medium: #f1f5f9;
+    --color-bg-light: #e2e8f0;
+    --color-border:#d1d5db;
+    --radius: 0.5rem;
+  }
+
 
   .orange-dark {
     --color-text-primary: #ea580c;
@@ -61,6 +85,18 @@
     --color-bg-medium: #1f2937;
     --color-bg-light: #374151;
     --color-border:#000000;
+    --radius: 0.5rem;
+  }
+
+  .orange-light {
+    --color-text-primary: #ea580c;
+    --color-text-secoundary: #ffedd5;
+    --color-text-base: #111827;
+    --color-bg-fill: #ffffff;
+    --color-bg-dark: #f3f4f6 ;
+    --color-bg-medium: #f1f5f9;
+    --color-bg-light: #e2e8f0;
+    --color-border:#d1d5db;
     --radius: 0.5rem;
   }
   tbody > tr:nth-child(odd) {
