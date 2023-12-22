@@ -64,11 +64,11 @@
 }
 
 .quantity-icon {
-  @apply text-white text-[1.5rem] mx-1;
+  @apply text-skin-base text-[1.5rem] mx-1;
 }
 
 .category-btn {
-  @apply p-3  text-white w-full  flex items-center gap-[1rem] rounded-lg drop-shadow transition;
+  @apply p-3  text-skin-base w-full  flex items-center gap-[1rem] rounded-lg drop-shadow transition bg-skin-medium hover:bg-skin-light;
 }
 
 .itemlist-btn {
@@ -94,11 +94,11 @@
 /* Buttons */
 
 .theme-btn {
-  @apply flex items-center gap-[1rem]  p-3 rounded-lg pl-[1rem] transition-all hover:text-white w-full;
+  @apply flex items-center gap-[1rem]  p-3 rounded-lg pl-[1rem] transition-all hover:text-skin-base w-full;
 }
 
 .theme-icon {
-  @apply p-3 flex items-center justify-center border rounded-lg cursor-pointer hover:text-white transition-all;
+  @apply p-3 flex items-center justify-center border rounded-lg cursor-pointer hover:text-skin-base transition-all;
 }
 
 .nav-link {
@@ -106,23 +106,23 @@
 }
 
 .nav-link-active {
-  @apply flex items-center gap-[1rem] pl-[1rem] p-3  rounded-lg hover:bg-gray-100 transition-all font-semibold text-white capitalize justify-center flex-col;
+  @apply flex items-center gap-[1rem] pl-[1rem] p-3  rounded-lg hover:bg-gray-100 transition-all font-semibold text-skin-base capitalize justify-center flex-col;
 }
 
 .btn-primary {
-  @apply text-white px-6 py-3 w-max font-semibold rounded-lg mx-auto  transition-all  drop-shadow-lg hover:bg-white;
+  @apply text-skin-base px-6 py-3 w-max font-semibold rounded-lg mx-auto  transition-all  drop-shadow-lg hover:bg-white;
 }
 
 .btn-primary-1 {
-  @apply text-white block px-6 py-3 rounded-lg drop-shadow font-semibold capitalize cursor-pointer  hover:bg-white transition-all hover:underline hover:drop-shadow-lg;
+  @apply text-skin-base block px-6 py-3 rounded-lg drop-shadow font-semibold capitalize cursor-pointer  hover:bg-white transition-all hover:underline hover:drop-shadow-lg;
 }
 
 .btn-quantity {
-  @apply transition-all text-white;
+  @apply transition-all text-skin-base;
 }
 
 .btn-number {
-  @apply bg-white  hover:text-white grow drop-shadow text-[1.8rem] font-bold   transition active:bg-white basis-1/4   rounded-lg uppercase;
+  @apply bg-white  hover:text-skin-base grow drop-shadow text-[1.8rem] font-bold   transition active:bg-white basis-1/4   rounded-lg uppercase;
 }
 
 /* Box */

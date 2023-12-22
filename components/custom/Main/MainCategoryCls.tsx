@@ -44,7 +44,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="flex w-full h-full items-start bg-secondary ">
+    <div className="flex w-full h-full items-start bg-skin-fill ">
       <CategoryButtons
         categories={data}
         onSelectCategory={handleSelectCategory}
