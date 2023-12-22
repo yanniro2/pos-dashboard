@@ -23,6 +23,13 @@ module.exports = {
           base: "var(--color-text-base)",
         },
       },
+      backgroundColor: {
+        skin: {
+          fill: "var(--color-bg-dark)",
+          medium: "var(--color-bg-medium)",
+          light: "var(--color-bg-light)",
+        },
+      },
       colors: {},
       borderRadius: {
         lg: "var(--radius)",
