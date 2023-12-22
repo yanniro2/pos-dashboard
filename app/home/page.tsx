@@ -17,7 +17,7 @@ export default async function Page() {
       <div className="w-1/3 h-full bg-skin-dark ">
         <MainCategoryCls />
       </div>
-      <div className="w-1/3 h-full bg-skin-dark ">
+      <div className="w-1/3 h-full bg-skin-medium ">
         <MainButtonCls />
       </div>
     </div>

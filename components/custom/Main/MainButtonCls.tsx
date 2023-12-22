@@ -36,11 +36,11 @@ export default async function Page() {
   };
   return (
     <div className="w-full h-full flex flex-col  p-1 gap-1 ">
-      <div className="h-1/2 w-full flex flex-col flex-wrap overflow-x-auto  rounded-lg overflow-hidden gap-1 ">
+      <div className="h-1/2 w-full flex flex-col flex-wrap overflow-x-auto  rounded-lg overflow-hidden gap-1 bg-skin-fill ">
         {buttons_icons.map((data) => (
           <button
             key={data.id}
-            className="bg-primary grow drop-shadow text-[1.2rem] font-bold  transition  basis-1/4 flex flex-col  items-center justify-center  rounded-lg gap-1 text-background ">
+            className="bg-primary grow drop-shadow text-[1.2rem] font-bold  transition  basis-1/4 flex flex-col  items-center justify-center  rounded-lg gap-1 text-skin-base">
             {React.createElement(iconComponents[data.icon], {
               className: "big-btn-icon",
             })}

@@ -28,12 +28,12 @@ const Calculator: React.FC = () => {
   //   };
 
   return (
-    <div className="h-1/2 w-full  grid grid-cols-4  rounded-lg overflow-hidden gap-1">
+    <div className="h-1/2 w-full  grid grid-cols-4  rounded-lg overflow-hidden gap-1 bg-skin-fill">
       <input
         type="text"
         //   value={result}
-        readOnly
-        className="col-span-4 p-2 text-right border border-gray-300 rounded-lg"
+        // readOnly
+        className="col-span-4 p-1 text-right rounded-lg bg-skin-dark text-skin-base font-bold text-[2rem]"
       />
       {[7, 8, 9, "ce"].map((number) => (
         <button
