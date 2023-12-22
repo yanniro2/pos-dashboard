@@ -169,7 +169,7 @@
 }
 
 .category-btn {
-  @apply p-3  text-skin-base w-full  flex items-center gap-[1rem] rounded-lg drop-shadow transition bg-card-dark hover:bg-card-light;
+  @apply p-3  text-primary w-full  flex items-center gap-[1rem] rounded-lg drop-shadow transition bg-card-dark hover:bg-card-light;
 }
 
 .itemlist-btn {
@@ -224,7 +224,7 @@
 }
 
 .btn-number {
-  @apply bg-skin-light hover:bg-skin-light  hover:text-skin-base grow drop-shadow text-[1.8rem] font-bold   transition  basis-1/4   rounded-lg uppercase;
+  @apply bg-skin-light   grow drop-shadow text-[1.8rem] font-bold     basis-1/4   rounded-lg uppercase hover:text-primary transition-all hover:bg-skin-fill;
 }
 
 /* Box */

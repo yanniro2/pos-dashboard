@@ -40,7 +40,7 @@ export default async function Page() {
         {buttons_icons.map((data) => (
           <button
             key={data.id}
-            className="bg-primary grow drop-shadow text-[1.2rem] font-bold  transition  basis-1/4 flex flex-col  items-center justify-center  rounded-lg gap-1 text-white">
+            className="bg-primary grow drop-shadow text-[1.2rem] font-bold    basis-1/4 flex flex-col  items-center justify-center  rounded-lg gap-1 text-white hover:bg-skin-fill hover:text-primary transition-all">
             {React.createElement(iconComponents[data.icon], {
               className: "big-btn-icon",
             })}

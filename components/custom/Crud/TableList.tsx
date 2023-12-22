@@ -32,7 +32,7 @@ const TableList = (props: Props) => {
           name="search"
           id="search"
           placeholder="search product name | SKU | Others"
-          className="border rounded-lg p-3 w-full  capitalize outline-primary bg-skin-dark border-borded"
+          className="border rounded-lg p-3 w-full  capitalize outline-primary bg-skin-dark border-borded text-skin-base"
           onChange={(e) => setSearch(e.target.value)}
         />
         <label htmlFor="search" className="absolute right-6 top-4">
