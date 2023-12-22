@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 @layer base {
- 
   .red-dark {
     --color-text-primary: #dc2626;
     --color-text-secoundary: #020617;
@@ -13,23 +12,31 @@
     --color-bg-dark: #030712;
     --color-bg-medium: #1f2937;
     --color-bg-light: #374151;
-    --color-border:#000000;
+    --color-border: #000000;
+    --color-card-light: #1f2937;
+    --color-card-dark: #111827;
+    --color-card-hover: #4b5563;
+    --color-card-disable: #030712;
     --radius: 0.5rem;
   }
 
-   .red-light {
+  .red-light {
     --color-text-primary: #dc2626;
     --color-text-secoundary: #fecaca;
     --color-text-base: #111827;
     --color-bg-fill: #ffffff;
-    --color-bg-dark: #f3f4f6 ;
+    --color-bg-dark: #f3f4f6;
     --color-bg-medium: #f1f5f9;
     --color-bg-light: #e2e8f0;
-    --color-border:#d1d5db;
+    --color-border: #d1d5db;
+    --color-card-light: #ffffff;
+    --color-card-dark: #ffffff;
+    --color-card-hover: #ffffff;
+    --color-card-disable: #f9fafb;
     --radius: 0.5rem;
   }
 
-   .blue-dark {
+  .blue-dark {
     --color-text-primary: #1d4ed8;
     --color-text-secoundary: #020617;
     --color-text-base: #fafafa;
@@ -37,7 +44,11 @@
     --color-bg-dark: #030712;
     --color-bg-medium: #1f2937;
     --color-bg-light: #374151;
-    --color-border:#000000;
+    --color-border: #000000;
+    --color-card-light: #1f2937;
+    --color-card-dark: #111827;
+    --color-card-hover: #4b5563;
+    --color-card-disable: #030712;
     --radius: 0.5rem;
   }
   .blue-light {
@@ -45,10 +56,14 @@
     --color-text-secoundary: #bfdbfe;
     --color-text-base: #111827;
     --color-bg-fill: #ffffff;
-    --color-bg-dark: #f3f4f6 ;
+    --color-bg-dark: #f3f4f6;
     --color-bg-medium: #f1f5f9;
     --color-bg-light: #e2e8f0;
-    --color-border:#d1d5db;
+    --color-border: #d1d5db;
+    --color-card-light: #ffffff;
+    --color-card-dark: #ffffff;
+    --color-card-hover: #ffffff;
+    --color-card-disable: #f9fafb;
     --radius: 0.5rem;
   }
 
@@ -60,7 +75,11 @@
     --color-bg-dark: #030712;
     --color-bg-medium: #1f2937;
     --color-bg-light: #374151;
-    --color-border:#000000;
+    --color-border: #000000;
+    --color-card-light: #1f2937;
+    --color-card-dark: #111827;
+    --color-card-hover: #4b5563;
+    --color-card-disable: #030712;
     --radius: 0.5rem;
   }
   .green-light {
@@ -68,13 +87,16 @@
     --color-text-secoundary: #dcfce7;
     --color-text-base: #111827;
     --color-bg-fill: #ffffff;
-    --color-bg-dark: #f3f4f6 ;
+    --color-bg-dark: #f3f4f6;
     --color-bg-medium: #f1f5f9;
     --color-bg-light: #e2e8f0;
-    --color-border:#d1d5db;
+    --color-border: #d1d5db;
+    --color-card-light: #ffffff;
+    --color-card-dark: #ffffff;
+    --color-card-hover: #ffffff;
+    --color-card-disable: #f9fafb;
     --radius: 0.5rem;
   }
-
 
   .orange-dark {
     --color-text-primary: #ea580c;
@@ -84,7 +106,11 @@
     --color-bg-dark: #030712;
     --color-bg-medium: #1f2937;
     --color-bg-light: #374151;
-    --color-border:#000000;
+    --color-border: #000000;
+    --color-card-light: #1f2937;
+    --color-card-dark: #111827;
+    --color-card-hover: #4b5563;
+    --color-card-disable: #030712;
     --radius: 0.5rem;
   }
 
@@ -93,10 +119,14 @@
     --color-text-secoundary: #ffedd5;
     --color-text-base: #111827;
     --color-bg-fill: #ffffff;
-    --color-bg-dark: #f3f4f6 ;
+    --color-bg-dark: #f3f4f6;
     --color-bg-medium: #f1f5f9;
     --color-bg-light: #e2e8f0;
-    --color-border:#d1d5db;
+    --color-border: #d1d5db;
+    --color-card-light: #ffffff;
+    --color-card-dark: #ffffff;
+    --color-card-hover: #ffffff;
+    --color-card-disable: #f9fafb;
     --radius: 0.5rem;
   }
   tbody > tr:nth-child(odd) {
@@ -139,14 +169,15 @@
 }
 
 .category-btn {
-  @apply p-3  text-skin-base w-full  flex items-center gap-[1rem] rounded-lg drop-shadow transition bg-skin-medium hover:bg-skin-light;
+  @apply p-3  text-skin-base w-full  flex items-center gap-[1rem] rounded-lg drop-shadow transition bg-card-dark hover:bg-card-light;
 }
 
 .itemlist-btn {
   @apply p-4 bg-white rounded-lg shadow-sm hover:shadow-xl   transition duration-300 flex justify-between;
 }
 
-.left,.right {
+.left,
+.right {
   @apply w-1/2 h-full  rounded-lg flex flex-col gap-1 overflow-x-auto bg-skin-light;
 }
 

@@ -44,10 +44,10 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.id}
-          className={`p-4  rounded-lg shadow-sm hover:shadow-xl   transition duration-300 flex justify-between  relative flex-col gap-[1rem]  ${
+          className={`p-4  rounded-lg   transition duration-300 flex justify-between  relative flex-col gap-[1rem]  ${
             item.availableStock > 0
-              ? "bg-skin-medium hover:bg-skin-light cursor-pointer"
-              : " cursor-not-allowed bg-skin-dark"
+              ? "bg-card-light hover:bg-card-hover cursor-pointer drop-shadow hover:drop-shadow-lg"
+              : " cursor-not-allowed bg-card-disable"
           }`}>
           <div className="flex justify-between w-full">
             <div className="text-left w-full ">
