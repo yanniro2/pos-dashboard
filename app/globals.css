@@ -28,6 +28,41 @@
     --radius: 0.5rem;
   }
 
+   .blue-dark {
+    --color-text-primary: #1d4ed8;
+    --color-text-secoundary: #020617;
+    --color-text-base: #fafafa;
+    --color-bg-fill: #111827;
+    --color-bg-dark: #030712;
+    --color-bg-medium: #1f2937;
+    --color-bg-light: #374151;
+    --color-border:#000000;
+    --radius: 0.5rem;
+  }
+
+  .green-dark {
+    --color-text-primary: #15803d;
+    --color-text-secoundary: #020617;
+    --color-text-base: #fafafa;
+    --color-bg-fill: #111827;
+    --color-bg-dark: #030712;
+    --color-bg-medium: #1f2937;
+    --color-bg-light: #374151;
+    --color-border:#000000;
+    --radius: 0.5rem;
+  }
+
+  .orange-dark {
+    --color-text-primary: #ea580c;
+    --color-text-secoundary: #020617;
+    --color-text-base: #fafafa;
+    --color-bg-fill: #111827;
+    --color-bg-dark: #030712;
+    --color-bg-medium: #1f2937;
+    --color-bg-light: #374151;
+    --color-border:#000000;
+    --radius: 0.5rem;
+  }
   tbody > tr:nth-child(odd) {
     @apply bg-secoundary;
   }
@@ -84,11 +119,11 @@
 }
 
 .active {
-  @apply font-bold text-[1.5rem];
+  @apply font-bold text-[1.5rem] text-primary;
 }
 
 .not-active {
-  @apply font-normal  hover:font-bold hover:text-[1.5rem] transition-all;
+  @apply font-normal  hover:font-bold hover:text-[1.5rem] transition-all hover:text-primary;
 }
 
 /* Buttons */

@@ -15,7 +15,7 @@ const HeaderPopup: React.FC<Props> = (props) => {
         className="w-full h-full z-[1501] bg-transparent backdrop-brightness-50"
         onClick={props.close}></div>
       <div
-        className={`fixed z-[150${z}] w-[10rem] h-[10rem] right-[3rem] top-[3rem] rounded-lg bg-white drop-shadow flex items-center justify-center right-[${z}rem]`}>
+        className={`fixed z-[150${z}] w-[10rem] h-[10rem] right-[3rem] top-[3rem] rounded-lg bg-skin-fill drop-shadow flex items-center justify-center right-[${z}rem] text-skin-base`}>
         {props.type}
       </div>
     </div>

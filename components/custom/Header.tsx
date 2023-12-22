@@ -49,7 +49,7 @@ const Header = () => {
   return (
     <>
       <nav className="w-full h-min bg-skin-fill text-skin-base relative ">
-        <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-b-bGray">
+        <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-borded ">
           <div className="flex items-center gap-[1rem]">
             <Link href="/home" className="flex items-center gap-3">
               <IoLogoBitbucket className="text-[2rem] hover:text-primary transition-all text-primary" />
@@ -118,7 +118,7 @@ const Header = () => {
         />
       )}
       {activePopup === "theme" && (
-        <ThemePopup style={8} type="theme" close={() => setActivePopup("")} />
+        <ThemePopup style={20} type="theme" close={() => setActivePopup("")} />
       )}
     </>
   );

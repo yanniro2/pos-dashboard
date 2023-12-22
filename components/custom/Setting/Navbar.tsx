@@ -30,7 +30,7 @@ const Navbar = (props: Props) => {
           <Link
             href={item.href}
             key={item.label}
-            className="text-white cursor-pointer hover:text-primary hover:bg-white w-full px-3 py-1 rounded-lg">
+            className="text-skin-base cursor-pointer hover:text-primary hover:bg-white w-full px-3 py-1 rounded-lg">
             {item.label}
           </Link>
         ))}

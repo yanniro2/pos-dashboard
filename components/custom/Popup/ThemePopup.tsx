@@ -54,7 +54,7 @@ const ThemePopup = (props: Props) => {
       <div
         className="w-full h-full z-[1501] bg-transparent backdrop-brightness-50"
         onClick={props.close}></div>
-      <div className="fixed z-[1510] w-min h-min  top-[3rem] rounded-lg bg-background drop-shadow flex items-start justify-center right-[9rem] flex-col gap-[1rem]  p-1 ">
+      <div className="fixed z-[1510] w-min h-min  top-[3rem] rounded-lg bg-skin-fill drop-shadow flex items-start justify-center right-[11rem] flex-col gap-[1rem]  p-1 ">
         <div className="w-full flex items-center justify-center gap-3">
           {/* Map through themes array */}
           {themes.map((t) => (
@@ -62,7 +62,9 @@ const ThemePopup = (props: Props) => {
               key={t.name}
               onClick={() => themeChange(t.name)}
               className={`theme-icon ${
-                currentTheme === t.name ? "bg-primary text-white" : ""
+                currentTheme === t.name
+                  ? "bg-primary text-white"
+                  : "text-skin-base"
               }`}>
               {t.icon}
             </button>

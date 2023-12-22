@@ -14,7 +14,7 @@ const page = (props: Props) => {
       <div className="w-1/4 h-full bg-primary flex items-center justify-center rounded-r-lg drop-shadow">
         <div className="flex flex-col justify-center items-center">
           <Image src="/dummy-logo.png" width="500" height="50" alt="img logo" />
-          <h1 className="text-4xl font-bold text-white ">lorem</h1>
+          <h1 className="text-4xl font-bold text-skin-base ">lorem</h1>
         </div>
       </div>
       <div className="w-3/4 h-full bg-white flex items-center flex-col justify-center dark:bg-gray-800 ">

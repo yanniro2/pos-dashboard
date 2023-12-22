@@ -23,7 +23,7 @@ const Popup: React.FC<PopupProps> = ({ item, onClose }) => {
           <h1 className="font-bold text-xl text-primary ">{item.name}</h1>
           <button
             onClick={onClose}
-            className="bg-primary text-white p-1 rounded text-[1.5rem]">
+            className="bg-primary text-skin-base p-1 rounded text-[1.5rem]">
             <IoClose />
           </button>
         </header>

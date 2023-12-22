@@ -13,8 +13,8 @@ const ShowSummary = (props: Props) => {
     <div className="flex items-center capitalize flex-col justify-between w-full h-full  gap-1  rounded-lg p-1  drop-shadow">
       <div className="flex flex-col gap-1 items-start w-full justify-between h-min">
         <div className="w-full justify-between items-center text-skin-base    py-2 px-1 rounded-lg flex font-bold uppercase bg-primary ">
-          <h1 className=" text-skin-base">sub total</h1>
-          <h1 className=" text-skin-base">{props.subTotal}$</h1>
+          <h1 className=" text-white">sub total</h1>
+          <h1 className=" text-white">{props.subTotal}$</h1>
         </div>
         <div className="w-full justify-between items-center bg-skin-medium  p-1 rounded-lg flex">
           <h1 className="text-skin-base ">total Quantity</h1>
@@ -32,8 +32,8 @@ const ShowSummary = (props: Props) => {
 
       <div className="w-full justify-between items-center    rounded-lg flex uppercase flex-col gap-1">
         <div className="w-full justify-between items-center bg-primary  b py-4 px-1 rounded-lg flex font-bold uppercase text-[1.2rem]">
-          <h1 className="text-skin-base font-bold ">Grand total</h1>
-          <h1 className="font-bold text-skin-base  ">{props.grandTotal}$</h1>
+          <h1 className="text-white font-bold ">Grand total</h1>
+          <h1 className="font-bold text-white  ">{props.grandTotal}$</h1>
         </div>
       </div>
     </div>

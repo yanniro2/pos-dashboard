@@ -60,7 +60,7 @@ const Quantity: React.FC<Props> = (props) => {
       </div>
 
       <button
-        className="text-primary underline font-semibold hover:bg-primary hover:text-white px-6 py-3 rounded-lg hover:shadow-md transition-all hover:no-underline"
+        className="text-primary underline font-semibold hover:bg-primary hover:text-skin-base px-6 py-3 rounded-lg hover:shadow-md transition-all hover:no-underline"
         onClick={() => addButton(props.item)}>
         Add
       </button>
