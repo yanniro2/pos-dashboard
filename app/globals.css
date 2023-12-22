@@ -5,15 +5,19 @@
  
 @layer base  {
   .red-light {
+    --color-text-primary:#dc2626;
     --color-text-base :#111827;
     --color-bg-dark:#fafafa;
     --color-bg-medium:#f3f4f6;
+    --color-bg-light:#d1d5db;
   }
 
   .red-dark {
+    --color-text-primary:#dc2626;
     --color-text-base :#fafafa;
     --color-bg-dark:#111827;
     --color-bg-medium:#1f2937;
+    --color-bg-light:#374151;
   }
 }
 
