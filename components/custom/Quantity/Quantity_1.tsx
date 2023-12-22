@@ -53,7 +53,7 @@ const Quantity: React.FC<Props> = ({ item, value }) => {
           id="quantity"
           value={quantity}
           onChange={handleChange}
-          className="w-[3rem] rounded-lg px-2"
+          className="w-[3rem] rounded-lg px-2 text-primary font-semibold"
         />
         <button
           onClick={() => setQuantity(quantity + 1)}

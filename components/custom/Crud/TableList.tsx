@@ -25,14 +25,14 @@ const TableList = (props: Props) => {
   // const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className="w-full p-1 h-2/3  rounded-lg border  flex flex-col gap-1">
+    <div className="w-full h-2/3  rounded-lg   flex flex-col gap-1  bg-skin-fill ">
       <div className="flex relative items-center">
         <input
           type="search"
           name="search"
           id="search"
           placeholder="search product name | SKU | Others"
-          className="border rounded-lg p-3 w-full outline-primary  capitalize"
+          className="border rounded-lg p-3 w-full  capitalize outline-primary bg-skin-dark border-borded"
           onChange={(e) => setSearch(e.target.value)}
         />
         <label htmlFor="search" className="absolute right-6 top-4">
@@ -45,9 +45,9 @@ const TableList = (props: Props) => {
         </div>
       </div>
       <div className="table-fixed w-full rounded-lg h-full overflow-x-auto">
-        <table className="table-auto w-full rounded-lg">
-          <thead className="w-full text-white">
-            <tr className="w-full">
+        <table className="table-auto w-full rounded-lg text-skin-base">
+          <thead className="w-full">
+            <tr className="w-full bg-skin-light">
               <th>Product Name</th>
               <th>U Price</th>
               <th>Qy</th>
@@ -55,10 +55,10 @@ const TableList = (props: Props) => {
               <th>act</th>
             </tr>
           </thead>
-          <tbody className="h-60 overflow-x-auto">
+          <tbody className="h-60 overflow-x-auto ">
             {items.map((data) => (
-              <tr key={data.id}>
-                <td className="text-ellipsis">
+              <tr key={data.id} className="">
+                <td className="text-ellipsis p-1">
                   {data.name.length > 50
                     ? `${data.name.substring(0, 50)}...`
                     : data.name}

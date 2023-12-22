@@ -7,8 +7,8 @@ type Props = {
 
 const ShowLabel = (props: Props) => {
   return (
-    <div className="flex w-full justify-between items-center bg-primary-foreground  p-1 rounded-lg capitalize dark:bg-gray-800 bg-white ">
-      <h1 className="text-gray-500">{props.title}</h1>
+    <div className="flex w-full justify-between items-center p-1 rounded-lg capitalize bg-skin-medium  ">
+      <h1 className=" text-skin-base">{props.title}</h1>
       <h1 className="price">${props.value}</h1>
     </div>
   );

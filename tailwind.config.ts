@@ -22,16 +22,22 @@ module.exports = {
         skin: {
           base: "var(--color-text-base)",
           primary: "var(--color-text-primary)",
+          secoundary: "var(--color-text-secoundary)",
         },
       },
       backgroundColor: {
         skin: {
-          fill: "var(--color-bg-dark)",
+          fill: "var(--color-bg-fill)",
+          dark: "var(--color-bg-dark)",
           medium: "var(--color-bg-medium)",
           light: "var(--color-bg-light)",
         },
       },
-      colors: {},
+      colors: {
+        primary: "var(--color-text-primary)",
+        secoundary: "var(--color-text-secoundary)",
+        borded: "var(--color-border)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

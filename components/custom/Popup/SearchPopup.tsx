@@ -36,7 +36,7 @@ const SearchPopup = (props: Props) => {
       <div
         className="w-full h-full z-[1500] fixed top-0 left-0 right-0 bottom-0 "
         onClick={props.handleSearchNull}></div>
-      <div className="drop-shadow-lg overflow-x-auto flex flex-col pb-[10rem] dark:bg-gray-800 bg-white top-[7.5rem] absolute left-1 rounded-lg p-3 w-1/3 h-screen z-[1600] gap-3">
+      <div className="drop-shadow-lg overflow-x-auto flex flex-col pb-[10rem]  top-[7.5rem] absolute left-1 rounded-lg p-3 w-1/3 h-screen z-[1600] gap-3 bg-skin-dark">
         <div>to search values are &quot;{props.search}&quot;</div>
 
         <div className="gap-1 items-start grid grid-cols-2 grid-rows-2">
@@ -60,7 +60,7 @@ const SearchPopup = (props: Props) => {
             .map((datas) => (
               <div
                 key={datas.id}
-                className="w-full h-full   flex  rounded-lg dark:border-primary  ">
+                className="w-full h-full   flex  rounded-lg   ">
                 {/* <div className="flex gap-1 p-3 font-semibold">
                   <div>Id:{datas.id}</div>
                   <div>{datas.name}</div>
@@ -72,10 +72,10 @@ const SearchPopup = (props: Props) => {
                       key={item.id}
                       className={` p-3 rounded-lg flex flex-col gap-3 w-auto h-full flex-wrap border drop-shadow ${
                         item.availableStock > 0
-                          ? "bg-white cursor-pointer"
-                          : "bg-gray-100 cursor-not-allowed"
+                          ? " bg-skin-medium cursor-pointer transition-all hover:bg-skin-light"
+                          : "cursor-not-allowed"
                       }`}>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 text-skin-base">
                         <div>{item.id}</div>
                         <div className="price">{item.name}</div>
                       </div>
