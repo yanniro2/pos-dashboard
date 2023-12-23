@@ -30,12 +30,12 @@ const ShowSummary = (props: Props) => {
         </div>
         <div className="w-full justify-between items-center bg-skin-medium   p-1 rounded-lg flex text-skin-base">
           <h1 className=" text-primary">tax</h1>
-          <h1 className=" text-primary">-{totalTax}$</h1>
+          <h1 className=" text-primary">+{totalTax}$</h1>
         </div>
       </div>
 
       <div className="w-full justify-between items-center    rounded-lg flex uppercase flex-col gap-1">
-        <div className="w-full justify-between items-center bg-primary  b py-4 px-1 rounded-lg flex font-bold uppercase text-[1.2rem]">
+        <div className="w-full justify-between items-center bg-primary  b py-4 px-1 rounded-lg flex font-bold uppercase text-[1.1rem]">
           <h1 className="text-white font-bold ">Grand total</h1>
           <h1 className="font-bold text-white  ">{grandTotal}$</h1>
         </div>

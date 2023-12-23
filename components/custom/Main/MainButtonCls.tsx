@@ -1,5 +1,22 @@
 import React from "react";
-import { FaHome } from "react-icons/fa";
+import {
+  FaHome,
+  FaShoppingCart,
+  FaBarcode,
+  FaPercent,
+  FaMoneyBill,
+  FaCreditCard,
+  FaUndo,
+  FaCog,
+  FaSignOutAlt,
+  FaFileAlt,
+  FaUser,
+  FaPrint,
+  FaTrash,
+  FaSearch,
+  FaQuestionCircle,
+  FaLock,
+} from "react-icons/fa";
 import data from "../../../data/db.json";
 import Calculate from "../Calculate";
 type ButtonsNumber = {
@@ -19,7 +36,6 @@ export default async function Page() {
   // });
   // const buttons_number: ButtonsNumber[] = await res_number.json();
 
-  const buttons_number = data.numberButtons;
   const buttons_icons = data.iconButtons;
   // const res_icons = await fetch("http://localhost:4000/iconButtons", {
   //   cache: "no-cache",
@@ -31,6 +47,21 @@ export default async function Page() {
     React.FC<React.SVGProps<SVGSVGElement>>
   > = {
     FaHome,
+    FaShoppingCart,
+    FaBarcode,
+    FaPercent,
+    FaMoneyBill,
+    FaCreditCard,
+    FaUndo,
+    FaCog,
+    FaSignOutAlt,
+    FaFileAlt,
+    FaUser,
+    FaPrint,
+    FaTrash,
+    FaSearch,
+    FaQuestionCircle,
+    FaLock,
 
     // Add more icon components as needed
   };

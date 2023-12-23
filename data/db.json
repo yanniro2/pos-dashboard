@@ -1,152 +1,100 @@
 {
-  "numberButtons": [
-    {
-      "id": 0,
-      "label": "0",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 1,
-      "label": "1",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 2,
-      "label": "2",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 3,
-      "label": "3",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 4,
-      "label": "4",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 5,
-      "label": "5",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 6,
-      "label": "6",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 7,
-      "label": "7",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 8,
-      "label": "8",
-      "onClick": "handleNumberButtonClick"
-    },
-    {
-      "id": 9,
-      "label": "9",
-      "onClick": "handleNumberButtonClick"
-    }
-  ],
   "iconButtons": [
     {
       "id": 1,
-      "label": "name 1",
-      "onClick": "handleSubmitButtonClick",
+      "label": "Home",
+      "onClick": "handleHomeButtonClick",
       "icon": "FaHome"
     },
     {
       "id": 2,
-      "label": "name 2",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Cart",
+      "onClick": "handleCartButtonClick",
+      "icon": "FaShoppingCart"
     },
     {
       "id": 3,
-      "label": "name 3",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Scan",
+      "onClick": "handleScanButtonClick",
+      "icon": "FaBarcode"
     },
     {
       "id": 4,
-      "label": "name 4",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Discount",
+      "onClick": "handleDiscountButtonClick",
+      "icon": "FaPercent"
     },
     {
       "id": 5,
-      "label": "name 5",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Cash",
+      "onClick": "handleCashButtonClick",
+      "icon": "FaMoneyBill"
     },
     {
       "id": 6,
-      "label": "name 6",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Credit",
+      "onClick": "handleCreditButtonClick",
+      "icon": "FaCreditCard"
     },
     {
       "id": 7,
-      "label": "name 7",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Refund",
+      "onClick": "handleRefundButtonClick",
+      "icon": "FaUndo"
     },
     {
       "id": 8,
-      "label": "name 8",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Settings",
+      "onClick": "handleSettingsButtonClick",
+      "icon": "FaCog"
     },
     {
       "id": 9,
-      "label": "name 9",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Exit",
+      "onClick": "handleExitButtonClick",
+      "icon": "FaSignOutAlt"
     },
     {
       "id": 10,
-      "label": "name 10",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Report",
+      "onClick": "handleReportButtonClick",
+      "icon": "FaFileAlt"
     },
     {
       "id": 11,
-      "label": "name 11",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Customer",
+      "onClick": "handleCustomerButtonClick",
+      "icon": "FaUser"
     },
     {
       "id": 12,
-      "label": "name 12",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Print",
+      "onClick": "handlePrintButtonClick",
+      "icon": "FaPrint"
     },
     {
       "id": 13,
-      "label": "name 13",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Void",
+      "onClick": "handleVoidButtonClick",
+      "icon": "FaTrash"
     },
     {
       "id": 14,
-      "label": "name 14",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Search",
+      "onClick": "handleSearchButtonClick",
+      "icon": "FaSearch"
     },
     {
       "id": 15,
-      "label": "name 15",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Help",
+      "onClick": "handleHelpButtonClick",
+      "icon": "FaQuestionCircle"
     },
     {
       "id": 16,
-      "label": "name 16",
-      "onClick": "handleSubmitButtonClick",
-      "icon": "FaHome"
+      "label": "Lock",
+      "onClick": "handleLockButtonClick",
+      "icon": "FaLock"
     }
   ]
 }
