@@ -1,22 +1,34 @@
 "use client";
-
+import React, {
+  createContext,
+  useState,
+  FC,
+  ReactNode,
+  useContext,
+  Dispatch,
+  SetStateAction,
+} from "react";
 import { CartItems } from "@/typings";
-import React, { createContext, useState, FC, ReactNode } from "react";
+
 type CartContextType = {
   count: number;
   items: CartItems[];
-  taxRate: number; // Tax rate as a percentage
+  taxRate: number;
   totalTax: number;
   discount: number;
   totalDiscount: number;
   subTotal: number;
   totalItems: number;
   grandTotal: number;
-  setCount: React.Dispatch<React.SetStateAction<number>>;
+  balance: number;
+  paymentAmount: number;
+  setCount: Dispatch<SetStateAction<number>>;
   addItems: (item: CartItems) => void;
   removeItem: (itemId: number) => void;
   changeQuantity: (itemId: number, newQuantity: number) => void;
   getItemById: (itemId: number) => CartItems | undefined;
+  setPaymentAmount: Dispatch<SetStateAction<number>>;
+  processPayment: (amount: number) => void;
 };
 
 export const CartContext = createContext<CartContextType>({
@@ -30,10 +42,14 @@ export const CartContext = createContext<CartContextType>({
   subTotal: 0,
   totalItems: 0,
   grandTotal: 0,
+  balance: 0,
+  paymentAmount: 0,
   addItems: () => {},
   removeItem: () => {},
   changeQuantity: () => {},
   getItemById: () => undefined,
+  setPaymentAmount: () => {},
+  processPayment: () => {},
 });
 
 export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
@@ -41,6 +57,8 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [items, setItems] = useState<CartItems[]>([]);
   const [taxRate, setTaxRate] = useState<number>(0.01);
   const [discount, setDiscount] = useState<number>(0);
+  const [paymentAmount, setPaymentAmount] = useState<number>(0);
+  const [balance, setBalance] = useState<number>(0);
 
   const addItems = (item: CartItems) => {
     setItems((prev) => {
@@ -87,26 +105,38 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const totalDiscount = discount;
   const grandTotal = subTotal - totalDiscount + totalTax;
 
+  const processPayment = (amount: number) => {
+    // Calculate the remaining balance
+    const remainingBalance = amount - grandTotal;
+
+    // Update the balance state
+    setBalance(remainingBalance < 0 ? 0 : remainingBalance);
+  };
+
+  const contextValues: CartContextType = {
+    count,
+    setCount,
+    items,
+    taxRate,
+    totalTax,
+    discount,
+    totalDiscount,
+    subTotal,
+    totalItems,
+    grandTotal,
+    balance,
+    paymentAmount,
+    addItems,
+    removeItem,
+    changeQuantity,
+    getItemById,
+    setPaymentAmount,
+    processPayment,
+  };
+
   return (
-    <CartContext.Provider
-      value={{
-        count,
-        setCount,
-        items,
-        taxRate,
-        totalTax,
-        discount,
-        totalDiscount,
-        subTotal,
-        totalItems,
-        grandTotal,
-        addItems,
-        removeItem,
-        changeQuantity,
-        getItemById,
-      }}>
+    <CartContext.Provider value={contextValues}>
       {children}
     </CartContext.Provider>
   );
 };
-
