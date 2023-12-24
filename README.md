@@ -38,4 +38,4 @@ To get started with this project, follow these steps:
 
 2. View Live:
    ```sh
-   https://dashboard-khaki-psi-27.vercel.app/
+   https://dashboard-khaki-psi-27.vercel.app/home
