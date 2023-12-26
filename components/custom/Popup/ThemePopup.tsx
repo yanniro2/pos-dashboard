@@ -33,7 +33,7 @@ const ThemePopup = (props: Props) => {
     { name: "orange", icon: <MdDoneAll className="text-white" /> },
   ];
 
-  // console.log(theme);
+  console.log(theme);
 
   const colorChange = (color: string) => {
     const currentTheme = theme?.split("-")[1]; // Extract current theme from the theme
@@ -55,6 +55,17 @@ const ThemePopup = (props: Props) => {
         className="w-full h-full z-[1501] bg-transparent backdrop-brightness-50"
         onClick={props.close}></div>
       <div className="fixed z-[1510] w-min h-min  top-[3rem] rounded-lg bg-skin-fill drop-shadow flex items-start justify-center right-[11rem] flex-col gap-[1rem]  p-1 ">
+        <div className="flex items-center justify-center w-full gap-3 p-1">
+          {/* Map through colors array */}
+          {colors.map((c) => (
+            <button
+              key={c.name}
+              className={`w-[1rem] h-[1rem] bg-${c.name}-500 rounded-full`}
+              onClick={() => colorChange(c.name)}>
+              {theme?.includes(c.name) && c.icon}
+            </button>
+          ))}
+        </div>
         <div className="w-full flex items-center justify-center gap-3">
           {/* Map through themes array */}
           {themes.map((t) => (
@@ -67,18 +78,6 @@ const ThemePopup = (props: Props) => {
                   : "text-skin-base"
               }`}>
               {t.icon}
-            </button>
-          ))}
-        </div>
-
-        <div className="flex items-center justify-center w-full gap-3 p-1">
-          {/* Map through colors array */}
-          {colors.map((c) => (
-            <button
-              key={c.name}
-              className={`w-[1rem] h-[1rem] bg-${c.name}-500 rounded-full`}
-              onClick={() => colorChange(c.name)}>
-              {theme?.includes(c.name) && c.icon}
             </button>
           ))}
         </div>

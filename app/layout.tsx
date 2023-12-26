@@ -26,8 +26,9 @@ export default function RootLayout({
       <body className="w-screen h-screen flex flex-col">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           themes={[
+            "light",
             "red-light",
             "red-dark",
             "blue-light",
