@@ -265,3 +265,11 @@
 .input-1 {
   @apply border rounded-lg p-3;
 }
+
+
+/* Layouts */
+
+.default-layout {
+  @apply w-full h-full flex flex-col;
+}
+

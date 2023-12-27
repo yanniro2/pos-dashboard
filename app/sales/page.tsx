@@ -1,3 +1,5 @@
+import Main from "@/components/custom/Sales/Main";
+import Sub from "@/components/custom/Sales/Sub";
 import { Metadata } from "next";
 import React from "react";
 
@@ -7,7 +9,16 @@ export const metadata: Metadata = {
 };
 
 const page = (props: Props) => {
-  return <div className="default-page">Sale page</div>;
+  return (
+    <section className="w-screen h-screen p-3 flex bg-skin-light">
+      <div className="w-3/4 h-full">
+        <Main />
+      </div>
+      <div className="w-1/4 h-full">
+        <Sub />
+      </div>
+    </section>
+  );
 };
 
 export default page;
