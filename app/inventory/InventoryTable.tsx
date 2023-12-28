@@ -63,14 +63,18 @@ const InventoryTable: React.FC = () => {
   }));
 
   return (
-    <div className="default-layout bg-skin-light overflow-hidden">
+    <div className="default-layout bg-skin-light overflow-hidden text-skin-base">
       <div className="container mx-auto py-[1rem] flex flex-col gap-3">
         <div className="flex w-full items-center bg-skin-fill justify-between p-3 rounded-lg drop-shadow">
           <div>
             <label htmlFor="filter" className="mr-2">
               Filter by Availability:
             </label>
-            <select id="filter" onChange={handleFilterChange} value={filter}>
+            <select
+              id="filter"
+              onChange={handleFilterChange}
+              value={filter}
+              className="text-primary font-semibold">
               <option value="all">All Items</option>
               <option value="available">Available Items</option>
               <option value="not-available">Not Available Items</option>
@@ -81,7 +85,7 @@ const InventoryTable: React.FC = () => {
           <input
             type="text"
             placeholder="Search by name"
-            className="input-1"
+            className="input-1 text-primary"
             onChange={handleSearchChange}
             value={searchTerm}
           />
@@ -90,8 +94,8 @@ const InventoryTable: React.FC = () => {
         <div className="table-container h-[70vh] overflow-y-auto">
           <table className="table-auto w-full bg-skin-fill rounded-lg">
             <thead className="h-[2rem]">
-              <tr>
-                <th className="border px-4 py-2">Category</th>
+              <tr className="bg-primary text-white">
+                <th className="border  px-4 py-2">Category</th>
                 <th className="border px-4 py-2">Item Name</th>
                 <th className="border px-4 py-2">Price</th>
                 <th className="border px-4 py-2">Discount</th>
