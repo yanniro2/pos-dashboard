@@ -1,16 +1,14 @@
 import React from "react";
 import Welcome from "./Main/Welcome";
-import Daily from "./Main/Daily";
 import Chart from "./Main/Chart";
 
 type Props = {};
 
 const Main = (props: Props) => {
   return (
-    <div className="default-layout">
+    <div className="default-layout flex flex-col gap-3">
       <Welcome />
       <Chart />
-      <Daily />
     </div>
   );
 };

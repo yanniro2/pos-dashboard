@@ -273,3 +273,7 @@
   @apply w-full h-full flex flex-col;
 }
 
+.fill {
+  @apply bg-primary;
+}
+

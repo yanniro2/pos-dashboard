@@ -1,0 +1,9 @@
+[
+  { "name": "Mon", "total": 2000 },
+  { "name": "Tue", "total": 2500 },
+  { "name": "Wed", "total": 1800 },
+  { "name": "Thu", "total": 3000 },
+  { "name": "Fri", "total": 3500 },
+  { "name": "Sat", "total": 4000 },
+  { "name": "Sun", "total": 3200 }
+]

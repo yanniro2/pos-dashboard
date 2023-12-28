@@ -17,9 +17,9 @@ const Welcome = (props: Props) => {
   };
 
   return (
-    <div className="w-full  bg-primary rounded-lg p-3 text-white flex items-center justify-between gap-3 drop-shadow h-1/4 mt-[4rem]">
+    <div className="w-full  bg-primary rounded-lg p-3 text-white flex items-center justify-between gap-3 drop-shadow h-1/4">
       <div className="flex items-start justify-between flex-col gap-1">
-        <h3 className="text-sm font-normal">
+        <h3 className="text-sm font-normal text-skin-secoundary">
           {getGreetingMessage()}{" "}
           <span className="underline font-medium">Niroyan</span>
         </h3>
@@ -27,8 +27,8 @@ const Welcome = (props: Props) => {
       </div>
       <div className="relative w-1/2 h-full">
         <Image
-          width={175}
-          height={175}
+          width={100}
+          height={100}
           src="./user.svg"
           alt="user img"
           className="absolute bottom-0 right-0 z-10"
