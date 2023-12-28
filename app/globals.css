@@ -270,7 +270,7 @@
 /* Layouts */
 
 .default-layout {
-  @apply w-full h-full flex flex-col;
+  @apply w-full h-full flex flex-col  gap-3 p-1;
 }
 
 .fill {

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "userName": "Alice Johnson",
+    "salesmanName": "John Smith",
+    "amount": 120.5,
+    "paymentMethod": "Credit Card",
+    "timestamp": "2023-01-03T08:15:00Z"
+  },
+  {
+    "id": 2,
+    "userName": "Bob Davis",
+    "salesmanName": "Jane Brown",
+    "amount": 55.75,
+    "paymentMethod": "Cash",
+    "timestamp": "2023-01-05T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "userName": "Charlie Miller",
+    "salesmanName": "Mike Wilson",
+    "amount": 210.2,
+    "paymentMethod": "Debit Card",
+    "timestamp": "2023-01-08T11:45:00Z"
+  },
+  {
+    "id": 4,
+    "userName": "David Smith",
+    "salesmanName": "Sara Johnson",
+    "amount": 75.6,
+    "paymentMethod": "Credit Card",
+    "timestamp": "2023-01-10T09:30:00Z"
+  },
+  {
+    "id": 5,
+    "userName": "Eva Brown",
+    "salesmanName": "Chris Davis",
+    "amount": 90.25,
+    "paymentMethod": "Cash",
+    "timestamp": "2023-01-12T15:20:00Z"
+  },
+  {
+    "id": 6,
+    "userName": "Frank Wilson",
+    "salesmanName": "Alice Miller",
+    "amount": 150.8,
+    "paymentMethod": "Debit Card",
+    "timestamp": "2023-01-15T12:10:00Z"
+  },
+  {
+    "id": 7,
+    "userName": "Grace Taylor",
+    "salesmanName": "Robert Davis",
+    "amount": 180.9,
+    "paymentMethod": "Credit Card",
+    "timestamp": "2023-01-18T10:05:00Z"
+  },
+  {
+    "id": 8,
+    "userName": "Henry Brown",
+    "salesmanName": "Laura Johnson",
+    "amount": 45.3,
+    "paymentMethod": "Cash",
+    "timestamp": "2023-01-20T14:45:00Z"
+  },
+  {
+    "id": 9,
+    "userName": "Ivy Miller",
+    "salesmanName": "Daniel Smith",
+    "amount": 120.75,
+    "paymentMethod": "Debit Card",
+    "timestamp": "2023-01-22T11:30:00Z"
+  },
+  {
+    "id": 10,
+    "userName": "Jack Davis",
+    "salesmanName": "Sophia Wilson",
+    "amount": 200.4,
+    "paymentMethod": "Credit Card",
+    "timestamp": "2023-01-25T09:20:00Z"
+  }
+]
