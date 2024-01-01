@@ -1,13 +1,12 @@
 import { Metadata } from "next";
 import React from "react";
-import Employee from "./Employee";
 
 type Props = {};
 export const metadata: Metadata = {
-  title: "Employee",
+  title: "Health",
 };
 const page = (props: Props) => {
-  return <Employee />;
+  return <h1>hello world</h1>;
 };
 
 export default page;

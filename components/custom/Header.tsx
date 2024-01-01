@@ -13,7 +13,7 @@ import {
   MdInsertChartOutlined,
   MdOutlineInventory2,
   MdPersonOutline,
-  MdOutlineReportProblem,
+  MdHealthAndSafety,
 } from "react-icons/md";
 import HeaderPopup from "./Popup/HeaderPopup";
 import ThemePopup from "./Popup/ThemePopup";
@@ -27,7 +27,7 @@ const Header = () => {
     { label: "sales", href: "/sales", icon: "MdInsertChartOutlined" },
     { label: "inventory", href: "/inventory", icon: "MdOutlineInventory2" },
     { label: "employees", href: "/employees", icon: "MdPersonOutline" },
-    { label: "reports", href: "/reports", icon: "MdOutlineReportProblem" },
+    { label: "health", href: "/health", icon: "MdHealthAndSafety" },
   ];
 
   const [activePopup, setActivePopup] = useState("");
@@ -41,7 +41,7 @@ const Header = () => {
     MdInsertChartOutlined,
     MdOutlineInventory2,
     MdPersonOutline,
-    MdOutlineReportProblem,
+    MdHealthAndSafety,
 
     // Add more icon components as needed
   };
