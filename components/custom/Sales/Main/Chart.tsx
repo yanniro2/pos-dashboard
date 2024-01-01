@@ -19,9 +19,7 @@ const Chart: React.FC<Props> = (props: Props) => {
   return (
     <div className="w-full h-full bg-skin-medium p-3 rounded-lg flex flex-col items-center justify-between">
       <div className="w-full flex items-center justify-between px-4">
-        <h3 className="text-skin-base font-semibold">
-          Daily / Monthly Sales Report{" "}
-        </h3>
+        <h3 className="h3">Daily / Monthly Sales Report </h3>
         <div className="bg-primary p-1 flex items-center gap-3 rounded-full drop-shadow text-white">
           <label
             htmlFor="daily"

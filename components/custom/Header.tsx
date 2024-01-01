@@ -26,7 +26,7 @@ const Header = () => {
     { label: "home", href: "/home", icon: "MdHome" },
     { label: "sales", href: "/sales", icon: "MdInsertChartOutlined" },
     { label: "inventory", href: "/inventory", icon: "MdOutlineInventory2" },
-    { label: "customers", href: "/customers", icon: "MdPersonOutline" },
+    { label: "employees", href: "/employees", icon: "MdPersonOutline" },
     { label: "reports", href: "/reports", icon: "MdOutlineReportProblem" },
   ];
 

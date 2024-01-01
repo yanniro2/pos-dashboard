@@ -281,3 +281,7 @@
   @apply text-xl font-bold text-primary;
 }
 
+.h3 {
+  @apply text-skin-base font-semibold;
+}
+
