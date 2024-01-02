@@ -31,6 +31,7 @@ import {
 } from "recharts";
 import AreaChartComponent from "./AreaChartComponent";
 import BarChartComponent from "./BarChartComponent";
+import LineChartComponent from "./LineChartComponent";
 
 interface NodeData {
   name: string;
@@ -177,6 +178,7 @@ const SalesReports: React.FC = () => {
       <div className="container mx-auto h-full p-3 grid grid-cols-2  gap-3">
         <AreaChartComponent />
         <BarChartComponent />
+        <LineChartComponent />
         {/* Total Sales - Line Chart */}
         <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
           <h2 className="h3 p-4">Total Sales Over Time</h2>
