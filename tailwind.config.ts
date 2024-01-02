@@ -36,6 +36,7 @@ module.exports = {
       colors: {
         primary: "var(--color-text-primary)",
         secoundary: "var(--color-text-secoundary)",
+        third: "var(--color-text-third)",
         borded: "var(--color-border)",
         "card-light": "var(--color-card-light)",
         "card-dark": "var(--color-card-dark)",

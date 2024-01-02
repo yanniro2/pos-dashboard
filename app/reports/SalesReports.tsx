@@ -29,6 +29,8 @@ import {
   PolarRadiusAxis,
   Sankey,
 } from "recharts";
+import AreaChartComponent from "./AreaChartComponent";
+import BarChartComponent from "./BarChartComponent";
 
 interface NodeData {
   name: string;
@@ -173,6 +175,8 @@ const SalesReports: React.FC = () => {
   return (
     <section className="default-layout bg-skin-light  text-skin-base overflow-auto">
       <div className="container mx-auto h-full p-3 grid grid-cols-2  gap-3">
+        <AreaChartComponent />
+        <BarChartComponent />
         {/* Total Sales - Line Chart */}
         <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
           <h2 className="h3 p-4">Total Sales Over Time</h2>
@@ -239,7 +243,7 @@ const SalesReports: React.FC = () => {
         </div>
 
         {/* Area Chart */}
-        <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
+        {/* <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
           <h2 className="h3 p-4">Area Chart</h2>
           <ResponsiveContainer width="100%" height="80%">
             <AreaChart data={areaChartData}>
@@ -257,7 +261,7 @@ const SalesReports: React.FC = () => {
               />
             </AreaChart>
           </ResponsiveContainer>
-        </div>
+        </div> */}
 
         {/* Composed Chart */}
         <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
