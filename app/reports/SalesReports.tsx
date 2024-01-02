@@ -32,6 +32,10 @@ import {
 import AreaChartComponent from "./AreaChartComponent";
 import BarChartComponent from "./BarChartComponent";
 import LineChartComponent from "./LineChartComponent";
+import ComposedChartComponent from "./ComposedChartComponent";
+import PieChartComponent from "./PieChartComponent";
+import RadarChartComponent from "./RadarChartComponent";
+import RadialBarChartComponent from "./RadialBarChartComponent";
 
 interface NodeData {
   name: string;
@@ -179,6 +183,10 @@ const SalesReports: React.FC = () => {
         <AreaChartComponent />
         <BarChartComponent />
         <LineChartComponent />
+        <ComposedChartComponent />
+        <PieChartComponent />
+        <RadarChartComponent />
+        <RadialBarChartComponent />
         {/* Total Sales - Line Chart */}
         <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
           <h2 className="h3 p-4">Total Sales Over Time</h2>
