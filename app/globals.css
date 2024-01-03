@@ -7,7 +7,7 @@
   .light {
     --color-text-primary: #dc2626;
     --color-text-secoundary: #020617;
-    --color-text-third:#610202;
+    --color-text-third: #610202;
     --color-text-base: #fafafa;
     --color-bg-fill: #111827;
     --color-bg-dark: #030712;
@@ -20,11 +20,11 @@
     --color-card-disable: #030712;
     --radius: 0.5rem;
   }
-  
+
   .red-dark {
     --color-text-primary: #dc2626;
     --color-text-secoundary: #020617;
-    --color-text-third:#610202;
+    --color-text-third: #610202;
     --color-text-base: #fafafa;
     --color-bg-fill: #111827;
     --color-bg-dark: #030712;
@@ -41,7 +41,7 @@
   .red-light {
     --color-text-primary: #dc2626;
     --color-text-secoundary: #fecaca;
-    --color-text-third:#610202;
+    --color-text-third: #610202;
     --color-text-base: #111827;
     --color-bg-fill: #ffffff;
     --color-bg-dark: #f3f4f6;
@@ -58,7 +58,7 @@
   .blue-dark {
     --color-text-primary: #1d4ed8;
     --color-text-secoundary: #020617;
-    --color-text-third:#011d69;
+    --color-text-third: #011d69;
     --color-text-base: #fafafa;
     --color-bg-fill: #111827;
     --color-bg-dark: #030712;
@@ -74,7 +74,7 @@
   .blue-light {
     --color-text-primary: #1d4ed8;
     --color-text-secoundary: #bfdbfe;
-    --color-text-third:#011d69;
+    --color-text-third: #011d69;
     --color-text-base: #111827;
     --color-bg-fill: #ffffff;
     --color-bg-dark: #f3f4f6;
@@ -91,7 +91,7 @@
   .green-dark {
     --color-text-primary: #15803d;
     --color-text-secoundary: #020617;
-    --color-text-third:#01451a;
+    --color-text-third: #01451a;
     --color-text-base: #fafafa;
     --color-bg-fill: #111827;
     --color-bg-dark: #030712;
@@ -107,7 +107,7 @@
   .green-light {
     --color-text-primary: #15803d;
     --color-text-secoundary: #dcfce7;
-    --color-text-third:#01451a;
+    --color-text-third: #01451a;
     --color-text-base: #111827;
     --color-bg-fill: #ffffff;
     --color-bg-dark: #f3f4f6;
@@ -125,7 +125,7 @@
     --color-text-primary: #ea580c;
     --color-text-secoundary: #020617;
     --color-text-base: #fafafa;
-    --color-text-third:#5b2101;
+    --color-text-third: #5b2101;
     --color-bg-fill: #111827;
     --color-bg-dark: #030712;
     --color-bg-medium: #1f2937;
@@ -141,7 +141,7 @@
   .orange-light {
     --color-text-primary: #ea580c;
     --color-text-secoundary: #ffedd5;
-    --color-text-third:#5b2101;
+    --color-text-third: #5b2101;
     --color-text-base: #111827;
     --color-bg-fill: #ffffff;
     --color-bg-dark: #f3f4f6;
@@ -275,7 +275,6 @@
   @apply border rounded-lg p-3;
 }
 
-
 /* Layouts */
 
 .default-layout {
@@ -294,3 +293,11 @@
   @apply text-skin-base font-semibold;
 }
 
+.grid-parent {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap:10px;
+  
+  
+}
