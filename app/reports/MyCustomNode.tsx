@@ -5,7 +5,13 @@ const MyCustomNode = ({ x, y, payload }: any) => {
   return (
     <g transform={`translate(${x},${y})`}>
       <rect width={10} height={30} className="fill-primary" />
-      <text x={15} y={15} dy={5} textAnchor="start" fill="#000">
+      <text
+        x={15}
+        y={15}
+        dy={5}
+        textAnchor="start"
+        className="fill-primary"
+        fill="bg-skin-base">
         {payload.name}
       </text>
     </g>

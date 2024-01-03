@@ -13,6 +13,7 @@ import ScatterChartComponent from "./ScatterChartComponent";
 import FunnelChartComponent from "./FunnelChartComponent";
 import TreemapComponent from "./TreemapComponent";
 import SankeyChartComponent from "./SankeyChartComponent";
+import ColorChange from "./ColorChange";
 
 const SalesReports: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const SalesReports: React.FC = () => {
         <FunnelChartComponent />
         <TreemapComponent />
         <SankeyChartComponent />
+        <ColorChange />
       </div>
     </section>
   );

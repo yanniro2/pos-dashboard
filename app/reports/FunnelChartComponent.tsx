@@ -65,7 +65,7 @@ const FunnelChartComponent: React.FC<Props> = () => {
           <Funnel dataKey="totalSales" data={salesData} isAnimationActive>
             <LabelList
               position="right"
-              fill="#000"
+              className="fill-text-skin-base"
               stroke="none"
               dataKey="month"
             />
