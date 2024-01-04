@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { PieChart, Pie, Tooltip, Cell, ResponsiveContainer } from "recharts";
 import Details from "./Details";
+import { CartContext } from "../contexts/CartContext";
 
 const salesData = [
   {
@@ -41,7 +42,7 @@ const salesData = [
 ];
 
 const PieChartComponent: React.FC = () => {
-  const COLORS = ["primary", "secoundary"]; // Define colors for the Pie segments
+  const { primaryColor } = useContext(CartContext);
 
   return (
     <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
@@ -77,7 +78,17 @@ const PieChartComponent: React.FC = () => {
               />
             ))}
           </Pie>
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              color: "white",
+              background: primaryColor,
+              padding: "10px",
+              borderRadius: "10px",
+            }}
+            labelStyle={{ fontWeight: "bold", fontSize: "16px" }}
+            itemStyle={{ listStyleType: "square", marginLeft: "10px" }}
+            cursor={true}
+          />
         </PieChart>
       </ResponsiveContainer>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   AreaChart,
   XAxis,
@@ -10,6 +10,7 @@ import {
   Legend,
 } from "recharts";
 import Details from "./Details";
+import { CartContext } from "../contexts/CartContext";
 
 type Props = {};
 
@@ -59,6 +60,8 @@ const salesData = [
 ];
 
 const SalesAreaChart = (props: Props) => {
+  // Accessing primaryColor from the context
+  const { primaryColor } = useContext(CartContext);
   return (
     <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
       <h2 className="h3 p-4">Monthly Sales Report (AreaChart)</h2>
@@ -90,7 +93,17 @@ const SalesAreaChart = (props: Props) => {
           <XAxis dataKey="month" />
           <YAxis />
           <CartesianGrid strokeDasharray="3 3" />
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              color: "white",
+              background: primaryColor,
+              padding: "10px",
+              borderRadius: "10px",
+            }}
+            labelStyle={{ fontWeight: "bold", fontSize: "16px" }}
+            itemStyle={{ listStyleType: "square", marginLeft: "10px" }}
+            cursor={true}
+          />
           {/* <Legend /> */}
           <Area
             type="monotone"

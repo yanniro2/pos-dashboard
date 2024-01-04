@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ResponsiveContainer, Sankey, Tooltip } from "recharts";
 import MyCustomNode from "./MyCustomNode";
+import { CartContext } from "../contexts/CartContext";
 
 type Props = {};
 
@@ -47,6 +48,7 @@ const data0 = {
 };
 
 const SankeyChartComponent = (props: Props) => {
+  const { primaryColor } = useContext(CartContext);
   return (
     <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
       <h2 className="h3 p-4">Total Sales Over Time (SankeyChart)</h2>
@@ -56,7 +58,17 @@ const SankeyChartComponent = (props: Props) => {
           node={<MyCustomNode />}
           nodePadding={50}
           link={{ className: "stroke-primary" }}>
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              color: "white",
+              background: primaryColor,
+              padding: "10px",
+              borderRadius: "10px",
+            }}
+            labelStyle={{ fontWeight: "bold", fontSize: "16px" }}
+            itemStyle={{ listStyleType: "square", marginLeft: "10px" }}
+            cursor={true}
+          />
         </Sankey>
       </ResponsiveContainer>
     </div>

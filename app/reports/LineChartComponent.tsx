@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   XAxis,
   YAxis,
@@ -10,6 +10,7 @@ import {
   Legend,
 } from "recharts";
 import Details from "./Details";
+import { CartContext } from "../contexts/CartContext";
 
 type Props = {};
 
@@ -52,6 +53,7 @@ const salesData = [
 ];
 
 const LineChartComponent: React.FC<Props> = () => {
+  const { primaryColor } = useContext(CartContext);
   return (
     <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
       <h2 className="h3 p-4">Monthly Sales Report (LineChart)</h2>
@@ -64,7 +66,17 @@ const LineChartComponent: React.FC<Props> = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />
           <YAxis />
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              color: "white",
+              background: primaryColor,
+              padding: "10px",
+              borderRadius: "10px",
+            }}
+            labelStyle={{ fontWeight: "bold", fontSize: "16px" }}
+            itemStyle={{ listStyleType: "square", marginLeft: "10px" }}
+            cursor={true}
+          />
           <Line
             type="monotone"
             dataKey="totalSales"

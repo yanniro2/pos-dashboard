@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   RadialBarChart,
   RadialBar,
@@ -8,7 +8,8 @@ import {
 } from "recharts";
 import Details from "./DetailsTypeOne";
 // import { compose } from "ramda"; // Replace with any compose() function of your choice
-import { lighten, transparentize } from "polished";
+import { transparentize } from "polished";
+import { CartContext } from "../contexts/CartContext";
 
 // const salesData = [
 //   {
@@ -104,7 +105,7 @@ const initialSalesData: SalesData[] = [
 
 const RadialBarChartComponent: React.FC = () => {
   const [salesData, setSalesData] = useState<SalesData[]>(initialSalesData);
-  const [primaryColor, setPrimaryColor] = useState<String>("");
+  const [primaryColor, setPrimaryColor] = useState<string>("");
 
   useEffect(() => {
     // Take primary color
@@ -142,7 +143,17 @@ const RadialBarChartComponent: React.FC = () => {
             dataKey="totalSales"
           />
 
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              color: "white",
+              background: primaryColor,
+              padding: "10px",
+              borderRadius: "10px",
+            }}
+            labelStyle={{ fontWeight: "bold", fontSize: "16px" }}
+            itemStyle={{ listStyleType: "square", marginLeft: "10px" }}
+            cursor={true}
+          />
         </RadialBarChart>
       </ResponsiveContainer>
 

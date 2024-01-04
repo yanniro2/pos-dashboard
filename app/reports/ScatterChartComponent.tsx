@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   ResponsiveContainer,
   ScatterChart,
@@ -10,6 +10,7 @@ import {
   Scatter,
 } from "recharts";
 import Details from "./Details";
+import { CartContext } from "../contexts/CartContext";
 
 type Props = {};
 const data01 = [
@@ -78,6 +79,7 @@ const data02 = [
 ];
 
 const ScatterChartComponent = (props: Props) => {
+  const { primaryColor } = useContext(CartContext);
   return (
     <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
       <h2 className="h3 p-4">Monthly Sales Report (ScatterChart)</h2>
@@ -101,7 +103,17 @@ const ScatterChartComponent = (props: Props) => {
             name="score"
             unit="km"
           />
-          <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+          <Tooltip
+            contentStyle={{
+              color: "white",
+              background: primaryColor,
+              padding: "10px",
+              borderRadius: "10px",
+            }}
+            labelStyle={{ fontWeight: "bold", fontSize: "16px" }}
+            itemStyle={{ listStyleType: "square", marginLeft: "10px" }}
+            cursor={true}
+          />
 
           <Scatter
             name="A school"

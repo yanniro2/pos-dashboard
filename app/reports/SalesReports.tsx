@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 
 import AreaChartComponent from "./AreaChartComponent";
 import BarChartComponent from "./BarChartComponent";
@@ -13,9 +12,16 @@ import ScatterChartComponent from "./ScatterChartComponent";
 import FunnelChartComponent from "./FunnelChartComponent";
 import TreemapComponent from "./TreemapComponent";
 import SankeyChartComponent from "./SankeyChartComponent";
-import ColorChange from "./ColorChange";
 
 const SalesReports: React.FC = () => {
+  const [primaryColor, setPerimary] = useState<string>("");
+  useEffect(() => {
+    const root = document.documentElement;
+    const primaryColor = getComputedStyle(root).getPropertyValue(
+      "--color-text-primary"
+    );
+    setPerimary(primaryColor);
+  }, []);
   return (
     <section className="default-layout bg-skin-light text-skin-base overflow-auto">
       <div className="container mx-auto h-full p-3 grid grid-cols-2  gap-3 ">
@@ -30,7 +36,6 @@ const SalesReports: React.FC = () => {
         <FunnelChartComponent />
         <TreemapComponent />
         <SankeyChartComponent />
-        <ColorChange />
       </div>
     </section>
   );

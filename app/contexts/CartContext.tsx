@@ -7,6 +7,7 @@ import React, {
   useContext,
   Dispatch,
   SetStateAction,
+  useEffect,
 } from "react";
 import { CartItems } from "@/typings";
 
@@ -22,6 +23,7 @@ type CartContextType = {
   grandTotal: number;
   balance: number;
   paymentAmount: number;
+  primaryColor: string;
   setCount: Dispatch<SetStateAction<number>>;
   addItems: (item: CartItems) => void;
   removeItem: (itemId: number) => void;
@@ -43,6 +45,7 @@ export const CartContext = createContext<CartContextType>({
   totalItems: 0,
   grandTotal: 0,
   balance: 0,
+  primaryColor: "#ff5733",
   paymentAmount: 0,
   addItems: () => {},
   removeItem: () => {},
@@ -59,6 +62,17 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [discount, setDiscount] = useState<number>(0);
   const [paymentAmount, setPaymentAmount] = useState<number>(0);
   const [balance, setBalance] = useState<number>(0);
+
+  const [primaryColor, setPrimaryColor] = useState<string>("#ff5733");
+
+  useEffect(() => {
+    // Take primary color
+    const root = document.documentElement;
+    const primaryColor = getComputedStyle(root).getPropertyValue(
+      "--color-text-primary"
+    );
+    setPrimaryColor(primaryColor.trim());
+  }, []);
 
   const addItems = (item: CartItems) => {
     setItems((prev) => {
@@ -126,6 +140,7 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
     grandTotal,
     balance,
     paymentAmount,
+    primaryColor,
     addItems,
     removeItem,
     changeQuantity,
