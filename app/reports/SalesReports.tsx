@@ -30,7 +30,7 @@ const SalesReports: React.FC = () => {
         <FunnelChartComponent />
         <TreemapComponent />
         <SankeyChartComponent />
-        {/* <ColorChange /> */}
+        <ColorChange />
       </div>
     </section>
   );

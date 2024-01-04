@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   RadialBarChart,
   RadialBar,
@@ -7,53 +7,123 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Details from "./DetailsTypeOne";
+// import { compose } from "ramda"; // Replace with any compose() function of your choice
+import { lighten, transparentize } from "polished";
 
-const salesData = [
+// const salesData = [
+//   {
+//     month: "Jan",
+//     totalSales: 4000,
+//     additionalSales: 2400,
+//     fill: "fill-bg-secoundary",
+//     className: "fill-secoundary",
+//   },
+//   {
+//     month: "Feb",
+//     totalSales: 4800,
+//     additionalSales: 3200,
+//     fill: "#ff3333", // Red shade 2
+//   },
+//   {
+//     month: "Mar",
+//     totalSales: 5500,
+//     additionalSales: 4000,
+//     fill: "#ff0000", // Red shade 3
+//   },
+//   {
+//     month: "Apr",
+//     totalSales: 6200,
+//     additionalSales: 4800,
+//     fill: "#cc0000", // Red shade 4
+//   },
+//   {
+//     month: "May",
+//     totalSales: 7000,
+//     additionalSales: 5500,
+//     fill: "#990000", // Red shade 5
+//   },
+//   {
+//     month: "Jun",
+//     totalSales: 7800,
+//     additionalSales: 6200,
+//     fill: "#660000", // Red shade 6
+//   },
+//   {
+//     month: "Jul",
+//     totalSales: 8500,
+//     additionalSales: 7000,
+//     fill: "#330000", // Red shade 7
+//   },
+// ];
+
+interface SalesData {
+  month: string;
+  totalSales: number;
+  additionalSales: number;
+  fill?: string | null;
+  className?: string | null;
+}
+
+const initialSalesData: SalesData[] = [
   {
     month: "Jan",
     totalSales: 4000,
     additionalSales: 2400,
-    fill: "#ff6666", // Red shade 1
   },
   {
     month: "Feb",
     totalSales: 4800,
     additionalSales: 3200,
-    fill: "#ff3333", // Red shade 2
   },
   {
     month: "Mar",
     totalSales: 5500,
     additionalSales: 4000,
-    fill: "#ff0000", // Red shade 3
   },
   {
     month: "Apr",
     totalSales: 6200,
     additionalSales: 4800,
-    fill: "#cc0000", // Red shade 4
   },
   {
     month: "May",
     totalSales: 7000,
     additionalSales: 5500,
-    fill: "#990000", // Red shade 5
   },
   {
     month: "Jun",
     totalSales: 7800,
     additionalSales: 6200,
-    fill: "#660000", // Red shade 6
   },
   {
     month: "Jul",
     totalSales: 8500,
     additionalSales: 7000,
-    fill: "#330000", // Red shade 7
   },
 ];
 
 const RadialBarChartComponent: React.FC = () => {
+  const [salesData, setSalesData] = useState<SalesData[]>(initialSalesData);
+  const [primaryColor, setPrimaryColor] = useState<String>("");
+
+  useEffect(() => {
+    // Take primary color
+    const root = document.documentElement;
+    const primaryColor = getComputedStyle(root).getPropertyValue(
+      "--color-text-primary"
+    );
+    setPrimaryColor(primaryColor.trim());
+
+    // modifi Data
+    const modifiedData = salesData.map((item, index) => ({
+      ...item,
+      // fill: `bg-${(primaryColor)}-${100 * (index + 1)}`,
+      // className: `bg-${primaryColor}-${100 * (index + 1)}`,
+      fill: transparentize(index / salesData.length, primaryColor),
+    }));
+    setSalesData(modifiedData);
+  }, []);
+
   return (
     <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
       <h2 className="h3 p-4">Monthly Sales Report (RadialBarChart)</h2>
@@ -78,7 +148,7 @@ const RadialBarChartComponent: React.FC = () => {
 
       <div className="capitalize w-full mx-auto flex justify-evenly">
         {salesData.map((entry, index) => (
-          <Details key={index} color={entry.fill} title={entry.month} />
+          <Details key={index} color={entry.fill || ""} title={entry.month} />
         ))}
       </div>
     </div>
