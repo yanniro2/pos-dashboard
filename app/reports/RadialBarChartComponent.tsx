@@ -11,7 +11,7 @@ import Details from "./DetailsTypeOne";
 import { transparentize } from "polished";
 import { CartContext } from "../contexts/CartContext";
 
-// const salesData = [
+
 //   {
 //     month: "Jan",
 //     totalSales: 4000,
@@ -105,15 +105,10 @@ const initialSalesData: SalesData[] = [
 
 const RadialBarChartComponent: React.FC = () => {
   const [salesData, setSalesData] = useState<SalesData[]>(initialSalesData);
-  const [primaryColor, setPrimaryColor] = useState<string>("");
+  const { primaryColor } = useContext(CartContext);
 
   useEffect(() => {
     // Take primary color
-    const root = document.documentElement;
-    const primaryColor = getComputedStyle(root).getPropertyValue(
-      "--color-text-primary"
-    );
-    setPrimaryColor(primaryColor.trim());
 
     // modifi Data
     const modifiedData = salesData.map((item, index) => ({

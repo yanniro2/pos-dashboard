@@ -1,4 +1,5 @@
 "use client";
+
 import React, {
   createContext,
   useState,
@@ -10,6 +11,7 @@ import React, {
   useEffect,
 } from "react";
 import { CartItems } from "@/typings";
+import { useTheme } from "next-themes";
 
 type CartContextType = {
   count: number;
@@ -24,6 +26,7 @@ type CartContextType = {
   balance: number;
   paymentAmount: number;
   primaryColor: string;
+  
   setCount: Dispatch<SetStateAction<number>>;
   addItems: (item: CartItems) => void;
   removeItem: (itemId: number) => void;
@@ -37,6 +40,7 @@ export const CartContext = createContext<CartContextType>({
   count: 0,
   setCount: () => {},
   items: [],
+
   taxRate: 0.01,
   totalTax: 0,
   discount: 0,
@@ -62,17 +66,19 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [discount, setDiscount] = useState<number>(0);
   const [paymentAmount, setPaymentAmount] = useState<number>(0);
   const [balance, setBalance] = useState<number>(0);
-
-  const [primaryColor, setPrimaryColor] = useState<string>("#ff5733");
-
-  useEffect(() => {
-    // Take primary color
-    const root = document.documentElement;
-    const primaryColor = getComputedStyle(root).getPropertyValue(
-      "--color-text-primary"
-    );
-    setPrimaryColor(primaryColor.trim());
-  }, []);
+    const themeMap = {
+    light: "#dc2626",
+    "red-dark": "#dc2626",
+    "red-light": "#dc2626",
+    "blue-dark": "#1d4ed8",
+    "blue-light": "#1d4ed8",
+    "green-dark": "#15803d",
+    "green-light": "#15803d",
+    "orange-dark": "#ea580c",
+    "orange-light": "#ea580c",
+  };
+  const { theme } = useTheme();
+  const primaryColor = themeMap[theme as keyof typeof themeMap];
 
   const addItems = (item: CartItems) => {
     setItems((prev) => {
@@ -126,6 +132,8 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
     // Update the balance state
     setBalance(remainingBalance < 0 ? 0 : remainingBalance);
   };
+
+
 
   const contextValues: CartContextType = {
     count,

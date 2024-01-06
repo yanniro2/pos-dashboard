@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import {
   AreaChart,
   XAxis,
@@ -7,7 +7,6 @@ import {
   Tooltip,
   Area,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
 import Details from "./Details";
 import { CartContext } from "../contexts/CartContext";
@@ -62,6 +61,7 @@ const salesData = [
 const SalesAreaChart = (props: Props) => {
   // Accessing primaryColor from the context
   const { primaryColor } = useContext(CartContext);
+
   return (
     <div className="bg-skin-medium p-3 rounded-lg w-full h-full">
       <h2 className="h3 p-4">Monthly Sales Report (AreaChart)</h2>

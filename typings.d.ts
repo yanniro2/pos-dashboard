@@ -27,3 +27,11 @@ export interface NavLink {
   url: string;
   children?: NavLink[];
 }
+
+export interface SalesData {
+  month: string;
+  totalSales: number;
+  additionalSales: number;
+  fill?: string | null;
+  className?: string | null;
+}
