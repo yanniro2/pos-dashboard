@@ -18,6 +18,7 @@ import {
 import HeaderPopup from "./Popup/HeaderPopup";
 import ThemePopup from "./Popup/ThemePopup";
 import { GoGear } from "react-icons/go";
+import NotificationPopup from "./Popup/NotificationPopup";
 
 const Header = () => {
   const pathName = usePathname();
@@ -111,7 +112,7 @@ const Header = () => {
         <HeaderPopup style={8} type="user" close={() => setActivePopup("")} />
       )}
       {activePopup === "notification" && (
-        <HeaderPopup
+        <NotificationPopup
           style={4}
           type="notification"
           close={() => setActivePopup("")}
