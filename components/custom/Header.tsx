@@ -20,6 +20,7 @@ import ThemePopup from "./Popup/ThemePopup";
 import { GoGear } from "react-icons/go";
 import NotificationPopup from "./Popup/NotificationPopup";
 import { CartContext } from "@/app/contexts/CartContext";
+import UserPopup from "./Popup/UserPopup";
 
 const Header = () => {
   const pathName = usePathname();
@@ -111,7 +112,7 @@ const Header = () => {
         </div>
       </nav>
       {activePopup === "user" && (
-        <HeaderPopup style={8} type="user" close={() => setActivePopup("")} />
+        <UserPopup style={8} type="user" close={() => setActivePopup("")} />
       )}
       {activePopup === "notification" && (
         <NotificationPopup

@@ -59,7 +59,7 @@ const NotificationList: React.FC<NotificationListProps> = ({
       {notifications.map((notification, index) => (
         <div
           key={index}
-          className={`cursor-pointer hover:bg-skin-dark transition-all p-3 flex items-start justify-between border-b ${
+          className={`cursor-pointer hover:bg-skin-dark transition-all p-3 flex items-start justify-between border-b border-borded ${
             notification.seen ? "bg-skin-fill" : "bg-skin-light"
           }`}
           onClick={() => onNotificationClick(index)}>

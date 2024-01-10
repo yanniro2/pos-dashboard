@@ -41,7 +41,7 @@ const NotificationPopup: React.FC<Props> = (props) => {
         onClick={props.close}></div>
       <div
         className={`fixed z-[150${z}] w-[20rem] h-[60vh]  top-[3rem] rounded-lg  drop-shadow flex items-center  right-[11rem] bg-skin-light justify-between flex-col overflow-auto `}>
-        <div className="bg-skin-fill w-full flex items-center justify-between p-3 text-primary border-b sticky top-0 left-0 right-0">
+        <div className="bg-skin-fill w-full flex items-center justify-between p-3 text-primary border-b sticky top-0 left-0 right-0 border-borded">
           <h1 className="h3 capitalize">notification</h1>
 
           <div className="flex">

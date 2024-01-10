@@ -299,5 +299,8 @@
   grid-template-rows: repeat(3, 1fr);
   gap:10px;
   
-  
+}
+
+.btn-2 {
+  @apply cursor-pointer hover:text-primary transition-all;
 }
