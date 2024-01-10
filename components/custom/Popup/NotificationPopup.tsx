@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { FaBell } from "react-icons/fa";
 import NotificationList from "../Notification/NotificationList";
 import data from "../../../data/notification.json";
+import { CartContext } from "@/app/contexts/CartContext";
 
 type Props = {
   type: string;
@@ -15,6 +16,7 @@ const NotificationPopup: React.FC<Props> = (props) => {
   const z = 10 - props.style;
   const [notifications, setNotifications] = useState(data);
 
+  const { setnotificationNo, notificationNo } = useContext(CartContext);
   const unseenNotificationsCount = notifications.filter(
     (notification) => !notification.seen
   ).length;
@@ -25,6 +27,12 @@ const NotificationPopup: React.FC<Props> = (props) => {
     updatedNotifications[index].seen = true; // Change to true when clicked
     setNotifications(updatedNotifications);
   };
+
+  console.log(typeof unseenNotificationsCount);
+
+  useEffect(() => {
+    setnotificationNo(unseenNotificationsCount);
+  }, [unseenNotificationsCount, handleNotificationClick]);
 
   return (
     <div className="w-screen h-screen fixed z-[1500] ">
@@ -38,10 +46,8 @@ const NotificationPopup: React.FC<Props> = (props) => {
 
           <div className="flex">
             <p className=" text-sm text-gray-500 underline cursor-pointer hover:text-primary transition-all ">
-              {unseenNotificationsCount}{" "}
-              {unseenNotificationsCount === 1
-                ? "Unseen Message"
-                : "Unseen Messages"}
+              {notificationNo}{" "}
+              {notificationNo === 1 ? "Unseen Message" : "Unseen Messages"}
             </p>
 
             {/* <FaBell /> */}

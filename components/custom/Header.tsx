@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -19,6 +19,7 @@ import HeaderPopup from "./Popup/HeaderPopup";
 import ThemePopup from "./Popup/ThemePopup";
 import { GoGear } from "react-icons/go";
 import NotificationPopup from "./Popup/NotificationPopup";
+import { CartContext } from "@/app/contexts/CartContext";
 
 const Header = () => {
   const pathName = usePathname();
@@ -47,6 +48,7 @@ const Header = () => {
     // Add more icon components as needed
   };
 
+  const { notificationNo } = useContext(CartContext);
   return (
     <>
       <nav className="w-full h-min bg-skin-fill text-skin-base relative ">
@@ -88,7 +90,7 @@ const Header = () => {
                 className="relative">
                 <IoMdNotificationsOutline className="icon-outline" />
                 <div className="w-[1.5rem] h-[1.5rem] absolute bg-primary drop-shadow rounded-full top-[-.5rem] right-0 translate-x-1/2 text-white font-bold">
-                  3
+                  {notificationNo}
                 </div>
               </button>
             </li>

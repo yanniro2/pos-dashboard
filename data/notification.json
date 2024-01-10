@@ -1,92 +1,102 @@
 [
   {
-    "name": "Notification 1",
-    "time": "08:00 AM",
+    "name": "Meeting Reminder",
+    "time": "08:30 AM",
     "day": "Monday",
-    "profile": "Profile 1",
-    "notification": "This is your first notification.",
-    "profile_img": "https://example.com/profile1.jpg",
-    "seen": false
+    "profile": "John Doe",
+    "notification": "Don't forget the team meeting at 9:00 AM.",
+    "profile_img": "https://example.com/johndoe.jpg",
+    "seen": false,
+    "icon": "FaCalendarAlt"
   },
   {
-    "name": "Notification 2",
-    "time": "12:30 PM",
+    "name": "Project Update",
+    "time": "12:45 PM",
     "day": "Wednesday",
-    "profile": "Profile 2",
-    "notification": "A reminder for your second notification.",
-    "profile_img": "https://example.com/profile2.jpg",
-    "seen": true
+    "profile": "Jane Smith",
+    "notification": "Check the latest project update in the shared folder.",
+    "profile_img": "https://example.com/janesmith.jpg",
+    "seen": true,
+    "icon": "FaClipboardList"
   },
   {
-    "name": "Notification 3",
-    "time": "03:45 PM",
-    "day": "Friday",
-    "profile": "Profile 3",
-    "notification": "Your third notification is ready.",
-    "profile_img": "https://example.com/profile3.jpg",
-    "seen": false
-  },
-  {
-    "name": "Notification 4",
-    "time": "09:15 AM",
-    "day": "Tuesday",
-    "profile": "Profile 4",
-    "notification": "Important update for your fourth notification.",
-    "profile_img": "https://example.com/profile4.jpg",
-    "seen": true
-  },
-  {
-    "name": "Notification 5",
-    "time": "01:00 PM",
-    "day": "Thursday",
-    "profile": "Profile 5",
-    "notification": "You have a message in your inbox.",
-    "profile_img": "https://example.com/profile5.jpg",
-    "seen": false
-  },
-  {
-    "name": "Notification 6",
-    "time": "04:30 PM",
-    "day": "Monday",
-    "profile": "Profile 6",
-    "notification": "New friend request received.",
-    "profile_img": "https://example.com/profile6.jpg",
-    "seen": true
-  },
-  {
-    "name": "Notification 7",
-    "time": "10:45 AM",
-    "day": "Wednesday",
-    "profile": "Profile 7",
-    "notification": "Event reminder: Meeting at 2:00 PM.",
-    "profile_img": "https://example.com/profile7.jpg",
-    "seen": false
-  },
-  {
-    "name": "Notification 8",
-    "time": "02:20 PM",
-    "day": "Friday",
-    "profile": "Profile 8",
-    "notification": "Your post received 100 likes!",
-    "profile_img": "https://example.com/profile8.jpg",
-    "seen": true
-  },
-  {
-    "name": "Notification 9",
-    "time": "11:30 AM",
-    "day": "Tuesday",
-    "profile": "Profile 9",
-    "notification": "Reminder: Pay your bills today.",
-    "profile_img": "https://example.com/profile9.jpg",
-    "seen": false
-  },
-  {
-    "name": "Notification 10",
+    "name": "Urgent Announcement",
     "time": "03:00 PM",
+    "day": "Friday",
+    "profile": "Company Admin",
+    "notification": "Urgent: New company policy updates. Please review.",
+    "profile_img": "https://example.com/companyadmin.jpg",
+    "seen": false,
+    "icon": "FaBell"
+  },
+  {
+    "name": "Client Call",
+    "time": "10:15 AM",
+    "day": "Tuesday",
+    "profile": "Client Relations",
+    "notification": "Scheduled call with XYZ client at 11:00 AM.",
+    "profile_img": "https://example.com/clientrelations.jpg",
+    "seen": true,
+    "icon": "FaComment"
+  },
+  {
+    "name": "Inbox Message",
+    "time": "01:30 PM",
     "day": "Thursday",
-    "profile": "Profile 10",
-    "notification": "New product launch at 4:00 PM.",
-    "profile_img": "https://example.com/profile10.jpg",
-    "seen": true
+    "profile": "Friend",
+    "notification": "You've received a new message in your inbox.",
+    "profile_img": "https://example.com/friend.jpg",
+    "seen": false,
+    "icon": "FaEnvelope"
+  },
+  {
+    "name": "Connection Request",
+    "time": "04:45 PM",
+    "day": "Monday",
+    "profile": "New Connection",
+    "notification": "You have a new connection request. Accept now!",
+    "profile_img": "https://example.com/newconnection.jpg",
+    "seen": true,
+    "icon": "FaUserFriends"
+  },
+  {
+    "name": "Project Meeting",
+    "time": "11:00 AM",
+    "day": "Wednesday",
+    "profile": "Project Team",
+    "notification": "Reminder: Project meeting at 2:30 PM.",
+    "profile_img": "https://example.com/projectteam.jpg",
+    "seen": false,
+    "icon": "FaClock"
+  },
+  {
+    "name": "Social Media Milestone",
+    "time": "02:45 PM",
+    "day": "Friday",
+    "profile": "YourName",
+    "notification": "Your latest post just reached 1,000 likes!",
+    "profile_img": "https://example.com/yourname.jpg",
+    "seen": true,
+    "icon": "FaThumbsUp"
+  },
+  {
+    "name": "Bill Payment Reminder",
+    "time": "12:15 PM",
+    "day": "Tuesday",
+    "profile": "Finance Department",
+    "notification": "Reminder: Pay your monthly bills by end of the day.",
+    "profile_img": "https://example.com/financedept.jpg",
+    "seen": false,
+    "icon": "FaMoneyBill"
+  },
+  {
+    "name": "Product Launch",
+    "time": "03:30 PM",
+    "day": "Thursday",
+    "profile": "Marketing Team",
+    "notification": "Exciting news! New product launch at 4:00 PM. Be there!",
+    "profile_img": "https://example.com/marketingteam.jpg",
+    "seen": true,
+    "icon": "FaRocket"
   }
 ]

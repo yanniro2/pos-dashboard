@@ -26,8 +26,10 @@ type CartContextType = {
   balance: number;
   paymentAmount: number;
   primaryColor: string;
-  
+  notificationNo: number;
+
   setCount: Dispatch<SetStateAction<number>>;
+  setnotificationNo: Dispatch<SetStateAction<number>>;
   addItems: (item: CartItems) => void;
   removeItem: (itemId: number) => void;
   changeQuantity: (itemId: number, newQuantity: number) => void;
@@ -39,6 +41,7 @@ type CartContextType = {
 export const CartContext = createContext<CartContextType>({
   count: 0,
   setCount: () => {},
+  setnotificationNo: () => {},
   items: [],
 
   taxRate: 0.01,
@@ -51,6 +54,7 @@ export const CartContext = createContext<CartContextType>({
   balance: 0,
   primaryColor: "#ff5733",
   paymentAmount: 0,
+  notificationNo: 5,
   addItems: () => {},
   removeItem: () => {},
   changeQuantity: () => {},
@@ -66,7 +70,8 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [discount, setDiscount] = useState<number>(0);
   const [paymentAmount, setPaymentAmount] = useState<number>(0);
   const [balance, setBalance] = useState<number>(0);
-    const themeMap = {
+  const [notificationNo, setnotificationNo] = useState<number>(5);
+  const themeMap = {
     light: "#dc2626",
     "red-dark": "#dc2626",
     "red-light": "#dc2626",
@@ -133,8 +138,6 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setBalance(remainingBalance < 0 ? 0 : remainingBalance);
   };
 
-
-
   const contextValues: CartContextType = {
     count,
     setCount,
@@ -149,12 +152,14 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
     balance,
     paymentAmount,
     primaryColor,
+    notificationNo,
     addItems,
     removeItem,
     changeQuantity,
     getItemById,
     setPaymentAmount,
     processPayment,
+    setnotificationNo,
   };
 
   return (
