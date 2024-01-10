@@ -19,7 +19,7 @@ const UserPopup: React.FC<Props> = (props) => {
         className="w-full h-full z-[1501] bg-transparent backdrop-brightness-50"
         onClick={props.close}></div>
       <div
-        className={`fixed z-[150${z}] w-[20rem] h-min  top-[3rem] rounded-lg  drop-shadow flex items-center  right-[7rem] bg-skin-light justify-between flex-col overflow-auto `}>
+        className={`fixed z-[150${z}] w-[20rem] h-min  top-[3rem] rounded-lg  drop-shadow flex items-center  right-[8rem] bg-skin-light justify-between flex-col overflow-auto `}>
         <div className="bg-skin-fill w-full flex  items-center  p-3 text-primary border-b sticky top-0 left-0 right-0 justify-between border-borded">
           <div className="flex items-center gap-5">
             <Image
