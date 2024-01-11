@@ -304,3 +304,11 @@
 .btn-2 {
   @apply cursor-pointer hover:text-primary transition-all;
 }
+
+.btn-submit {
+  @apply bg-primary py-3 px-6 rounded-lg text-white font-semibold cursor-pointer hover:bg-skin-fill hover:text-primary transition-all hover:drop-shadow;
+}
+
+.btn-register{
+  @apply bg-secoundary py-3 px-6 rounded-lg text-primary font-semibold cursor-pointer hover:bg-skin-fill hover:text-primary transition-all hover:drop-shadow;
+}
