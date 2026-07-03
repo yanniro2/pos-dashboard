@@ -17,8 +17,8 @@ const Chart: React.FC<Props> = (props: Props) => {
     showData ? setData(dailySales) : setData(monthlySales);
   };
   return (
-    <div className="w-full h-full bg-skin-medium p-3 rounded-lg flex flex-col items-center justify-between">
-      <div className="w-full flex items-center justify-between px-4">
+    <div className="flex min-h-[24rem] w-full flex-1 flex-col rounded-lg bg-skin-medium p-3">
+      <div className="flex w-full shrink-0 flex-col gap-3 px-4 sm:flex-row sm:items-center sm:justify-between">
         <h3 className="h3">Daily / Monthly Sales Report </h3>
         <div className="bg-primary p-1 flex items-center gap-3 rounded-full drop-shadow text-white">
           <label
@@ -54,30 +54,32 @@ const Chart: React.FC<Props> = (props: Props) => {
         </div>
       </div>
 
-      <ResponsiveContainer width="100%" height="80%">
-        <BarChart data={data}>
-          <XAxis
-            dataKey="name"
-            stroke="#888888"
-            fontSize={12}
-            tickLine={false}
-            axisLine={false}
-            // className="stroke-primary"
-          />
-          <YAxis
-            stroke="#888888"
-            fontSize={12}
-            tickLine={false}
-            axisLine={false}
-            tickFormatter={(value) => `$${value}`}
-          />
-          <Bar
-            dataKey="total"
-            radius={[4, 4, 0, 0]}
-            className="fill-primary" // Tailwind CSS color class
-          />
-        </BarChart>
-      </ResponsiveContainer>
+      <div className="min-h-0 w-full flex-1 pt-4">
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data}>
+            <XAxis
+              dataKey="name"
+              stroke="#888888"
+              fontSize={12}
+              tickLine={false}
+              axisLine={false}
+              // className="stroke-primary"
+            />
+            <YAxis
+              stroke="#888888"
+              fontSize={12}
+              tickLine={false}
+              axisLine={false}
+              tickFormatter={(value) => `$${value}`}
+            />
+            <Bar
+              dataKey="total"
+              radius={[4, 4, 0, 0]}
+              className="fill-primary" // Tailwind CSS color class
+            />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };

@@ -3,10 +3,8 @@
 import React, { useState, useEffect } from "react";
 import CategoryButtons from "../Category/CategoryButtons";
 import ItemList_2 from "../Category/ItemList_2";
-import ItemList_1 from "../Category/ItemList_1";
 import dataCategory from "../../../data/categories.json";
 import { Category } from "@/typings";
-import PopAndClick from "../Item/PopAndClick";
 
 export default function Page() {
   const [data, setData] = useState<Category[] | null>(null);
@@ -44,7 +42,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="flex w-full h-full items-start bg-skin-fill ">
+    <div className="flex h-full w-full flex-col items-start overflow-hidden bg-skin-fill xl:flex-row">
       <CategoryButtons
         categories={data}
         onSelectCategory={handleSelectCategory}

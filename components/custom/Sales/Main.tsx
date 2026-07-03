@@ -6,7 +6,7 @@ type Props = {};
 
 const Main = (props: Props) => {
   return (
-    <div className="w-full h-full flex flex-col gap-3 p-1">
+    <div className="flex h-full min-h-0 w-full flex-col gap-3 p-1">
       <Welcome />
       <Chart />
     </div>

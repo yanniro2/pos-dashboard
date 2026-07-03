@@ -52,21 +52,23 @@ const Header = () => {
   const { notificationNo } = useContext(CartContext);
   return (
     <>
-      <nav className="w-full h-min bg-skin-fill text-skin-base relative ">
-        <div className="container mx-auto py-4 flex items-center justify-between border-b-[1px] border-borded ">
-          <div className="flex items-center gap-[1rem]">
-            <Link href="/home" className="flex items-center gap-3">
+      <nav className="w-full shrink-0 bg-skin-fill text-skin-base relative">
+        <div className="container mx-auto flex flex-col gap-4 border-b-[1px] border-borded py-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex min-w-0 flex-col gap-4 lg:flex-row lg:items-center lg:gap-[1rem]">
+            <Link
+              href="/"
+              className="flex min-w-0 items-center justify-center gap-3 lg:justify-start">
               <IoLogoBitbucket className="text-[2rem] hover:text-primary transition-all text-primary" />
 
-              <h3 className="font-bold uppercase text-primary"> Pos System</h3>
+              <h3 className="truncate font-bold uppercase text-primary"> Pos System</h3>
             </Link>
-            <ul className="flex items-center gap-5 justify-center pl-[5rem]">
+            <ul className="flex w-full items-center justify-start gap-3 overflow-x-auto pb-1 sm:justify-center lg:w-auto lg:gap-5 lg:overflow-visible lg:pb-0 lg:pl-[5rem]">
               {links.map((link) => {
                 const isActive = pathName.startsWith(link.href);
                 return (
                   <li
                     key={link.href}
-                    className={`${isActive ? "active" : "not-active"}`}>
+                    className={`shrink-0 ${isActive ? "active" : "not-active"}`}>
                     <Link href={link.href}>
                       {React.createElement(iconComponents[link.icon], {
                         className: "nav-icon-left",
@@ -79,7 +81,7 @@ const Header = () => {
             </ul>
           </div>
 
-          <ul className="flex items-center gap-5 justify-center">
+          <ul className="flex shrink-0 flex-wrap items-center justify-center gap-5">
             <li className="flex items-center justify-center">
               <button onClick={() => handleClick("theme")}>
                 <IoColorPaletteOutline className="icon-outline" />

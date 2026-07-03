@@ -7,10 +7,10 @@ export default function RootLayout({
 }>) {
   return (
     <div
-      className="w-screen h-screen flex  justify-between"
+      className="flex min-h-0 w-full flex-1 flex-col gap-3 overflow-y-auto p-3 lg:flex-row lg:justify-between lg:overflow-hidden"
       suppressHydrationWarning>
       <Navbar />
-      {children}
+      <div className="min-h-0 w-full flex-1 overflow-y-auto">{children}</div>
     </div>
   );
 }

@@ -24,7 +24,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
   };
 
   return (
-    <div className="w-2/3 h-full bg-gray-100 border rounded-lg p-1  flex-col overflow-y-auto content-start dark:bg-gray-900  gap-2 grid grid-cols-2">
+    <div className="grid h-full w-full content-start gap-2 overflow-y-auto rounded-lg border bg-gray-100 p-1 dark:bg-gray-900 sm:grid-cols-2 lg:w-2/3">
       {items.map((item) => (
         <div
           key={item.id}

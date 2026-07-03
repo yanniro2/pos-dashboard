@@ -21,7 +21,7 @@ const CategoryButtons: React.FC<CategoryButtonsTypes.CategoryButtonsProps> = ({
   categories,
   onSelectCategory,
 }) => (
-  <div className="w-1/3 flex flex-col items-start gap-1 p-1  rounded-lg h-full overflow-x-auto bg-skin-dark ">
+  <div className="grid h-auto w-full shrink-0 grid-cols-3 gap-1 overflow-x-auto rounded-lg bg-skin-dark p-1 xl:flex xl:h-full xl:w-1/3 xl:flex-col xl:items-start">
     {categories?.map((category) => (
       <button
         key={category.id}

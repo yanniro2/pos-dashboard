@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="POS Dashboard app icon">
+  <rect width="180" height="180" rx="42" fill="#111827"/>
+  <rect x="36" y="38" width="108" height="76" rx="14" fill="#dc2626"/>
+  <rect x="50" y="52" width="80" height="30" rx="6" fill="#ffffff"/>
+  <rect x="60" y="132" width="60" height="14" rx="7" fill="#dc2626"/>
+  <circle cx="68" cy="99" r="7" fill="#ffffff"/>
+  <circle cx="90" cy="99" r="7" fill="#ffffff"/>
+  <circle cx="112" cy="99" r="7" fill="#ffffff"/>
+</svg>

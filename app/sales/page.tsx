@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 const page = (props: Props) => {
   return (
-    <section className="w-screen h-screen p-3 flex bg-skin-light">
-      <div className="w-3/4 h-full">
+    <section className="flex min-h-0 w-full flex-1 flex-col gap-3 overflow-y-auto bg-skin-light p-3 md:flex-row md:overflow-hidden">
+      <div className="min-h-[32rem] w-full md:h-full md:w-3/4">
         <Main />
       </div>
-      <div className="w-1/4 h-full">
+      <div className="min-h-[24rem] w-full md:h-full md:w-1/4">
         <Sub />
       </div>
     </section>

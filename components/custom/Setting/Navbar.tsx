@@ -11,7 +11,7 @@ const Navbar = (props: Props) => {
   const [sub, setSub] = useState<any | null>(null);
 
   return (
-    <div className="w-1/4 h-[85vh] grid grid-cols-2 gap-1 drop-shadow rounded-lg  border shadow-md relative">
+    <div className="relative grid w-full shrink-0 grid-cols-2 gap-2 rounded-lg border p-2 shadow-md drop-shadow sm:grid-cols-3 lg:h-[85vh] lg:w-1/4 lg:grid-cols-2">
       {navData.map((data) => (
         <Link
           key={data.label}
@@ -25,7 +25,7 @@ const Navbar = (props: Props) => {
         </Link>
       ))}
 
-      <div className="fixed top-0 bottom-0 left-[105%]   z-[5000] bg-primary flex flex-col gap-3 rounded-lg w-min drop-shadow-lg">
+      <div className="absolute left-0 top-full z-[5000] mt-2 flex w-full flex-col gap-3 rounded-lg bg-primary p-2 drop-shadow-lg lg:fixed lg:bottom-0 lg:left-[26%] lg:top-auto lg:mt-0 lg:w-min">
         {sub?.map((item: any) => (
           <Link
             href={item.href}

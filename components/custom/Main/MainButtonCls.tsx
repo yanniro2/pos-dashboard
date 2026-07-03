@@ -66,12 +66,14 @@ export default async function Page() {
     // Add more icon components as needed
   };
   return (
-    <div className="w-full h-full flex flex-col  p-1 gap-1 ">
-      <div className="h-1/2 w-full flex flex-col flex-wrap overflow-x-auto  rounded-lg overflow-hidden gap-1 bg-skin-fill ">
-        {buttons_icons.map((data) => (
+    <div className="flex h-full w-full flex-col gap-1 p-1">
+      <div className="grid min-h-[20rem] w-full grid-cols-4 gap-1 overflow-hidden rounded-lg bg-skin-fill xl:h-1/2 xl:grid-flow-col xl:grid-cols-none xl:grid-rows-3">
+        {buttons_icons.map((data, index) => (
           <button
             key={data.id}
-            className="bg-primary grow drop-shadow text-[1.2rem] font-bold    basis-1/4 flex flex-col  items-center justify-center  rounded-lg gap-1 text-white hover:bg-skin-fill hover:text-primary transition-all">
+            className={`flex min-h-0 flex-col items-center justify-center gap-1 rounded-lg bg-primary text-[1.2rem] font-bold text-white drop-shadow transition-all hover:bg-skin-fill hover:text-primary ${
+              index === buttons_icons.length - 1 ? "xl:row-span-3" : ""
+            }`}>
             {React.createElement(iconComponents[data.icon], {
               className: "big-btn-icon",
             })}

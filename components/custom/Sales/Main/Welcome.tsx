@@ -17,7 +17,7 @@ const Welcome = (props: Props) => {
   };
 
   return (
-    <div className="w-full  bg-primary rounded-lg p-3 text-white flex items-center justify-between gap-3 drop-shadow h-1/4">
+    <div className="flex min-h-[9rem] w-full shrink-0 items-center justify-between gap-3 rounded-lg bg-primary p-3 text-white drop-shadow">
       <div className="flex items-start justify-between flex-col gap-1">
         <h3 className="text-sm font-normal text-skin-secoundary">
           {getGreetingMessage()}{" "}

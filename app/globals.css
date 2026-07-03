@@ -165,6 +165,168 @@
   @apply w-full h-full flex items-center justify-center  text-skin-base bg-skin-medium;
 }
 
+.main-page {
+  @apply w-full flex-1 overflow-y-auto bg-skin-medium text-skin-base;
+}
+
+.main-hero {
+  @apply grid gap-8 py-10 md:grid-cols-[1.4fr_.8fr] md:items-center lg:py-14;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.main-hero__content {
+  @apply flex max-w-4xl flex-col gap-5;
+  animation: main-fade-up 0.7s ease both;
+}
+
+.main-eyebrow {
+  @apply w-fit rounded-full border border-primary bg-skin-dark px-4 py-2 text-sm font-bold uppercase tracking-normal text-primary;
+}
+
+.main-hero h1 {
+  @apply text-3xl font-extrabold leading-tight text-skin-base sm:text-4xl lg:text-5xl;
+}
+
+.main-hero p {
+  @apply max-w-2xl text-base leading-7 text-skin-base opacity-80 sm:text-lg;
+}
+
+.main-hero__actions {
+  @apply flex flex-col gap-3 sm:flex-row;
+}
+
+.main-btn {
+  @apply inline-flex min-h-[3rem] items-center justify-center rounded-lg px-6 py-3 text-center font-bold capitalize transition-all duration-300;
+}
+
+.main-btn--primary {
+  @apply bg-primary text-white shadow-lg hover:-translate-y-1 hover:bg-skin-fill hover:text-primary;
+}
+
+.main-btn--ghost {
+  @apply border border-primary bg-skin-dark text-primary hover:-translate-y-1 hover:bg-primary hover:text-white;
+}
+
+.main-hero__panel {
+  @apply grid gap-4 rounded-lg border border-borded bg-skin-dark p-4 shadow-xl sm:grid-cols-3 md:grid-cols-1;
+  animation: main-fade-up 0.7s ease 0.12s both;
+}
+
+.main-stat {
+  @apply rounded-lg bg-card-dark p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-card-light;
+}
+
+.main-stat strong {
+  @apply block text-3xl font-extrabold text-primary;
+}
+
+.main-stat span {
+  @apply mt-1 block text-sm font-semibold text-skin-base opacity-80;
+}
+
+.main-features {
+  @apply grid gap-4 pb-10 sm:grid-cols-2 lg:grid-cols-3 lg:pb-14;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.feature-card {
+  @apply flex min-h-[12rem] flex-col gap-5 rounded-lg border border-borded bg-card-dark p-5 text-skin-base shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:bg-card-light hover:shadow-2xl;
+  animation: main-fade-up 0.6s ease both;
+}
+
+.feature-card__icon {
+  @apply flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white shadow-lg transition-transform duration-300;
+}
+
+.feature-card:hover .feature-card__icon {
+  transform: rotate(-6deg) scale(1.08);
+}
+
+.feature-card__icon svg {
+  @apply h-6 w-6;
+}
+
+.feature-card__body {
+  @apply flex flex-1 flex-col gap-2;
+}
+
+.feature-card__body strong {
+  @apply text-xl font-extrabold text-primary;
+}
+
+.feature-card__body span {
+  @apply text-sm leading-6 text-skin-base opacity-80;
+}
+
+.footer-content {
+  @apply flex flex-col items-center justify-between gap-3 text-center text-sm font-bold capitalize text-primary sm:flex-row sm:text-left;
+}
+
+.footer-credit {
+  @apply inline-flex   px-3 py-1 font-extrabold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-primary;
+
+}
+
+@keyframes main-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes footer-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(220, 38, 38, 0);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(220, 38, 38, 0.45);
+  }
+}
+
+@media (max-width: 640px) {
+  .main-hero {
+    @apply py-8;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .main-hero h1 {
+    @apply text-3xl;
+  }
+
+  .main-hero__panel {
+    @apply p-3;
+  }
+
+  .main-features {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .feature-card {
+    @apply min-h-0;
+  }
+
+  .main-btn {
+    @apply w-full;
+  }
+}
+
 /* Icons */
 .icon {
   @apply text-[1.5rem];
@@ -298,7 +460,7 @@
   grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap:10px;
-  
+
 }
 
 .btn-2 {

@@ -40,7 +40,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
   };
 
   return (
-    <div className="w-2/3 h-full   rounded-lg p-1 flex-col overflow-y-auto content-start   gap-2 grid grid-cols-2 bg-skin-fill text-skin-base">
+    <div className="grid h-full w-full grid-cols-1 content-start gap-2 overflow-y-auto rounded-lg bg-skin-fill p-1 text-skin-base sm:grid-cols-2 xl:w-2/3">
       {items.map((item) => (
         <div
           key={item.id}
